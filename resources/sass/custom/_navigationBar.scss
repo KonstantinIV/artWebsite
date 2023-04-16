@@ -1,0 +1,21 @@
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-collapse{
+    
+    display: grid !important;
+    justify-content: right;
+   
+}
+}
+
+.navbar-brand{
+    font-size: 28px;
+}
+.nav-item{
+color: rgb(28, 28, 28);
+font-family: sans-serif;
+letter-spacing: 1.5px;
+
+ margin: 0 10px;   
+ font-size: 18px;
+
+}

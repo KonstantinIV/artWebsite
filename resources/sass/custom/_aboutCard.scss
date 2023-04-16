@@ -1,0 +1,22 @@
+.aboutContainer{
+max-width: 725px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.aboutProfileImage{
+    border-radius: 50%;
+    
+    margin: 50px 0px ;
+
+    width: 150px;
+    height: 150px;
+
+    object-fit:cover;
+    object-position: 100% 10%;
+
+
+    max-width: 150px;
+}
