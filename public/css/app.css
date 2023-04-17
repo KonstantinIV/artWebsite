@@ -21,13 +21,34 @@ body {
   background-color: rgb(248, 247, 230);
 }
 
-.aboutContainer {
-  max-width: 725px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+/*.aboutContainer{
+max-width: 725px;
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+
+}*/
+.aboutContainer .row {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+/*
+@media (min-width: 992px){
+    .aboutContainer {
+        justify-content: center;
+
+
+        }
+}
+@media (min-width: 992px){
+    .aboutContainer .row{
+        //flex-flow: column;
+        flex-wrap:nowrap;
+        }
+}
+*/
 .aboutProfileImage {
   border-radius: 50%;
   margin: 50px 0px;
@@ -38,4 +59,98 @@ body {
   -o-object-position: 100% 10%;
      object-position: 100% 10%;
   max-width: 150px;
+}
+
+.troll {
+  max-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 576px) {
+  .troll {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .troll {
+    max-width: 840px;
+  }
+}
+.aboutLink {
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.aboutTextContainer {
+  margin-top: 20px;
+  border: 0;
+}
+
+.aboutContainer {
+  max-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .aboutContainer {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .aboutContainer {
+    max-width: 840px;
+  }
+}
+.aboutImageContainer {
+  display: flex;
+}
+
+.aboutImage {
+  border-radius: 50%;
+  margin: 50px 0px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 10%;
+     object-position: 100% 10%;
+  max-width: 150px;
+  flex-grow: 3;
+}
+
+.aboutTextAndLinksContainer {
+  display: flex;
+  flex-grow: 3;
+  flex-direction: row;
+}
+
+.aboutTextContainerNEW {
+  flex-basis: 0;
+  flex-grow: 2;
+  display: flex;
+  padding: 15px;
+}
+
+.aboutText {
+  display: flex;
+}
+
+.aboutLinksContainer {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.aboutLinkNEW {
+  display: flex;
 }
