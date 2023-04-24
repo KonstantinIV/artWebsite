@@ -1,186 +1,122 @@
-
-/*.aboutContainer{
-max-width: 725px;
-background-color: white;
-border-radius: 10px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-
-
-}*/
-
-.aboutContainer .row{
-    flex-wrap: wrap;
-    justify-content: center;
-
-    }
-
-/*
-@media (min-width: 992px){
-    .aboutContainer {
-        justify-content: center;
-        
-        
-        }
-}
-@media (min-width: 992px){
-    .aboutContainer .row{
-        //flex-flow: column;
-        flex-wrap:nowrap;
-        }
-}
-*/
-.aboutProfileImage{
-    border-radius: 50%;
-    
-    margin: 50px 0px ;
-
-    width: 150px;
-    height: 150px;
-
-    object-fit:cover;
-    object-position: 100% 10%;
-
-
-    max-width: 150px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.troll{
+.aboutContainer {
     max-width: 300px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-    
 
-}
-@media (min-width: 576px){
-    .troll{
-        max-width: 500px;
+    margin-top: 90px;
+    margin-bottom: 100px;
 
-        }
-}
-@media (min-width: 992px){
-    .troll{
-        max-width: 840px;
-
-        }
-}
-
-
-
-.aboutLink{
-  justify-content:center;
-  margin-bottom: 5px;
-}
-.aboutTextContainer{
-    margin-top: 20px;
-    border: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-//new 3
-
-
-
-
-.aboutContainer{
-    max-width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
-    
     margin-right: auto;
     margin-left: auto;
-    
-    padding: 10px;
-   
+
+    padding: 0px 10px;
+
     display: flex;
 
-    }
+}
 
-  
-    @media (min-width: 576px){
-        .aboutContainer{
-            max-width: 500px;
-    
-            }
+@media (min-width: 576px) {
+    .aboutContainer {
+        max-width: 500px;
+
     }
-    @media (min-width: 992px){
-        .aboutContainer{
-            max-width: 840px;
-    
-            }
+}
+
+@media (min-width: 992px) {
+    .aboutContainer {
+        max-width: 750px;
+
     }
+}
 
 
-    
-.aboutImageContainer{
-  
+@media (min-width: 1150px) {
+    .aboutContainer {
+        max-width: 950px;
+
+    }
+}
+
+///////////////////////////////////////////////////////////////
+
+
+
+
+.aboutImageContainer {
+
     display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
 
-    }
- .aboutImage{
-  
+.aboutImage {
+
     border-radius: 50%;
-    
-    margin: 50px 0px ;
+
+    margin: 20px 0px;
 
     width: 150px;
     height: 150px;
 
-    object-fit:cover;
+    object-fit: cover;
     object-position: 100% 10%;
 
     max-width: 150px;
     flex-grow: 3;
-    }   
-
-.aboutTextAndLinksContainer{
-  
-        display: flex;
-        flex-grow: 3;
-        flex-direction: row;
-        }
+}
 
 
+///////////////////////////////////////////////////////////////
+.aboutTextAndLinksContainer {
 
-
-
-
-
-
-
-.aboutTextContainerNEW {
-    flex-basis: 0;
-    flex-grow: 2;
     display: flex;
+    flex-grow: 3;
+    flex-direction: row;
+    flex-basis: 0;
+
+}
+
+
+
+.aboutTextContainer {
+    flex-basis: 0;
+    flex-grow: 3;
+    display: flex;
+    flex-flow: column;
+
+    //align-content: center;
+
+
     padding: 15px;
+
 }
 
 .aboutText {
 
     display: flex;
-
+    align-items: center;
+    margin-top:45px;
+    margin-bottom:0px;
 }
+
+.aboutContact {
+
+    display: flex;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.aboutContact .aboutContacGreen{
+
+    color: #4ac44a;;
+font-weight: bold;}
+
+
+///////////////////////////////////////////////////////////////
 
 .aboutLinksContainer {
 
@@ -189,13 +125,122 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-items: start;
     padding: 15px;
 
 }
 
-.aboutLinkNEW {
+.aboutLink {
 
     display: flex;
+    text-decoration: none;
 
 }
+
+.aboutLinkIcon {
+
+   height: 16px;
+   filter: opacity(0.5) drop-shadow(0 0 0 blue);
+
+}
+
+
+
+///////////////////////////////////////////////////////////////
+
+@media (max-width: 992px) {
+    .aboutImage{
+        margin-top: 30px;
+    }
+
+    .aboutContainer {
+        flex-flow: column;
+        padding: 20px 10px;
+    }
+
+    .aboutTextAndLinksContainer {
+        flex-direction: column;
+    }
+
+    .aboutText {
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .aboutLinksContainer {
+        align-items: center;
+    }
+
+    .aboutContact{
+        justify-content: center;
+
+    }
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/CALID.ttf);
+    //font-weight: bold;
+  }
+
+
+@font-face {
+    font-family: myFirstFont2;
+    src: url(../fonts/Buenard-Bold.ttf);
+    font-weight: bold;
+  }
+
+
+
+  @font-face {
+    font-family: myFirstFont3;
+    src: url(../fonts/ArtySignature.ttf);
+    //font-weight: bold;
+  }
+
+  @font-face {
+    font-family: myFirstFont3;
+    src: url(../fonts/ArtySignature.ttf);
+    //font-weight: bold;
+  }
+
+  @font-face {
+    font-family: myFirstFont4;
+    src: url(../fonts/Bilbo-Regular.ttf);
+    //font-weight: bold;
+  }
+  @font-face {
+    font-family: myFirstFont5;
+    src: url(../fonts/BilboSwashCaps-Regular.ttf);
+    //font-weight: bold;
+  }
+  @font-face {
+    font-family: myFirstFont6;
+    src: url(../fonts/MurTheme.ttf);
+    //font-weight: bold;
+  }
+
+
+
+
+.kostaLogo{
+   
+    margin: 0 auto;
+    
+    margin-top: 30px;
+
+    text-align: center;
+
+    font-family: myFirstFont5;
+    font-size: 130px;
+    letter-spacing: 25px;
+    font-style: italic;
+
+    cursor: pointer;
+
+    //font-weight: bold;
+
+
+    }
