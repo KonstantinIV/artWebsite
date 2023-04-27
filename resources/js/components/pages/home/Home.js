@@ -22,6 +22,10 @@ export default class Home extends React.Component {
 </div>
 <div class="aboutTextAndLinksContainer">
 <div class="aboutTextContainer">
+  
+  <p class="aboutTextHeadline" >
+      About
+  </p>
 <p class="aboutText">
 
 Digital and traditional artist based in Estonia. In terms of digital art I focus on mainly on characters, portraits and fantasy with serious tone. In terms of traditional art I focus on portraits drawn with graphite and charcoal. For paintings I use oil and paint renesanse type of compositons.

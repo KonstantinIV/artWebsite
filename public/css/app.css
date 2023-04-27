@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+body {
+  background-color: rgb(255, 253, 226);
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     display: grid !important;
@@ -39,7 +43,6 @@
   margin: 0 10px;
   font-size: 18px;
   color: rgb(28, 28, 28);
-  background-color: aliceblue;
   border-radius: 10px;
   font-family: sans-serif;
   letter-spacing: 1.5px;
@@ -55,8 +58,117 @@
   justify-content: center;
 }
 
-body {
-  background-color: rgb(255, 253, 226);
+.navBarItems {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+@media (min-width: 576px) {
+  .navBarItems {
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .navBarItems {
+    width: 750px;
+  }
+}
+@media (min-width: 1150px) {
+  .navBarItems {
+    width: 950px;
+  }
+}
+.navBarLink {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+  padding: 10px;
+  color: #212529;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+}
+
+.navBarLink:hover {
+  background-color: #edebd5;
+}
+
+.activeBut {
+  background-color: #edebd5;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/fonts/CALID.ttf?81614d2f9038d23ded26472eb13261d5);
+}
+@font-face {
+  font-family: myFirstFont2;
+  src: url(/fonts/Buenard-Bold.ttf?ddd9d373e42d2b632a197be076be521c);
+  font-weight: bold;
+}
+@font-face {
+  font-family: myFirstFont3;
+  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
+}
+@font-face {
+  font-family: myFirstFont3;
+  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
+}
+@font-face {
+  font-family: myFirstFont4;
+  src: url(/fonts/Bilbo-Regular.ttf?34a41484568ffdabd62082099d8c649f);
+}
+@font-face {
+  font-family: myFirstFont5;
+  src: url(/fonts/BilboSwashCaps-Regular.ttf?25ee5013c09f26d3f8a81d07ce479c03);
+}
+@font-face {
+  font-family: myFirstFont6;
+  src: url(/fonts/MurTheme.ttf?888b8493e5d1ae68cbb5a8c02ac1b1ea);
+}
+.kostaLogoTextContainer {
+  width: 390px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.kostaLogoText {
+  position: relative;
+  top: 15px;
+  background: #fffde2;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.kostaLogoLine {
+  height: 3px;
+  background: #212529;
+}
+
+.kostaLogo {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 140px;
+  text-align: center;
+  font-family: myFirstFont5;
+  font-size: 130px;
+  letter-spacing: 25px;
+  font-style: italic;
+  line-height: 90px;
+  cursor: pointer;
 }
 
 .aboutContainer {
@@ -121,13 +233,20 @@ body {
   flex-grow: 3;
   display: flex;
   flex-flow: column;
+  margin-top: 45px;
+  margin-bottom: 20px;
   padding: 15px;
+}
+
+.aboutTextHeadline {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .aboutText {
   display: flex;
   align-items: center;
-  margin-top: 45px;
   margin-bottom: 0px;
 }
 
@@ -147,9 +266,9 @@ body {
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
   padding: 15px;
+  margin-top: 80px;
 }
 
 .aboutLink {
@@ -173,57 +292,25 @@ body {
   .aboutTextAndLinksContainer {
     flex-direction: column;
   }
+  .aboutTextContainer {
+    margin-top: 0px;
+  }
   .aboutText {
     text-align: center;
     margin-top: 0px;
   }
   .aboutLinksContainer {
     align-items: center;
+    margin-top: 0px;
+    padding-top: 0;
   }
   .aboutContact {
     justify-content: center;
   }
+  .aboutTextHeadline {
+    text-align: center;
+  }
 }
-@font-face {
-  font-family: myFirstFont;
-  src: url(/fonts/CALID.ttf?81614d2f9038d23ded26472eb13261d5);
-}
-@font-face {
-  font-family: myFirstFont2;
-  src: url(/fonts/Buenard-Bold.ttf?ddd9d373e42d2b632a197be076be521c);
-  font-weight: bold;
-}
-@font-face {
-  font-family: myFirstFont3;
-  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
-}
-@font-face {
-  font-family: myFirstFont3;
-  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
-}
-@font-face {
-  font-family: myFirstFont4;
-  src: url(/fonts/Bilbo-Regular.ttf?34a41484568ffdabd62082099d8c649f);
-}
-@font-face {
-  font-family: myFirstFont5;
-  src: url(/fonts/BilboSwashCaps-Regular.ttf?25ee5013c09f26d3f8a81d07ce479c03);
-}
-@font-face {
-  font-family: myFirstFont6;
-  src: url(/fonts/MurTheme.ttf?888b8493e5d1ae68cbb5a8c02ac1b1ea);
-}
-.kostaLogo {
-  margin: 0 auto;
-  margin-top: 30px;
-  text-align: center;
-  font-family: myFirstFont5;
-  font-size: 130px;
-  letter-spacing: 25px;
-  font-style: italic;
-  cursor: pointer;
-}
-
 .galleryNavAndGalleryContainer {
   display: flex;
   flex-flow: column;

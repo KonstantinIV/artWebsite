@@ -1,4 +1,17 @@
-@import 'navigationBar';
-@import 'body';
-@import 'aboutCard';
-@import 'gallery';
+
+//Universal
+@import 'universal/body';
+
+//Navigation
+@import 'navigationBar/navigationBar';
+
+//Pages
+//lOGO
+@import 'logo/websiteLogo';
+
+
+
+//Home
+@import 'pages/home/aboutCard';
+@import 'pages/home/gallery';
+

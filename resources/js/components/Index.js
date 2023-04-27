@@ -10,6 +10,10 @@ import {ImageListItem} from '@mui/material/ImageListItem';
 import NavigationRouter from './NavigationRouter';
 
 import NavigationBar from './navigationbar/NavigationBar';
+import NavigationBarNew from './navigationbar/NavigationBarNew';
+import WebsiteLogo from './logo/WebsiteLogo';
+
+
 import Footer from './footer/Footer';
 
 import ImageGallery from './pages/gallery/imageGallery'
@@ -29,12 +33,11 @@ class Main extends React.Component{
 
       return(
 
-        <div>
-                   <div class="kostaLogo">
-            Kosta
-        </div>
-        <NavigationBar/>
- 
+        <div>       
+         <WebsiteLogo/>
+         <NavigationBar/>
+         <NavigationBarNew/>
+
         <NavigationRouter />
           
         <ImageGallery />

@@ -34,6 +34,11 @@ export default class ImageGallery extends React.Component {
 
                     </div>
                 <div class="galleryNavItem">
+                       Client Work
+
+                    </div>
+
+                    <div class="galleryNavItem">
                         Animation
 
                     </div>

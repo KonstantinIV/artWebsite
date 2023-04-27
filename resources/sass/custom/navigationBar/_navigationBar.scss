@@ -1,0 +1,163 @@
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-collapse{
+    
+    display: grid !important;
+    justify-content: right;
+   
+}
+}
+
+.navbarCustom{
+    background-color: transparent !important;
+}
+.navbar-brand{
+    font-size: 28px;
+}
+
+
+.navbarItemsContainer{
+justify-content: space-between;
+}
+
+@media (min-width: 576px) {
+    .navbarItemsContainer {
+        width: 500px;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .navbarItemsContainer {
+        width: 750px;
+
+    }
+}
+
+
+@media (min-width: 1150px) {
+    .navbarItemsContainer {
+        width: 950px;
+
+    }
+}
+
+
+.nav-item{
+    display: flex;
+        justify-content: center;
+    
+        width: 140px;
+    
+        margin: 0 10px;
+        font-size: 18px;
+    
+    
+    
+        color: rgb(28, 28, 28);
+        //background-color: aliceblue;
+        border-radius: 10px;
+    
+        font-family: sans-serif;
+        letter-spacing: 1.5px;
+    
+    
+    
+        transition: background-color 0.2s linear;
+    
+    }
+
+.nav-item:hover{
+    background-color: #edebd5;
+    border-radius: 5px;
+}
+
+
+#navbarSupportedContent{
+    justify-content: center;
+}
+
+
+
+
+
+
+.navBarItems{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+
+    width: 100%;
+    
+    
+    padding: 0px;
+    margin: 0 auto;
+
+    list-style: none;
+
+    
+}
+
+
+@media (min-width: 576px) {
+    .navBarItems {
+        width: 500px;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .navBarItems {
+        width: 750px;
+
+    }
+}
+
+
+@media (min-width: 1150px) {
+    .navBarItems {
+        width: 950px;
+
+    }
+}
+.navBarLink{
+
+    display: flex;
+    justify-content: center;
+
+    width: 140px;
+
+    padding: 10px;
+
+
+    color: #212529;
+    border-radius: 5px;
+
+
+    
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    letter-spacing: 1.5px;
+
+    text-transform: capitalize;
+    text-decoration: none; 
+    
+    transition: background-color 0.2s linear;
+    
+}
+
+
+.navBarLink:hover{
+background-color: #edebd5;
+}
+.activeBut{
+    background-color: #edebd5;
+}
+
+
+
+
+
+
