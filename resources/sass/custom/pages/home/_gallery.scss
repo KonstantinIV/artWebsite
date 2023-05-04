@@ -80,14 +80,20 @@
 
 .galleryNavItem{
     height:100%;
-    font-family: sans-serif;
-    text-align: center;
+   
 
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     justify-content: center;
     flex-grow: 1;
+
+
+    text-transform: capitalize;
+    font-family: sans-serif;
+    text-align: center;
+    //border-radius: 10px;
+
 
     transition: background-color 0.2s linear;
     cursor: pointer;
@@ -98,6 +104,14 @@
     //transition-timing-function: linear;
 }
 
+.galleryClickedButton{
+    background-color: #a9744f;
+    color: white;
+}
+
+.galleryClickedButton:hover{
+    background-color: #a9744f;
+}
 
 
 .galleryNavContainerSecondRow{
@@ -142,15 +156,45 @@
     display: grid;
 
     grid-template-columns:300px 300px 300px ;
-    grid-template-rows:300px  auto300px ; 
+    grid-template-rows:300px  auto 300px ; 
     column-gap: 10px;
     row-gap: 15px;
 }
 
+@media (max-width: 992px) {
+    .gallery{
+    
+        grid-template-columns:300px 300px  ;
+        grid-template-rows:300px  300px ; 
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .gallery{
+    
+        grid-template-columns:300px   ;
+        grid-template-rows:300px   ; 
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+}
 
 .galleryImageContainer{
     width:300px ;
     height:300px ;
+    transition: box-shadow 0.2s linear;
+
+}
+
+.galleryImageContainer:hover{
+    box-shadow: 5px 10px #888888;
+
+
+   
 }
 
 
@@ -159,4 +203,8 @@
     height:300px ;
 
     object-fit: cover;
+
+    cursor: pointer;
+
 }
+

@@ -24,7 +24,7 @@ export default class NavigationBar extends React.Component {
 
     //Bootsrap nav
     render() {
-        const pageNames = ["home", "portfolio", "about"];
+        const pageNames = ["home", "workflow","commision", "about"];
         var currentPageName = window.location.pathname.split("/").pop();
         return (
             <Router>
@@ -32,17 +32,32 @@ export default class NavigationBar extends React.Component {
                     <ul class="navBarItems">
 
 
-                        {pageNames.map(pageName => (
+                        {pageNames.map((pageName, pageID) => (
                             <li class="navBarLinkContainer">
 
-                                <Link 
-                                to={"/" + pageName}
-                                className={"navBarLink " + (pageName == currentPageName ? "activeBut" : "")}
-                                onClick={() => this.handleSetActiveButton()}
-                                
-                                > 
-                                
-                                {pageName}
+
+
+                                {//Home also acts as base url so if there is no page name in url
+                                 //ending then it will make the home button backround also colered
+                                }
+                                <Link
+                                    to={"/" + (pageName == "home" ? "" : pageName)}
+                                    key={pageID}
+                                    className={"navBarLink " +
+                                        (
+                                            pageName == "home" ?
+                                                (pageName == currentPageName || currentPageName == "" ? "activeBut" : "")
+                                                :
+                                                (pageName == currentPageName ? "activeBut" : "")
+                                        )
+
+                                    }
+                                    onClick={() => this.handleSetActiveButton()}
+
+                                >
+
+                                    {(pageName == "home" || "" ? "home / gallery" : pageName)
+}
                                 </Link>
 
                             </li>

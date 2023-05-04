@@ -9,7 +9,6 @@ import {ImageListItem} from '@mui/material/ImageListItem';
 
 import NavigationRouter from './NavigationRouter';
 
-import NavigationBar from './navigationbar/NavigationBar';
 import NavigationBarNew from './navigationbar/NavigationBarNew';
 import WebsiteLogo from './logo/WebsiteLogo';
 
@@ -35,7 +34,6 @@ class Main extends React.Component{
 
         <div>       
          <WebsiteLogo/>
-         <NavigationBar/>
          <NavigationBarNew/>
 
         <NavigationRouter />

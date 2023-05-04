@@ -3,61 +3,6 @@ body {
   background-color: rgb(255, 253, 226);
 }
 
-@media (min-width: 992px) {
-  .navbar-expand-lg .navbar-collapse {
-    display: grid !important;
-    justify-content: right;
-  }
-}
-.navbarCustom {
-  background-color: transparent !important;
-}
-
-.navbar-brand {
-  font-size: 28px;
-}
-
-.navbarItemsContainer {
-  justify-content: space-between;
-}
-
-@media (min-width: 576px) {
-  .navbarItemsContainer {
-    width: 500px;
-  }
-}
-@media (min-width: 992px) {
-  .navbarItemsContainer {
-    width: 750px;
-  }
-}
-@media (min-width: 1150px) {
-  .navbarItemsContainer {
-    width: 950px;
-  }
-}
-.nav-item {
-  display: flex;
-  justify-content: center;
-  width: 140px;
-  margin: 0 10px;
-  font-size: 18px;
-  color: rgb(28, 28, 28);
-  border-radius: 10px;
-  font-family: sans-serif;
-  letter-spacing: 1.5px;
-  transition: background-color 0.2s linear;
-}
-
-.nav-item:hover {
-  background-color: #edebd5;
-  border-radius: 5px;
-}
-
-#navbarSupportedContent {
-  justify-content: center;
-}
-
 .navBarItems {
   display: flex;
   flex-flow: row;
@@ -83,10 +28,20 @@ body {
     width: 950px;
   }
 }
+@media (max-width: 992px) {
+  .navBarItems {
+    flex-flow: column;
+  }
+  .navBarLinkContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
 .navBarLink {
   display: flex;
   justify-content: center;
-  width: 140px;
+  width: 180px;
   padding: 10px;
   color: #212529;
   border-radius: 5px;
@@ -362,19 +317,29 @@ body {
 }
 .galleryNavItem {
   height: 100%;
-  font-family: sans-serif;
-  text-align: center;
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
   flex-grow: 1;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  text-align: center;
   transition: background-color 0.2s linear;
   cursor: pointer;
 }
 
 .galleryNavItem:hover {
   background-color: #edebd5;
+}
+
+.galleryClickedButton {
+  background-color: #a9744f;
+  color: white;
+}
+
+.galleryClickedButton:hover {
+  background-color: #a9744f;
 }
 
 .galleryNavContainerSecondRow {
@@ -398,15 +363,38 @@ body {
   justify-content: center;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 300px auto300px;
+  grid-template-rows: 300px auto 300px;
   -moz-column-gap: 10px;
        column-gap: 10px;
   row-gap: 15px;
 }
 
+@media (max-width: 992px) {
+  .gallery {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 300px;
+    grid-template-rows: 300px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 15px;
+  }
+}
 .galleryImageContainer {
   width: 300px;
   height: 300px;
+  transition: box-shadow 0.2s linear;
+}
+
+.galleryImageContainer:hover {
+  box-shadow: 5px 10px #888888;
 }
 
 .galleryImage {
@@ -414,4 +402,5 @@ body {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }

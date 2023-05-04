@@ -2,87 +2,116 @@ import * as React from "react";
 
 export default class ImageGallery extends React.Component {
     constructor(props) {
-      super(props);
-  
-      this.state = {};
-  
-  
+        super(props);
+
+        this.state = {
+            clickedFirstRowButtonID: 0,
+            clickedSecondRowButtonID: 0
+
+
+        };
+
+
     }
-  
+
+
+    handleSetFirstRowActiveButton(ID) {
+        this.setState({ clickedFirstRowButtonID: ID });
+    }
+
+
+    handleSetSecondRowActiveButton(ID) {
+        this.setState({ clickedSecondRowButtonID: ID });
+    }
+
+
     render() {
-      return (
+
+        const galleryFirstRowButtons = ["Digital", "Traditional"];
+        const gallerySecondRowButtons =
+            [["paintings", "clients Work", "animation"],
+            ["paintings", "clients Work", "drawings"]
+            ]
+
+            ;
 
 
-          <div class="galleryNavAndGalleryContainer">
+        var clickedButtonClassName = "galleryClickedButton";
 
-            <div class="galleryNavContainer">
-             <div class="galleryNavContainerFirstRow">
-                 <div class="galleryNavItem">
-                        Digital
+        return (
+
+
+            <div class="galleryNavAndGalleryContainer">
+
+                <div class="galleryNavContainer">
+                    <div class="galleryNavContainerFirstRow">
+
+                        {galleryFirstRowButtons.map((galleryFirstRowButtonName, ID) => (
+
+                            <div class={(this.state.clickedFirstRowButtonID == ID ? ("galleryNavItem " + clickedButtonClassName) : "galleryNavItem")} onClick={() => this.handleSetFirstRowActiveButton(ID)}>
+                                {galleryFirstRowButtonName}
+
+                            </div>
+                        ))}
+
+
 
                     </div>
-                <div class="galleryNavItem">
-                        Traditional
+                    <div class="galleryNavContainerSecondRow">
+
+
+
+
+                        {gallerySecondRowButtons[this.state.clickedFirstRowButtonID].map((gallerySecondRowButtonName, ID) => (
+
+                            <div class={(this.state.clickedSecondRowButtonID == ID ? ("galleryNavItem " + clickedButtonClassName) : "galleryNavItem")} onClick={() => this.handleSetSecondRowActiveButton(ID)}>
+                                {gallerySecondRowButtonName}
+
+                            </div>
+                        ))}
+
+
+
 
                     </div>
+                </div>
+
+
+
+
+
+                <div class="galleryContainer">
+                    <div class="gallery">
+
+
+
+                        <div class="galleryImageContainer">
+                            <img src="img/profile.jpg" class=" galleryImage" alt="..." />
+
+                        </div>
+
+
+                        <div class="galleryImageContainer">
+                            <img src="img/yas.jpeg" class=" galleryImage" alt="..." />
+
+                        </div>
+
+                        <div class="galleryImageContainer">
+                            <img src="img/oldman.png" class=" galleryImage" alt="..." />
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
 
 
             </div>
-            <div class="galleryNavContainerSecondRow">
-                 <div class="galleryNavItem">
-                        Paintings
-
-                    </div>
-                <div class="galleryNavItem">
-                       Client Work
-
-                    </div>
-
-                    <div class="galleryNavItem">
-                        Animation
-
-                    </div>
-
-
-            </div>
-        </div>
-
-
-
-
-
-            <div class="galleryContainer">
-              <div class="gallery">
-
-
-
-                  <div class="galleryImageContainer">
-                      <img src="img/profile.jpg" class=" galleryImage" alt="..." />
-
-                  </div>
-
-
-                  <div class="galleryImageContainer">
-                      <img src="img/yas.jpeg" class=" galleryImage" alt="..." />
-
-                  </div>
-
-                  <div class="galleryImageContainer">
-                      <img src="img/oldman.png" class=" galleryImage" alt="..." />
-
-                  </div>
-
-
-
-
-
-              </div>
-          </div>
-
-
-
-
-          </div>
 
 
 
@@ -90,8 +119,7 @@ export default class ImageGallery extends React.Component {
 
 
 
-      )
+        )
     }
-  }
-  
-  
+}
+
