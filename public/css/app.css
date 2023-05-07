@@ -1,0 +1,406 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body {
+  background-color: rgb(255, 253, 226);
+}
+
+.navBarItems {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+@media (min-width: 576px) {
+  .navBarItems {
+    width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .navBarItems {
+    width: 750px;
+  }
+}
+@media (min-width: 1150px) {
+  .navBarItems {
+    width: 950px;
+  }
+}
+@media (max-width: 992px) {
+  .navBarItems {
+    flex-flow: column;
+  }
+  .navBarLinkContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+.navBarLink {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  padding: 10px;
+  color: #212529;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+}
+
+.navBarLink:hover {
+  background-color: #edebd5;
+}
+
+.activeBut {
+  background-color: #edebd5;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/fonts/CALID.ttf?81614d2f9038d23ded26472eb13261d5);
+}
+@font-face {
+  font-family: myFirstFont2;
+  src: url(/fonts/Buenard-Bold.ttf?ddd9d373e42d2b632a197be076be521c);
+  font-weight: bold;
+}
+@font-face {
+  font-family: myFirstFont3;
+  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
+}
+@font-face {
+  font-family: myFirstFont3;
+  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
+}
+@font-face {
+  font-family: myFirstFont4;
+  src: url(/fonts/Bilbo-Regular.ttf?34a41484568ffdabd62082099d8c649f);
+}
+@font-face {
+  font-family: myFirstFont5;
+  src: url(/fonts/BilboSwashCaps-Regular.ttf?25ee5013c09f26d3f8a81d07ce479c03);
+}
+@font-face {
+  font-family: myFirstFont6;
+  src: url(/fonts/MurTheme.ttf?888b8493e5d1ae68cbb5a8c02ac1b1ea);
+}
+.kostaLogoTextContainer {
+  width: 390px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.kostaLogoText {
+  position: relative;
+  top: 15px;
+  background: #fffde2;
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.kostaLogoLine {
+  height: 3px;
+  background: #212529;
+}
+
+.kostaLogo {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 140px;
+  text-align: center;
+  font-family: myFirstFont5;
+  font-size: 130px;
+  letter-spacing: 25px;
+  font-style: italic;
+  line-height: 90px;
+  cursor: pointer;
+}
+
+.aboutContainer {
+  max-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 90px;
+  margin-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 10px;
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .aboutContainer {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .aboutContainer {
+    max-width: 750px;
+  }
+}
+@media (min-width: 1150px) {
+  .aboutContainer {
+    max-width: 950px;
+  }
+}
+.aboutImageContainer {
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.aboutImage {
+  border-radius: 50%;
+  margin: 20px 0px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 10%;
+     object-position: 100% 10%;
+  max-width: 150px;
+  flex-grow: 3;
+}
+
+.aboutTextAndLinksContainer {
+  display: flex;
+  flex-grow: 3;
+  flex-direction: row;
+  flex-basis: 0;
+}
+
+.aboutTextContainer {
+  flex-basis: 0;
+  flex-grow: 3;
+  display: flex;
+  flex-flow: column;
+  margin-top: 45px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.aboutTextHeadline {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.aboutText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.aboutContact {
+  display: flex;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.aboutContact .aboutContacGreen {
+  color: #4ac44a;
+  font-weight: bold;
+}
+
+.aboutLinksContainer {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 15px;
+  margin-top: 80px;
+}
+
+.aboutLink {
+  display: flex;
+  text-decoration: none;
+}
+
+.aboutLinkIcon {
+  height: 16px;
+  filter: opacity(0.5) drop-shadow(0 0 0 blue);
+}
+
+@media (max-width: 992px) {
+  .aboutImage {
+    margin-top: 30px;
+  }
+  .aboutContainer {
+    flex-flow: column;
+    padding: 20px 10px;
+  }
+  .aboutTextAndLinksContainer {
+    flex-direction: column;
+  }
+  .aboutTextContainer {
+    margin-top: 0px;
+  }
+  .aboutText {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .aboutLinksContainer {
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0;
+  }
+  .aboutContact {
+    justify-content: center;
+  }
+  .aboutTextHeadline {
+    text-align: center;
+  }
+}
+.galleryNavAndGalleryContainer {
+  display: flex;
+  flex-flow: column;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .galleryNavAndGalleryContainer {
+    max-width: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .galleryNavAndGalleryContainer {
+    max-width: 840px;
+  }
+}
+.galleryNavContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.galleryNavContainerFirstRow {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  height: 60px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 576px) {
+  .galleryNavContainerFirstRow {
+    max-width: 260px;
+  }
+}
+@media (min-width: 992px) {
+  .galleryNavContainerFirstRow {
+    max-width: 550px;
+  }
+}
+.galleryNavItem {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  text-align: center;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+
+.galleryNavItem:hover {
+  background-color: #edebd5;
+}
+
+.galleryClickedButton {
+  background-color: #a9744f;
+  color: white;
+}
+
+.galleryClickedButton:hover {
+  background-color: #a9744f;
+}
+
+.galleryNavContainerSecondRow {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.galleryContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px auto 300px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 15px;
+}
+
+@media (max-width: 992px) {
+  .gallery {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 300px;
+    grid-template-rows: 300px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 15px;
+  }
+}
+.galleryImageContainer {
+  width: 300px;
+  height: 300px;
+  transition: box-shadow 0.2s linear;
+}
+
+.galleryImageContainer:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+.galleryImage {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
