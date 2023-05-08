@@ -27,7 +27,13 @@ export default class ImageGallery extends React.Component {
             },
 
             clickedFirstRowButtonName: "digital",
-            clickedSecondRowButtonName: "paintings"
+            clickedSecondRowButtonName: "paintings",
+
+            clickedViewTypeName: "small",
+
+            isImageClicked: false,
+            imageFileName: ""
+
 
 
 
@@ -38,16 +44,20 @@ export default class ImageGallery extends React.Component {
         this.gallerySecondRowButtons =
         {
             digital: ["paintings", "commission", "animation"],
-
             traditional: ["paintings", "commission", "drawings"]
-        }
-            ;
+        };
+
+        this.galleryViewType = ["small", "large"];
+
 
     }
 
 
     handleSetFirstRowActiveButton(buttonName) {
-        this.setState({ clickedFirstRowButtonName: buttonName });
+        this.setState({
+            clickedFirstRowButtonName: buttonName,
+            clickedSecondRowButtonName: "paintings"
+        });
     }
 
 
@@ -55,12 +65,19 @@ export default class ImageGallery extends React.Component {
         this.setState({ clickedSecondRowButtonName: buttonName });
     }
 
-
-    componentDidMount() {
-        fetch('/api/test')
-            .then((response) => response.json())
-            .then(console.log(response));
+    handleSetViewType(buttonName) {
+        this.setState({ clickedViewTypeName: buttonName });
     }
+
+    handleSetEnlargeImage(fileName) {
+        this.setState({
+            isImageClicked: !this.state.isImageClicked,
+            imageFileName: fileName
+        });
+
+    }
+
+
 
     componentDidMount() {
         fetch('/api/imagefiles')
@@ -71,7 +88,6 @@ export default class ImageGallery extends React.Component {
 
     render() {
 
-        console.log(this.gallerySecondRowButtons[this.state.clickedFirstRowButtonName]);
 
         var clickedButtonClassName = "galleryClickedButton";
 
@@ -107,6 +123,36 @@ export default class ImageGallery extends React.Component {
                             </div>
                         ))}
 
+                    </div>
+
+
+                    <div class="galleryNavContainerThirdRow">
+
+                        {this.galleryViewType.map((galleryViewTypeName, ID) => (
+
+                            <div key={ID} class={(this.state.clickedViewTypeName == galleryViewTypeName ? ("galleryNavItem " + clickedButtonClassName) : "galleryNavItem")} onClick={() => this.handleSetViewType(galleryViewTypeName)}>
+                                {galleryViewTypeName == "small" ? (
+                                    <div className="gallerySmallViewIcon">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+
+                                ) :
+                                    (<div className="galleryLargeViewIcon">
+                                        <div></div>
+                                    </div>)
+
+                                }
+
+                            </div>
+                        ))}
 
 
 
@@ -117,31 +163,54 @@ export default class ImageGallery extends React.Component {
 
 
 
+
+
                 <div class="galleryContainer">
-                    <div class="gallery">
-
+                    <div class={(this.state.clickedViewTypeName == "small" ? "gallerySmallView" : "galleryLargeView")}>
                         {
-
-
                             this.state.imageFiles[this.state.clickedFirstRowButtonName][this.state.clickedSecondRowButtonName] &&
                             this.state.imageFiles[this.state.clickedFirstRowButtonName][this.state.clickedSecondRowButtonName]
                                 .map((file, index) => (
 
 
 
-                                    <div class="galleryImageContainer">
-                                        <img key={index} src={"img/gallery/" + this.state.clickedFirstRowButtonName + "/" + this.state.clickedSecondRowButtonName + "/" + file} class=" galleryImage" alt="..." />
+                                    <div class={(this.state.clickedViewTypeName == "small" ? "galleryImageContainerSmallView" : "galleryImageContainerLargeView")}>
+
+                                        <img
+                                            key={index}
+                                            onClick={() => this.handleSetEnlargeImage(file)}
+                                            src={"img/gallery/" + this.state.clickedFirstRowButtonName + "/" + this.state.clickedSecondRowButtonName + "/" + file}
+                                            class={(this.state.clickedViewTypeName == "small" ? " galleryImageSmall" : " galleryImageLarge")}
+                                            alt="..." />
 
                                     </div>
                                 ))
+                        }
+
+                        {//On click enlarge specidfic image
+                            (this.state.isImageClicked ?
+                                <div class="galleryEnlargeImageContainer"
+                                    onClick={() => this.handleSetEnlargeImage("")}
+                                >
+
+                                    <img className="galleryEnlargeImageCloseButton"
+                                        onClick={() => this.handleSetEnlargeImage("")}
+                                        src={"img/closeButton.png"}
+                                        alt="..." />
+
+                                    <img className="galleryEnlargeImage"
+                                        onClick={() => this.handleSetEnlargeImage("")}
+                                        src={"img/gallery/" + this.state.clickedFirstRowButtonName + "/" + this.state.clickedSecondRowButtonName + "/" + this.state.imageFileName}
+                                        alt="..." />
+                                </div>
+                                : ""
+                            )
+                        }
 
 
-/*
-                            <div class="galleryImageContainer">
-                                <img key={index} src={"img/" + file} class=" galleryImage" alt="..." />
 
-                            </div>
-                        ))*/}
+
+
 
 
 

@@ -317,6 +317,7 @@ body {
 }
 .galleryNavItem {
   height: 100%;
+  border-radius: 10px;
   display: flex;
   align-content: center;
   flex-wrap: wrap;
@@ -353,12 +354,49 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
+.galleryNavContainerThirdRow {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  height: 60px;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallerySmallViewIcon {
+  display: grid;
+  grid-template-columns: 5px 5px 5px;
+  grid-template-rows: 5px 5px 5px;
+  -moz-column-gap: 1px;
+       column-gap: 1px;
+  row-gap: 1px;
+}
+
+.gallerySmallViewIcon div {
+  background-color: #281b11;
+}
+
+.galleryLargeViewIcon {
+  display: grid;
+  grid-template-columns: 18px;
+  grid-template-rows: 18px;
+}
+
+.galleryLargeViewIcon div {
+  border-radius: 3px;
+  background-color: #281b11;
+}
+
 .galleryContainer {
   display: flex;
   justify-content: center;
 }
 
-.gallery {
+.gallerySmallView {
   display: flex;
   justify-content: center;
   display: grid;
@@ -370,7 +408,7 @@ body {
 }
 
 @media (max-width: 992px) {
-  .gallery {
+  .gallerySmallView {
     grid-template-columns: 300px 300px;
     grid-template-rows: 300px 300px;
     -moz-column-gap: 10px;
@@ -379,7 +417,7 @@ body {
   }
 }
 @media (max-width: 700px) {
-  .gallery {
+  .gallerySmallView {
     grid-template-columns: 300px;
     grid-template-rows: 300px;
     -moz-column-gap: 10px;
@@ -387,20 +425,109 @@ body {
     row-gap: 15px;
   }
 }
-.galleryImageContainer {
+.galleryLargeView {
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: 600px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 15px;
+}
+
+.galleryImageContainerSmallView {
   width: 300px;
   height: 300px;
   transition: box-shadow 0.2s linear;
 }
 
-.galleryImageContainer:hover {
+.galleryImageContainerLargeView {
+  display: flex;
+  justify-content: center;
+  transition: box-shadow 0.2s linear;
+}
+
+.galleryImageContainerLargeView:hover {
   box-shadow: 5px 10px #888888;
 }
 
-.galleryImage {
+.galleryImageContainerSmallView:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+.galleryImageSmall {
   width: 300px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+  animation: fadeInAnimation ease 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.galleryImageLarge {
+  height: 600px;
+  width: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  animation: fadeInAnimation ease 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.galleryEnlargeImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  animation: fadeInAnimation ease 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.galleryEnlargeImage {
+  position: relative;
+  max-height: 70%;
+  cursor: pointer;
+}
+
+.galleryEnlargeImageCloseButton {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 0px;
+  right: 0px;
 }

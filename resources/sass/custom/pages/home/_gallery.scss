@@ -1,10 +1,4 @@
-
-
-
-
-
-
-.galleryNavAndGalleryContainer{
+.galleryNavAndGalleryContainer {
 
     display: flex;
     flex-flow: column;
@@ -13,7 +7,7 @@
 
     margin-right: auto;
     margin-left: auto;
-    
+
 }
 
 
@@ -31,8 +25,34 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////////////////////////////////
-.galleryNavContainer{
+.galleryNavContainer {
 
     display: flex;
     flex-flow: column;
@@ -41,10 +61,10 @@
 
     margin-bottom: 50px;
 
-    
+
 }
 
-.galleryNavContainerFirstRow{
+.galleryNavContainerFirstRow {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -56,14 +76,15 @@
     margin-bottom: 20px;
 
     background-color: white;
-   // border-top-right-radius: 10px;
-   // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
 
-   border-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 
 
 }
+
 @media (min-width: 576px) {
     .galleryNavContainerFirstRow {
         max-width: 260px;
@@ -78,9 +99,10 @@
     }
 }
 
-.galleryNavItem{
-    height:100%;
-   
+.galleryNavItem {
+    height: 100%;
+    border-radius: 10px;
+
 
     display: flex;
     align-content: center;
@@ -95,26 +117,27 @@
     //border-radius: 10px;
 
 
+
     transition: background-color 0.2s linear;
     cursor: pointer;
 }
 
-.galleryNavItem:hover{
+.galleryNavItem:hover {
     background-color: #edebd5;
     //transition-timing-function: linear;
 }
 
-.galleryClickedButton{
+.galleryClickedButton {
     background-color: #a9744f;
     color: white;
 }
 
-.galleryClickedButton:hover{
+.galleryClickedButton:hover {
     background-color: #a9744f;
 }
 
 
-.galleryNavContainerSecondRow{
+.galleryNavContainerSecondRow {
     height: 50px;
     width: 100%;
 
@@ -133,6 +156,55 @@
 }
 
 
+.galleryNavContainerThirdRow {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    height: 60px;
+    width: 100%;
+    max-width: 200px;
+
+    margin-top: 20px;
+
+    background-color: white;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.gallerySmallViewIcon {
+    display: grid;
+
+    grid-template-columns: 5px 5px 5px;
+    grid-template-rows: 5px 5px 5px;
+    column-gap: 1px;
+    row-gap: 1px;
+}
+
+.gallerySmallViewIcon div {
+
+    background-color: #281b11;
+}
+
+
+.galleryLargeViewIcon {
+    display: grid;
+
+    grid-template-columns: 18px;
+    grid-template-rows: 18px;
+
+
+}
+
+.galleryLargeViewIcon div {
+    border-radius: 3px;
+
+    background-color: #281b11;
+}
 
 
 
@@ -143,29 +215,48 @@
 
 
 
-.galleryContainer{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.galleryContainer {
     display: flex;
     justify-content: center;
 
 }
 
-.gallery{
+.gallerySmallView {
     display: flex;
     justify-content: center;
 
     display: grid;
 
-    grid-template-columns:300px 300px 300px ;
-    grid-template-rows:300px  auto 300px ; 
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px auto 300px;
     column-gap: 10px;
     row-gap: 15px;
 }
 
 @media (max-width: 992px) {
-    .gallery{
-    
-        grid-template-columns:300px 300px  ;
-        grid-template-rows:300px  300px ; 
+    .gallerySmallView  {
+
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 300px 300px;
         column-gap: 10px;
         row-gap: 15px;
     }
@@ -173,38 +264,177 @@
 }
 
 @media (max-width: 700px) {
-    .gallery{
-    
-        grid-template-columns:300px   ;
-        grid-template-rows:300px   ; 
+    .gallerySmallView  {
+
+        grid-template-columns: 300px;
+        grid-template-rows: 300px;
         column-gap: 10px;
         row-gap: 15px;
     }
 
 }
 
-.galleryImageContainer{
-    width:300px ;
-    height:300px ;
+
+.galleryLargeView {
+    display: flex;
+    justify-content: center;
+
+    display: grid;
+
+    grid-template-columns: 600px ;
+    grid-template-rows: 600px ;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.galleryImageContainerSmallView {
+    width: 300px;
+    height: 300px;
     transition: box-shadow 0.2s linear;
 
 }
 
-.galleryImageContainer:hover{
+
+.galleryImageContainerLargeView {
+    display: flex;
+    justify-content: center;
+  
+    transition: box-shadow 0.2s linear;
+
+}
+
+.galleryImageContainerLargeView:hover {
     box-shadow: 5px 10px #888888;
 
 
-   
+
 }
 
 
-.galleryImage{
-    width:300px ;
-    height:300px ;
+.galleryImageContainerSmallView:hover {
+    box-shadow: 5px 10px #888888;
+
+
+
+}
+
+
+.galleryImageSmall {
+    width: 300px;
+    height: 300px;
 
     object-fit: cover;
 
     cursor: pointer;
 
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.galleryImageLarge {
+    height: 600px;
+    width: 600px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+.galleryEnlargeImageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+
+    top: 0%;
+    left: 0%;
+
+   
+
+    
+
+    background-color:rgba(0, 0, 0, 0.5);
+
+
+    cursor: pointer;
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.galleryEnlargeImage{
+    position: relative;
+    //width: 80%;
+    max-height: 70%;
+    cursor: pointer;
+}
+
+.galleryEnlargeImageCloseButton{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+
+    top: 0px;
+    right: 0px;
+}
