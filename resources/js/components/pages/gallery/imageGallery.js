@@ -49,9 +49,17 @@ export default class ImageGallery extends React.Component {
 
         this.galleryViewType = ["small", "large"];
 
-
+        this.handleSetFirstRowActiveButton2  = this.handleSetFirstRowActiveButton2.bind(this);
     }
 
+
+
+    handleSetFirstRowActiveButton2(buttonName) {
+        this.setState({
+            clickedFirstRowButtonName: buttonName,
+            clickedSecondRowButtonName: "paintings"
+        });
+    }
 
     handleSetFirstRowActiveButton(buttonName) {
         this.setState({
@@ -97,6 +105,16 @@ export default class ImageGallery extends React.Component {
             <div class="galleryNavAndGalleryContainer">
 
                 <div class="galleryNavContainer">
+
+
+
+                    <GalleryNavFirstRow 
+                    handleSetFirstRowActiveButton2 = {this.handleSetFirstRowActiveButton2}
+                    galleryFirstRowButtons         = {this.galleryFirstRowButtons}
+                    clickedFirstRowButtonName      = {this.state.clickedFirstRowButtonName}
+                    >
+                        
+                        </ GalleryNavFirstRow>
                     <div class="galleryNavContainerFirstRow">
 
                         {this.galleryFirstRowButtons.map((galleryFirstRowButtonName, ID) => (
@@ -231,5 +249,33 @@ export default class ImageGallery extends React.Component {
 
         )
     }
+}
+
+
+function GalleryNavFirstRow(props) {
+    var clickedButtonClassName = "galleryClickedButton";
+
+    return (
+
+        <div class="galleryNavContainerFirstRow">
+
+            {props.galleryFirstRowButtons.map((galleryFirstRowButtonName, ID) => (
+
+                <div 
+                key={ID} 
+                class={(
+                    props.clickedFirstRowButtonName == galleryFirstRowButtonName ? 
+
+                    ("galleryNavItem " + clickedButtonClassName) :  "galleryNavItem")} 
+                    
+                onClick={() => props.handleSetFirstRowActiveButton2(galleryFirstRowButtonName)}>
+
+                    {galleryFirstRowButtonName}
+
+                </div>
+            ))}
+
+        </div>
+    );
 }
 
