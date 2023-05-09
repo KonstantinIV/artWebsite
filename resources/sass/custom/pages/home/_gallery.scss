@@ -1,0 +1,440 @@
+.galleryNavAndGalleryContainer {
+
+    display: flex;
+    flex-flow: column;
+
+    max-width: 300px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+@media (min-width: 576px) {
+    .galleryNavAndGalleryContainer {
+        max-width: 500px;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .galleryNavAndGalleryContainer {
+        max-width: 840px;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////
+.galleryNavContainer {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+
+}
+
+.galleryNavContainerFirstRow {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    height: 60px;
+    width: 100%;
+    max-width: 200px;
+
+    margin-bottom: 20px;
+
+    background-color: white;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+@media (min-width: 576px) {
+    .galleryNavContainerFirstRow {
+        max-width: 260px;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .galleryNavContainerFirstRow {
+        max-width: 550px;
+
+    }
+}
+
+.galleryNavItem {
+    height: 100%;
+    border-radius: 10px;
+
+
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+
+
+    text-transform: capitalize;
+    font-family: sans-serif;
+    text-align: center;
+    //border-radius: 10px;
+
+
+
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+.galleryNavItem:hover {
+    background-color: #edebd5;
+    //transition-timing-function: linear;
+}
+
+.galleryClickedButton {
+    background-color: #a9744f;
+    color: white;
+}
+
+.galleryClickedButton:hover {
+    background-color: #a9744f;
+}
+
+
+.galleryNavContainerSecondRow {
+    height: 50px;
+    width: 100%;
+
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    background-color: white;
+
+    border-radius: 10px;
+    //border-bottom-right-radius: 10px;
+    //border-bottom-left-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.galleryNavContainerThirdRow {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    height: 60px;
+    width: 100%;
+    max-width: 200px;
+
+    margin-top: 20px;
+
+    background-color: white;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.gallerySmallViewIcon {
+    display: grid;
+
+    grid-template-columns: 5px 5px 5px;
+    grid-template-rows: 5px 5px 5px;
+    column-gap: 1px;
+    row-gap: 1px;
+}
+
+.gallerySmallViewIcon div {
+
+    background-color: #281b11;
+}
+
+
+.galleryLargeViewIcon {
+    display: grid;
+
+    grid-template-columns: 18px;
+    grid-template-rows: 18px;
+
+
+}
+
+.galleryLargeViewIcon div {
+    border-radius: 3px;
+
+    background-color: #281b11;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.galleryContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.gallerySmallView {
+    display: flex;
+    justify-content: center;
+
+    display: grid;
+
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px auto 300px;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .gallerySmallView  {
+
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 300px 300px;
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .gallerySmallView  {
+
+        grid-template-columns: 300px;
+        grid-template-rows: 300px;
+        column-gap: 10px;
+        row-gap: 15px;
+    }
+
+}
+
+
+.galleryLargeView {
+    display: flex;
+    justify-content: center;
+
+    display: grid;
+
+    grid-template-columns: 600px ;
+    grid-template-rows: 600px ;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.galleryImageContainerSmallView {
+    width: 300px;
+    height: 300px;
+    transition: box-shadow 0.2s linear;
+
+}
+
+
+.galleryImageContainerLargeView {
+    display: flex;
+    justify-content: center;
+  
+    transition: box-shadow 0.2s linear;
+
+}
+
+.galleryImageContainerLargeView:hover {
+    box-shadow: 5px 10px #888888;
+
+
+
+}
+
+
+.galleryImageContainerSmallView:hover {
+    box-shadow: 5px 10px #888888;
+
+
+
+}
+
+
+.galleryImageSmall {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.galleryImageLarge {
+    height: 600px;
+    width: 600px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+.galleryEnlargeImageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+
+    top: 0%;
+    left: 0%;
+
+   
+
+    
+
+    background-color:rgba(0, 0, 0, 0.5);
+
+
+    cursor: pointer;
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.galleryEnlargeImage{
+    position: relative;
+    //width: 80%;
+    max-height: 70%;
+    cursor: pointer;
+}
+
+.galleryEnlargeImageCloseButton{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+
+    top: 0px;
+    right: 0px;
+}
