@@ -24,36 +24,18 @@ export default class ImageGallery extends React.Component {
                 }
 
 
-
             },
-
-            medium  : "digital",
-            artType : "paintings",
-            viewType: "small",
-
 
             clickedFirstRowButtonName: "digital",
             clickedSecondRowButtonName: "paintings",
+
             clickedViewTypeName: "small",
-
-
-
-
 
             isImageClicked: false,
             imageFileName: ""
 
 
 
-
-
-        };
-        this.galleryNavigationButtonNames = {
-            medium : {
-                 digital: ["paintings", "commission", "animation"],
-                 traditional: ["paintings", "commission", "drawings"]},
-
-            viewType : ["small", "large"]
 
 
         };
@@ -67,28 +49,9 @@ export default class ImageGallery extends React.Component {
 
         this.galleryViewType = ["small", "large"];
 
-        this.handleSetFirstRowActiveButton2  = this.handleSetFirstRowActiveButton2.bind(this);
-        this.handleSetFirstRowActiveButton3  = this.handleSetFirstRowActiveButton3.bind(this);
 
     }
 
-
-    handleSetFirstRowActiveButton3(buttonType, buttonName) {
-        console.log(buttonType,buttonName);
-        var obj = {};
-        obj[buttonType] = buttonName;
-
-        this.setState({
-            [buttonType] : buttonName
-        });
-    }
-
-    handleSetFirstRowActiveButton2(buttonName) {
-        this.setState({
-            clickedFirstRowButtonName: buttonName,
-            clickedSecondRowButtonName: "paintings"
-        });
-    }
 
     handleSetFirstRowActiveButton(buttonName) {
         this.setState({
@@ -127,31 +90,26 @@ export default class ImageGallery extends React.Component {
 
 
         var clickedButtonClassName = "galleryClickedButton";
-        console.log(Object.keys(this.galleryNavigationButtonNames.medium));
+
         return (
 
 
             <div class="galleryNavAndGalleryContainer">
 
                 <div class="galleryNavContainer">
+                    <div class="galleryNavContainerFirstRow">
+
+                        {this.galleryFirstRowButtons.map((galleryFirstRowButtonName, ID) => (
+
+                            <div key={ID} class={(this.state.clickedFirstRowButtonName == galleryFirstRowButtonName ? ("galleryNavItem " + clickedButtonClassName) : "galleryNavItem")} onClick={() => this.handleSetFirstRowActiveButton(galleryFirstRowButtonName)}>
+                                {galleryFirstRowButtonName}
+
+                            </div>
+                        ))}
 
 
 
-                    <GalleryNavFirstRow 
-                    handleSetFirstRowActiveButton2 = {this.handleSetFirstRowActiveButton2}
-                    galleryFirstRowButtons         = {this.galleryFirstRowButtons}
-                    clickedFirstRowButtonName      = {this.state.clickedFirstRowButtonName}
-                    />
-
-
-                    <GalleryNavFirstRow2 
-                    handleSetFirstRowActiveButton3 = {this.handleSetFirstRowActiveButton3}
-                    buttonNames         = {Object.keys(this.galleryNavigationButtonNames.medium)}
-                    buttonType          = {"medium"}
-                    clickedButton       = {this.state.medium}
-                    />
-                    
-            
+                    </div>
                     <div class="galleryNavContainerSecondRow">
 
 
@@ -275,59 +233,3 @@ export default class ImageGallery extends React.Component {
     }
 }
 
-
-function GalleryNavFirstRow(props) {
-    var clickedButtonClassName = "galleryClickedButton";
-
-    return (
-
-        <div class="galleryNavContainerFirstRow">
-
-            {props.galleryFirstRowButtons.map((galleryFirstRowButtonName, ID) => (
-
-                <div 
-                key={ID} 
-                class={(
-                    props.clickedFirstRowButtonName == galleryFirstRowButtonName ? 
-
-                    ("galleryNavItem " + clickedButtonClassName) :  "galleryNavItem")} 
-                    
-                onClick={() => props.handleSetFirstRowActiveButton2(galleryFirstRowButtonName)}>
-
-                    {galleryFirstRowButtonName}
-
-                </div>
-            ))}
-
-        </div>
-    );
-}
-
-
-function GalleryNavFirstRow2(props) {
-    var clickedButtonClassName = "galleryClickedButton";
-    var clickedButton = props.clickedButton; 
-
-    return (
-
-        <div class="galleryNavContainerFirstRow">
-
-            {props.buttonNames.map((loopButton, ID) => (
-
-                <div 
-                key={ID} 
-                class={(
-                    clickedButton == loopButton ? 
-
-                    ("galleryNavItem " + clickedButtonClassName) :  "galleryNavItem")} 
-                    
-                onClick={() => props.handleSetFirstRowActiveButton3(props.buttonType,loopButton)}>
-
-                    {loopButton}
-
-                </div>
-            ))}
-
-        </div>
-    );
-}
