@@ -1,0 +1,163 @@
+
+///////////////////////////////////////////////////
+.galleryNavContainer {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+
+}
+
+.galleryNavContainerArtMediumType {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    height: 60px;
+    width: 100%;
+    max-width: 200px;
+
+    margin-bottom: 20px;
+
+    background-color: white;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+@media (min-width: 576px) {
+    .galleryNavContainerArtMediumType {
+        max-width: 260px;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .galleryNavContainerArtMediumType {
+        max-width: 550px;
+
+    }
+}
+
+.galleryNavItem {
+    height: 100%;
+    border-radius: 10px;
+
+
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+
+
+    text-transform: capitalize;
+    font-family: sans-serif;
+    text-align: center;
+    //border-radius: 10px;
+
+
+
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+.galleryNavItem:hover {
+    background-color: #edebd5;
+    //transition-timing-function: linear;
+}
+
+.galleryClickedButton {
+    background-color: #a9744f;
+    color: white;
+}
+
+.galleryClickedButton:hover {
+    background-color: #a9744f;
+}
+
+
+.galleryNavContainerArtTypeTab {
+    height: 50px;
+    width: 100%;
+
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    background-color: white;
+
+    border-radius: 10px;
+    //border-bottom-right-radius: 10px;
+    //border-bottom-left-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.galleryNavContainerArtViewType {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+
+    height: 60px;
+    width: 100%;
+    max-width: 200px;
+
+    margin-top: 20px;
+
+    background-color: white;
+    // border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.gallerySmallViewIcon {
+    display: grid;
+
+    grid-template-columns: 5px 5px 5px;
+    grid-template-rows: 5px 5px 5px;
+    column-gap: 1px;
+    row-gap: 1px;
+}
+
+.gallerySmallViewIcon div {
+
+    background-color: #281b11;
+}
+
+
+.galleryLargeViewIcon {
+    display: grid;
+
+    grid-template-columns: 18px;
+    grid-template-rows: 18px;
+
+
+}
+
+.galleryLargeViewIcon div {
+    border-radius: 3px;
+
+    background-color: #281b11;
+}
+
+
+
+
+
+
+
+

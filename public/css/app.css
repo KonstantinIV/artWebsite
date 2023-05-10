@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 body {
   background-color: rgb(255, 253, 226);
+  background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, rgb(255, 253, 226) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
 }
 
 .navBarItems {
@@ -203,6 +206,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 0px;
+  font-family: "Segoe UI";
 }
 
 .aboutContact {
@@ -292,7 +296,7 @@ body {
   margin-bottom: 50px;
 }
 
-.galleryNavContainerFirstRow {
+.galleryNavContainerArtMediumType {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -306,12 +310,12 @@ body {
 }
 
 @media (min-width: 576px) {
-  .galleryNavContainerFirstRow {
+  .galleryNavContainerArtMediumType {
     max-width: 260px;
   }
 }
 @media (min-width: 992px) {
-  .galleryNavContainerFirstRow {
+  .galleryNavContainerArtMediumType {
     max-width: 550px;
   }
 }
@@ -343,7 +347,7 @@ body {
   background-color: #a9744f;
 }
 
-.galleryNavContainerSecondRow {
+.galleryNavContainerArtTypeTab {
   height: 50px;
   width: 100%;
   display: flex;
@@ -354,7 +358,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.galleryNavContainerThirdRow {
+.galleryNavContainerArtViewType {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -520,10 +524,37 @@ body {
 }
 .galleryEnlargeImage {
   position: relative;
-  max-height: 70%;
+  height: auto;
+  max-width: 900px;
+  max-height: 600px;
   cursor: pointer;
 }
 
+@media (max-width: 1000px) {
+  .galleryEnlargeImage {
+    max-width: 700px;
+  }
+}
+@media (max-width: 700px) {
+  .galleryEnlargeImage {
+    max-width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .galleryEnlargeImage {
+    max-width: 300px;
+  }
+}
+/*
+.galleryEnlargeImage{
+    position: relative;
+    width: 80%;
+    height: auto;
+
+    max-width: 900px;
+    //max-height: 70%;
+    cursor: pointer;
+}*/
 .galleryEnlargeImageCloseButton {
   position: absolute;
   width: 35px;

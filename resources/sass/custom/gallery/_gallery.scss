@@ -1,0 +1,72 @@
+.galleryNavAndGalleryContainer {
+
+    display: flex;
+    flex-flow: column;
+
+    max-width: 300px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+@media (min-width: 576px) {
+    .galleryNavAndGalleryContainer {
+        max-width: 500px;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .galleryNavAndGalleryContainer {
+        max-width: 840px;
+
+    }
+}
+
+@import './galleryNavigation';
+@import './galleryImages';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

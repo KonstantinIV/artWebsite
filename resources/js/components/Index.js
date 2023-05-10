@@ -2,20 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import { ImageList } from '@mui/material';
-import {ImageListItem} from '@mui/material/ImageListItem';
-
-//import   Route from 'react-router-dom/Route';
-
 import NavigationRouter from './NavigationRouter';
 
-import NavigationBarNew from './navigationbar/NavigationBarNew';
+import NavigationBar from './navigationbar/NavigationBar';
 import WebsiteLogo from './logo/WebsiteLogo';
 
 
 import Footer from './footer/Footer';
 
-import ImageGallery from './pages/gallery/imageGallery'
+import Gallery from './pages/gallery/gallery'
 
 class Main extends React.Component{
     constructor(props) {
@@ -34,11 +29,11 @@ class Main extends React.Component{
 
         <div>       
          <WebsiteLogo/>
-         <NavigationBarNew/>
+         <NavigationBar/>
 
         <NavigationRouter />
           
-        <ImageGallery />
+        <Gallery />
         <Footer />
 
         </div>

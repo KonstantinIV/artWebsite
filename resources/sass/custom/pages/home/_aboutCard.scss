@@ -104,6 +104,7 @@
     
     font-weight: bold;
     font-size: 18px;
+    //font-family: "Segoe UI";
 
 }
 
@@ -113,6 +114,7 @@
     align-items: center;
    // margin-top:45px;
     margin-bottom:0px;
+    font-family:'Segoe UI';
 }
 
 
@@ -121,12 +123,16 @@
     display: flex;
     margin-bottom: 0;
     font-weight: bold;
+    //font-family: "Segoe UI";
 }
 
 .aboutContact .aboutContacGreen{
 
     color: #4ac44a;;
-font-weight: bold;}
+font-weight: bold;
+//font-family: "Segoe UI";
+}
+
 
 
 ///////////////////////////////////////////////////////////////
@@ -142,7 +148,7 @@ font-weight: bold;}
     align-items: start;
     padding: 15px;
     margin-top: 80px;
-
+    //font-family: "Segoe UI";
 
 }
 
@@ -150,7 +156,7 @@ font-weight: bold;}
 
     display: flex;
     text-decoration: none;
-
+    //font-family: "Segoe UI";
 }
 
 .aboutLinkIcon {
