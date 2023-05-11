@@ -28,7 +28,8 @@ export default class Home extends React.Component {
   </p>
 <p class="aboutText">
 
-Digital and traditional artist based in Estonia. In terms of digital art I focus on mainly on characters, portraits and fantasy with serious tone. In terms of traditional art I focus on portraits drawn with graphite and charcoal. For paintings I use oil and paint renesanse type of compositons.
+Digital and traditional artist based in Europe,  <img style={{marginRight : "-3px"}}src='img/icons/ee.png' alt="..."/>&nbsp;
+Estonia. In terms of digital art I focus on mainly on characters, portraits and fantasy with serious tone. In terms of traditional art I focus on portraits drawn with graphite and charcoal. For paintings I use oil and paint renesanse type of compositons.
 
       </p>
       <br/>

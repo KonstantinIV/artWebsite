@@ -57,15 +57,15 @@
 
     border-radius: 50%;
 
-    margin: 20px 0px;
+    margin: 20px 20px;
 
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
 
     object-fit: cover;
     object-position: 100% 10%;
 
-    max-width: 150px;
+    max-width: 180px;
     flex-grow: 3;
 }
 
@@ -110,11 +110,12 @@
 
 .aboutText {
 
-    display: flex;
+    display: block;
     align-items: center;
    // margin-top:45px;
     margin-bottom:0px;
     font-family:'Segoe UI';
+    
 }
 
 

@@ -109,6 +109,9 @@ export default class Gallery extends React.Component {
 
 
             <div class="galleryNavAndGalleryContainer">
+                <h1 class="galleryHeader">
+                    Gallery
+                </h1>
 
 
                 <GalleryNavigation
