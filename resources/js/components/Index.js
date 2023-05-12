@@ -31,10 +31,10 @@ class Main extends React.Component{
          <WebsiteLogo/>
          <NavigationBar/>
 
-        <NavigationRouter />
+          <NavigationRouter />
           
-        <Gallery />
-        <Footer />
+         <Gallery />
+         <Footer />
 
         </div>
         

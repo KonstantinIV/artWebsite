@@ -1,4 +1,4 @@
-import * as React from "react";
+import  React from "react";
 
 import GalleryNavigation from "./galleryNavigation";
 import GalleryImages from "./galleryImages";
