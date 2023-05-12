@@ -1,49 +1,7 @@
 
 
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(../../fonts/CALID.ttf);
-    //font-weight: bold;
-  }
-
-
-@font-face {
-    font-family: myFirstFont2;
-    src: url(../../fonts/Buenard-Bold.ttf);
-    font-weight: bold;
-  }
-
-
-
-  @font-face {
-    font-family: myFirstFont3;
-    src: url(../../fonts/ArtySignature.ttf);
-    //font-weight: bold;
-  }
-
-  @font-face {
-    font-family: myFirstFont3;
-    src: url(../../fonts/ArtySignature.ttf);
-    //font-weight: bold;
-  }
-
-  @font-face {
-    font-family: myFirstFont4;
-    src: url(../../fonts/Bilbo-Regular.ttf);
-    //font-weight: bold;
-  }
-  @font-face {
-    font-family: myFirstFont5;
-    src: url(../../fonts/BilboSwashCaps-Regular.ttf);
-    //font-weight: bold;
-  }
-  @font-face {
-    font-family: myFirstFont6;
-    src: url(../../fonts/MurTheme.ttf);
-    //font-weight: bold;
-  }
-
+  
 
 
 
@@ -65,7 +23,7 @@
     display: inline-block;
     padding: 0 20px;
 
-    font-weight: 500;
+    font-weight: 900;
 
 }
 
@@ -82,7 +40,7 @@
 
     text-align: center;
 
-    font-family: myFirstFont5;
+    font-family: myLogoFont;
     font-size: 130px;
     letter-spacing: 25px;
     font-style: italic;

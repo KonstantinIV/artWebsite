@@ -6,6 +6,20 @@ body {
   background-position: 0 0, 10px 10px;
 }
 
+@font-face {
+  font-family: myLogoFont;
+  src: url(/fonts/BilboSwashCaps-Regular.ttf?25ee5013c09f26d3f8a81d07ce479c03);
+}
+@font-face {
+  font-family: baseFont;
+  src: url(/fonts/WorkSans-Regular.ttf?4be086328ba304c25f49ad0d8af428df);
+}
+* {
+  font-family: baseFont;
+  font-size: 17px;
+  line-height: 22px;
+}
+
 .navBarItems {
   display: flex;
   flex-flow: row;
@@ -48,10 +62,9 @@ body {
   padding: 10px;
   color: #212529;
   border-radius: 5px;
-  font-family: sans-serif;
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   text-transform: capitalize;
   text-decoration: none;
   transition: background-color 0.2s linear;
@@ -65,35 +78,6 @@ body {
   background-color: #edebd5;
 }
 
-@font-face {
-  font-family: myFirstFont;
-  src: url(/fonts/CALID.ttf?81614d2f9038d23ded26472eb13261d5);
-}
-@font-face {
-  font-family: myFirstFont2;
-  src: url(/fonts/Buenard-Bold.ttf?ddd9d373e42d2b632a197be076be521c);
-  font-weight: bold;
-}
-@font-face {
-  font-family: myFirstFont3;
-  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
-}
-@font-face {
-  font-family: myFirstFont3;
-  src: url(/fonts/ArtySignature.ttf?b41bff081a53f55eb006b776c2111e6a);
-}
-@font-face {
-  font-family: myFirstFont4;
-  src: url(/fonts/Bilbo-Regular.ttf?34a41484568ffdabd62082099d8c649f);
-}
-@font-face {
-  font-family: myFirstFont5;
-  src: url(/fonts/BilboSwashCaps-Regular.ttf?25ee5013c09f26d3f8a81d07ce479c03);
-}
-@font-face {
-  font-family: myFirstFont6;
-  src: url(/fonts/MurTheme.ttf?888b8493e5d1ae68cbb5a8c02ac1b1ea);
-}
 .kostaLogoTextContainer {
   width: 390px;
   margin: 0 auto;
@@ -107,7 +91,7 @@ body {
   background: #fffde2;
   display: inline-block;
   padding: 0 20px;
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .kostaLogoLine {
@@ -121,7 +105,7 @@ body {
   margin: 0 auto;
   margin-top: 140px;
   text-align: center;
-  font-family: myFirstFont5;
+  font-family: myLogoFont;
   font-size: 130px;
   letter-spacing: 25px;
   font-style: italic;
@@ -130,16 +114,16 @@ body {
 }
 
 .aboutContainer {
+  display: flex;
   max-width: 300px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
   margin-top: 90px;
   margin-bottom: 100px;
   margin-right: auto;
   margin-left: auto;
   padding: 0px 10px;
-  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media (min-width: 576px) {
@@ -155,6 +139,12 @@ body {
 @media (min-width: 1150px) {
   .aboutContainer {
     max-width: 950px;
+  }
+}
+@media (max-width: 992px) {
+  .aboutContainer {
+    flex-flow: column;
+    padding: 20px 10px;
   }
 }
 .aboutImageContainer {
@@ -179,6 +169,11 @@ body {
   flex-grow: 3;
 }
 
+@media (max-width: 992px) {
+  .aboutImage {
+    margin-top: 30px;
+  }
+}
 .aboutTextAndLinksContainer {
   display: flex;
   flex-grow: 3;
@@ -206,7 +201,6 @@ body {
   display: block;
   align-items: center;
   margin-bottom: 0px;
-  font-family: "Segoe UI";
 }
 
 .aboutContact {
@@ -220,6 +214,24 @@ body {
   font-weight: bold;
 }
 
+@media (max-width: 992px) {
+  .aboutTextAndLinksContainer {
+    flex-direction: column;
+  }
+  .aboutTextContainer {
+    margin-top: 0px;
+  }
+  .aboutText {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .aboutContact {
+    justify-content: center;
+  }
+  .aboutTextHeadline {
+    text-align: center;
+  }
+}
 .aboutLinksContainer {
   flex-grow: 1;
   flex-basis: 0;
@@ -241,33 +253,10 @@ body {
 }
 
 @media (max-width: 992px) {
-  .aboutImage {
-    margin-top: 30px;
-  }
-  .aboutContainer {
-    flex-flow: column;
-    padding: 20px 10px;
-  }
-  .aboutTextAndLinksContainer {
-    flex-direction: column;
-  }
-  .aboutTextContainer {
-    margin-top: 0px;
-  }
-  .aboutText {
-    text-align: center;
-    margin-top: 0px;
-  }
   .aboutLinksContainer {
     align-items: center;
     margin-top: 0px;
     padding-top: 0;
-  }
-  .aboutContact {
-    justify-content: center;
-  }
-  .aboutTextHeadline {
-    text-align: center;
   }
 }
 .galleryNavAndGalleryContainer {
@@ -334,7 +323,6 @@ body {
   justify-content: center;
   flex-grow: 1;
   text-transform: capitalize;
-  font-family: sans-serif;
   text-align: center;
   transition: background-color 0.2s linear;
   cursor: pointer;
