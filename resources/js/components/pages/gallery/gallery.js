@@ -1,7 +1,8 @@
-import  React from "react";
+import React from "react";
 
 import GalleryNavigation from "./galleryNavigation";
 import GalleryImages from "./galleryImages";
+import GalleryBackgroundCSS from "./galleryBackgroundCSS";
 
 
 
@@ -12,6 +13,8 @@ export default class Gallery extends React.Component {
         this.state = {
 
 
+
+/*      version 1
             imageFiles: {
                 digital: {
                     paintings: [],
@@ -29,10 +32,29 @@ export default class Gallery extends React.Component {
                 }
 
 
+            },*/
+
+            imageFiles: {
+                digital: {
+                    all: [],
+                    paintings: [],
+                    drawings: []
+
+
+                },
+                traditional: {
+                    all: [],
+                    paintings: [],
+                    drawings: []
+
+
+                }
+
+
             },
 
             clickedMediumType: "digital",
-            clickedArtType: "works",
+            clickedArtType: "all",
 
             clickedViewType: "small",
 
@@ -46,12 +68,18 @@ export default class Gallery extends React.Component {
         };
 
         this.artMediums = ["digital", "traditional"];
+        /*ver 1
         this.artTypes =
         {
             digital: ["works", "commissions", "animation"],
             traditional: ["paintings", "commissions", "drawings"]
         };
-
+*/
+this.artTypes =
+{
+    digital: ["all", "paintings", "drawings"],
+    traditional: ["all", "paintings", "drawings"]
+};
         this.viewTypes = ["small", "large"];
 
 
@@ -91,13 +119,46 @@ export default class Gallery extends React.Component {
         });
 
     }
+    getImageFileNames() {
+
+    }
 
 
 
     componentDidMount() {
-        fetch('/api/imagefiles')
+
+        // To retrieve the data from sessionStorage
+        const storedData = sessionStorage.getItem('kostaImageFileNames');
+
+        if (storedData) {
+            const parsedData =  JSON.parse(storedData);
+
+           this.setState({ imageFiles: parsedData })
+
+        }else{
+            fetch('/api/imagefiles')
             .then((response) => response.json())
-            .then((data) => this.setState({ imageFiles: data }));
+            .then((data) => {
+                this.setState({ imageFiles: data })
+
+                const stringifiedData = JSON.stringify(data);
+
+                // Store the stringified data in the sessionStorage
+                sessionStorage.setItem('kostaImageFileNames', stringifiedData);
+
+            }
+
+            );
+        }
+
+
+
+       
+
+
+
+
+
     }
 
 
@@ -113,7 +174,7 @@ export default class Gallery extends React.Component {
                     Gallery
                 </h1>
 
-
+                <GalleryBackgroundCSS/>
                 <GalleryNavigation
 
                     handleSetArtMedium={this.handleSetArtMedium}
@@ -142,8 +203,8 @@ export default class Gallery extends React.Component {
                     clickedArtType={this.state.clickedArtType}
                     clickedViewType={this.state.clickedViewType}
 
-                    isImageClicked = {this.state.isImageClicked}
-                    imageFileName   = {this.state.imageFileName}
+                    isImageClicked={this.state.isImageClicked}
+                    imageFileName={this.state.imageFileName}
 
 
                 />

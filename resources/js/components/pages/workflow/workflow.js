@@ -13,11 +13,6 @@ export default class Workflow extends React.Component {
 
         };
 
-      
-        
-
-
-
     }
 
 
@@ -35,6 +30,16 @@ export default class Workflow extends React.Component {
                 <h1 className="workflowHeader"></h1>
 
                 <p className="workflowText"></p>
+
+                <h1 className="workflowHeader"></h1>
+
+                <p className="workflowText"></p>
+
+                <h1 className="workflowHeader"></h1>
+
+                <p className="workflowText"></p>
+
+
                 
 
             </div>
