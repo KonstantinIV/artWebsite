@@ -2,15 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import NavigationRouter from './NavigationRouter';
 
-import NavigationBar from './navigationbar/NavigationBar';
-import WebsiteLogo from './logo/WebsiteLogo';
+import WebsiteLogo from './logo/websiteLogo';
+import NavigationRouter from './navigationRouter';
+import Footer from './footer/footer';
 
-
-import Footer from './footer/Footer';
-
-import Gallery from './pages/gallery/gallery'
 
 class Main extends React.Component{
     constructor(props) {
@@ -29,22 +25,14 @@ class Main extends React.Component{
 
         <div>       
 
-            
-
-
-
          <WebsiteLogo/>
-         <NavigationBar/>
 
           <NavigationRouter />
           
-         <Gallery />
          <Footer />
 
         </div>
         
-  
-
         
         
         )

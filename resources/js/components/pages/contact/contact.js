@@ -32,7 +32,7 @@ export default class Contact extends React.Component {
 
             <div class="contactContainer">
 
-                <h1 className="contactHeader"></h1>
+                <h1 className="contactHeader">HIIIIIIIIIIIIIIIIII</h1>
 
                 <p className="contactText"></p>
                 
