@@ -18,7 +18,17 @@
 
     display: flex;
     text-decoration: none;
+    align-items: center;
+    
     //font-family: "Segoe UI";
+}
+.aboutLink * {
+    margin-right: 7px;
+    transition: 0.2s;
+}
+
+.aboutLink:hover * {
+    margin-bottom:6px;
 }
 
 .aboutLinkIcon {
