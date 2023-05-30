@@ -22,6 +22,9 @@
     
     //font-family: "Segoe UI";
 }
+.aboutLink, .aboutLink:visited, .aboutLink:hover, .aboutLink:active {
+    color: rgb(49, 49, 221);
+  }
 .aboutLink * {
     margin-right: 7px;
     transition: 0.2s;

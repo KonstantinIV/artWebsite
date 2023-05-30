@@ -26,7 +26,10 @@
     font-weight: 900;
     color: #212529;
 
+
 }
+
+
 
 .kostaLogoLine {
     height: 3px;
@@ -37,7 +40,7 @@
    width: fit-content;
 
     margin: 0 auto;
-    margin-top: 140px;
+    margin-top: 110px;
 
     text-align: center;
 
@@ -53,4 +56,15 @@
     //font-weight: bold;
 
 
+    padding-top: 30px;
+    /* background-color: #f9f7d9c2; */
+    height: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    }
+
+    .kostaLogo:hover{
+    
+        background-color: #f9f7d9c2;
     }
