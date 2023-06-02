@@ -1,40 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+function WebsiteLogo(){
 
+    return (
 
-
-export default class WebsiteLogo extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {};
-
-
-    }
-
-
-    render() {
-
-
-        return (
-
-            <div>
-                <div class="kostaLogo">Kosta</div>
-                <div class="kostaLogoTextContainer">
-                    <div class="kostaLogoText">ARTIST</div>
-                    <div class="kostaLogoLine"></div>
-                </div>
-
+        <div>
+            <div className="kostaLogo">Kosta</div>
+            <div className="kostaLogoTextContainer">
+                <div className="kostaLogoText">ARTIST</div>
+                <div className="kostaLogoLine"></div>
             </div>
 
+        </div>
 
-
-
-
-
-        )
-    }
+    )
 }
+export default WebsiteLogo ;
 
-//ReactDOM.render(<Header />, document.getElementById('header'));

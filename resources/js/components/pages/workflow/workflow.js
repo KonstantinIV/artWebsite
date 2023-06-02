@@ -1,56 +1,30 @@
 import  React from "react";
 
 
+function Workflow() {
+  
+    
+    return (
 
 
-export default class Workflow extends React.Component {
-    constructor(props) {
-        super(props);
+        <div class="workflowContainer">
 
-        this.state = {
+            <h1 className="workflowHeader"></h1>
 
+            <p className="workflowText"></p>
 
+            <h1 className="workflowHeader"></h1>
 
-        };
+            <p className="workflowText"></p>
 
-    }
+            <h1 className="workflowHeader"></h1>
 
+            <p className="workflowText"></p>
 
-
-
-    render() {
-
+        </div>
 
 
-        return (
-
-
-            <div class="workflowContainer">
-
-                <h1 className="workflowHeader"></h1>
-
-                <p className="workflowText"></p>
-
-                <h1 className="workflowHeader"></h1>
-
-                <p className="workflowText"></p>
-
-                <h1 className="workflowHeader"></h1>
-
-                <p className="workflowText"></p>
-
-
-                
-
-            </div>
-
-
-
-
-
-
-
-        )
-    }
+    )
 }
+export default Workflow;
 

@@ -7,7 +7,7 @@ function GalleryNavigation(props) {
     var clickedButtonClassName = "galleryClickedButton";
 
     return (
-        <div class="galleryNavContainer">
+        <div className="galleryNavContainer">
 
             <GalleryNavigationTabArtMedium
                 handleSetArtMedium={props.handleSetArtMedium}
@@ -52,11 +52,11 @@ function GalleryNavigation(props) {
 
 function GalleryNavigationTabArtMedium(props) {
     return (
-        <div class="galleryNavContainerArtMediumType">
+        <div className="galleryNavContainerArtMediumType">
 
             {props.artMediums.map((buttonName, ID) => (
                 <div key={ID}
-                    class={(props.clickedMediumType == buttonName ? ("galleryNavItem " + props.clickedButtonClassName) : "galleryNavItem")}
+                    className={(props.clickedMediumType == buttonName ? ("galleryNavItem " + props.clickedButtonClassName) : "galleryNavItem")}
                     onClick={() => props.handleSetArtMedium(buttonName)}>
                     {buttonName}
 
@@ -73,11 +73,11 @@ function GalleryNavigationTabArtType(props) {
 
     return (
 
-        <div class="galleryNavContainerArtTypeTab">
+        <div className="galleryNavContainerArtTypeTab">
 
             {props.artTypes.map((buttonName, ID) => (
                 <div key={ID}
-                    class={(props.clickedArtType == buttonName ? ("galleryNavItem " + props.clickedButtonClassName) : "galleryNavItem")}
+                    className={(props.clickedArtType == buttonName ? ("galleryNavItem " + props.clickedButtonClassName) : "galleryNavItem")}
                     onClick={() => props.handleSetArtType(buttonName)}>
                     {buttonName}
                 </div>
@@ -89,12 +89,12 @@ function GalleryNavigationTabArtType(props) {
 
 function GalleryNavigationTabViewType(props) {
     return (
-        <div class="galleryNavContainerArtViewType">
+        <div className="galleryNavContainerArtViewType">
 
             {props.viewTypes.map((buttonName, ID) => (
 
                 <div key={ID}
-                    class={(props.clickedViewType == buttonName ? ("galleryNavItem " + props.clickedButtonClassName) : "galleryNavItem")}
+                    className={(props.clickedViewType == buttonName ? ("galleryNavItem " + props.clickedButtonClassName) : "galleryNavItem")}
                     onClick={() => props.handleSetViewType(buttonName)}>
                     {buttonName == "small" ? (
                         <div className="gallerySmallViewIcon">

@@ -13,40 +13,26 @@ import NavigationBar from './navigationbar/navigationBar';
 
 
 
-export default class NavigationRouter extends React.Component {
-    constructor(props) {
-        super(props);
+function NavigationRouter() {
+  
+    return (
+        <Router>
 
-        this.state = {};
+        <NavigationBar/>
+ 
+        
+            <Routes>
 
+                <Route path="/" exact element={<Home />} />
 
-    }
+                <Route path="/commission" element={<Commission />} />
 
-    render() {
-        return (
-            <Router>
+                <Route path="/contact" element={<Contact />} />
 
-            <NavigationBar/>
-     
-            
-                <Routes>
-
-                    <Route path="/" exact element={<Home />} />
-
+            </Routes>
+        </Router>
 
 
-                    <Route path="/commission" element={<Commission />} />
-
-
-                    <Route path="/contact" element={<Contact />} />
-
-
-
-                </Routes>
-            </Router>
-
-
-        )
-    }
+    )
 }
-
+export default NavigationRouter;
