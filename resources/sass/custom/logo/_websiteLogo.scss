@@ -1,49 +1,7 @@
 
 
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(../../fonts/CALID.ttf);
-    //font-weight: bold;
-  }
-
-
-@font-face {
-    font-family: myFirstFont2;
-    src: url(../../fonts/Buenard-Bold.ttf);
-    font-weight: bold;
-  }
-
-
-
-  @font-face {
-    font-family: myFirstFont3;
-    src: url(../../fonts/ArtySignature.ttf);
-    //font-weight: bold;
-  }
-
-  @font-face {
-    font-family: myFirstFont3;
-    src: url(../../fonts/ArtySignature.ttf);
-    //font-weight: bold;
-  }
-
-  @font-face {
-    font-family: myFirstFont4;
-    src: url(../../fonts/Bilbo-Regular.ttf);
-    //font-weight: bold;
-  }
-  @font-face {
-    font-family: myFirstFont5;
-    src: url(../../fonts/BilboSwashCaps-Regular.ttf);
-    //font-weight: bold;
-  }
-  @font-face {
-    font-family: myFirstFont6;
-    src: url(../../fonts/MurTheme.ttf);
-    //font-weight: bold;
-  }
-
+  
 
 
 
@@ -65,9 +23,13 @@
     display: inline-block;
     padding: 0 20px;
 
-    font-weight: 500;
+    font-weight: 900;
+    color: #212529;
+
 
 }
+
+
 
 .kostaLogoLine {
     height: 3px;
@@ -78,19 +40,31 @@
    width: fit-content;
 
     margin: 0 auto;
-    margin-top: 140px;
+    margin-top: 110px;
 
     text-align: center;
 
-    font-family: myFirstFont5;
+    font-family: myLogoFont;
     font-size: 130px;
     letter-spacing: 25px;
     font-style: italic;
     line-height: 90px;
+    color: #212529;
 
     cursor: pointer;
 
     //font-weight: bold;
 
 
+    padding-top: 30px;
+    /* background-color: #f9f7d9c2; */
+    height: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    }
+
+    .kostaLogo:hover{
+    
+        background-color: #f9f7d9c2;
     }

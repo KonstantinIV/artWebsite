@@ -1,0 +1,58 @@
+
+.aboutLinksContainer {
+
+    flex-grow: 1;
+    flex-basis: 0;
+
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: start;
+    padding: 15px;
+    margin-top: 80px;
+    //font-family: "Segoe UI";
+
+}
+
+.aboutLink {
+
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    
+    //font-family: "Segoe UI";
+}
+.aboutLink, .aboutLink:visited, .aboutLink:hover, .aboutLink:active {
+    color: rgb(49, 49, 221);
+  }
+.aboutLink * {
+    margin-right: 7px;
+    transition: 0.2s;
+}
+
+.aboutLink:hover * {
+    margin-bottom:6px;
+}
+
+.aboutLinkIcon {
+
+   height: 16px;
+   filter: opacity(0.5) drop-shadow(0 0 0 blue);
+
+}
+
+
+@media (max-width: 992px) {
+  
+   
+
+
+    .aboutLinksContainer {
+        align-items: center;
+        margin-top: 0px;
+        padding-top: 0;
+    }
+
+
+}
+

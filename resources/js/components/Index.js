@@ -2,54 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import { ImageList } from '@mui/material';
-import {ImageListItem} from '@mui/material/ImageListItem';
-
-//import   Route from 'react-router-dom/Route';
-
-import NavigationRouter from './NavigationRouter';
-
-import NavigationBarNew from './navigationbar/NavigationBarNew';
-import WebsiteLogo from './logo/WebsiteLogo';
+import WebsiteLogo from './logo/websiteLogo';
+import NavigationRouter from './navigationRouter';
+import Footer from './footer/footer';
 
 
-import Footer from './footer/Footer';
 
-import ImageGallery from './pages/gallery/imageGallery'
 
-class Main extends React.Component{
-    constructor(props) {
-        super(props);
 
-    this.state = {};
-   
-
-    }
-         
-
-    render(){
-        
-
-      return(
+function Main() {
+  
+    return(
 
         <div>       
-         <WebsiteLogo/>
-         <NavigationBarNew/>
 
-        <NavigationRouter />
+         <WebsiteLogo/>
+
+          <NavigationRouter />
           
-        <ImageGallery />
-        <Footer />
+         <Footer />
 
         </div>
         
-  
-
         
         
         )
-    }
 }
+
+
 
 //ReactDOM.render(<Header />, document.getElementById('header'));
 ReactDOM.render(<Main />, document.getElementById('root'));

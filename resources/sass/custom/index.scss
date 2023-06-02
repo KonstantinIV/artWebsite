@@ -1,6 +1,4 @@
 
-//Universal
-@import 'universal/body';
 
 //Navigation
 @import 'navigationBar/navigationBar';
@@ -12,6 +10,7 @@
 
 
 //Home
-@import 'pages/home/aboutCard';
-@import 'pages/home/gallery';
+@import 'aboutCard/aboutCard';
+
+@import 'gallery/gallery';
 
