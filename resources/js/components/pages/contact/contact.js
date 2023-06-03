@@ -1,29 +1,17 @@
 import React from 'react';
 
+import ContactInfo from './contactInfo';
+import ContactForm from './contactForm';
+
+function Contact(){
 
 
-function Contact() {
-
-
-
-    return (
-
-
-        <div class="contactContainer">
-
-            <h1 className="contactHeader">HIIIIIIIIIIIIIIIIII</h1>
-
-            <p className="contactText"></p>
-
-
-        </div>
-
-
-
-
-
-
-
+    return(
+        <div className='contactContainer'>
+        <ContactInfo />
+        <ContactForm />
+            </div>
+        
     )
 }
 export default Contact;

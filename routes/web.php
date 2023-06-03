@@ -21,6 +21,12 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('welcome');
 });
+Route::get('/commission', function () {
+    return view('welcome');
+});
+Route::get('/contact', function () {
+    return view('welcome');
+});
 
 
 Auth::routes();
