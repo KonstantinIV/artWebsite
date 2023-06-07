@@ -20,7 +20,9 @@ function AboutCard() {
           <p className="aboutText">
 
             Digital and traditional artist based in Europe,  <img style={{ marginRight: "-3px" }} src='img/icons/ee.png' alt="..." />&nbsp;
-            Estonia. In terms of digital art I focus on mainly on characters, portraits and fantasy with serious tone. In terms of traditional art I focus on portraits drawn with graphite and charcoal. For paintings I use oil and paint renesanse type of compositons.
+            Estonia. In terms of digital art I focus on mainly on characters,
+             portraits and fantasy with serious tone.
+              In terms of traditional art I focus on portraits drawn with graphite and charcoal. For paintings I use oil and paint renesanse type of compositons.
 
           </p>
           <br />
@@ -39,7 +41,8 @@ function AboutCard() {
           </a>
 
 
-          <a className="icon-link icon-link-hover aboutLink" style={{ "--bs-icon-link-transform": " translate3d(0, -.125rem, 0)" }} href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+          <a className="icon-link icon-link-hover aboutLink" style={{ "--bs-icon-link-transform": " translate3d(0, -.125rem, 0)" }} 
+          href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
               fill="currentColor" className="bi bi-twitter" viewBox="0 0 16 16">
               <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 
@@ -49,12 +52,16 @@ function AboutCard() {
                 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
             </svg> Twitter
           </a>
+          <a disabled className="icon-link icon-link-hover aboutLink" style={{ "--bs-icon-link-transform": " translate3d(0, -.125rem, 0)" }} href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            <img src="img/icons/artstation.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
+
+            Artstation
+          </a>
           <a className="icon-link icon-link-hover aboutLink" style={{ "--bs-icon-link-transform": " translate3d(0, -.125rem, 0)" }} href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
             <img src="img/icons/artstation.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
 
             Artstation
           </a>
-
 
 
         </div>
