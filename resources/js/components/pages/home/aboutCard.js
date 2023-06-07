@@ -20,9 +20,8 @@ function AboutCard() {
           <p className="aboutText">
 
             Digital and traditional artist based in Europe,  <img style={{ marginRight: "-3px" }} src='img/icons/ee.png' alt="..." />&nbsp;
-            Estonia. In terms of digital art I focus on mainly on characters,
-             portraits and fantasy with serious tone.
-              In terms of traditional art I focus on portraits drawn with graphite and charcoal. For paintings I use oil and paint renesanse type of compositons.
+            Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
+            continuously improving and exploring new ways of artistic expression.
 
           </p>
           <br />
