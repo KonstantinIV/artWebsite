@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useEffect, useState } from "react";
 
 
 
 
 function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    subject : 'WebsiteMail',
+
+    sendersName: '',
+    sendersEmail: '',
+    sendersMessage: ''
   });
 
   const handleChange = (e) => {
@@ -16,26 +19,46 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform additional validation or submit the form data here
-    console.log(formData);
-    // Reset the form fields
-    setFormData({ name: '', email: '', message: '' });
+  
+
+    fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+      });
+
+
+
   };
+
+
+  useEffect(() => {
+    // Fetch image file names when the component mounts
+    //handleSubmit("");
+
+  }, []);
+
 
   return (
 
 
     <form className="contactFormContainer" onSubmit={handleSubmit}>
-         <h2 className='contactInfoHeader'>
-                Contact Form
-            </h2>
+      <h2 className='contactInfoHeader'>
+        Contact Form
+      </h2>
       <div>
         <label htmlFor="name" className="contactLabel">Your name:</label>
         <input
           type="text"
           id="name"
-          name="name"
-          value={formData.name}
+          name="sendersName"
+          value={formData.sendersName}
           onChange={handleChange}
           required
           className="contactInput"
@@ -46,8 +69,8 @@ function ContactForm() {
         <input
           type="email"
           id="email"
-          name="email"
-          value={formData.email}
+          name="sendersEmail"
+          value={formData.sendersEmail}
           onChange={handleChange}
           required
           className="contactInput"
@@ -57,8 +80,8 @@ function ContactForm() {
         <label htmlFor="message" className="contactLabel">Message:</label>
         <textarea
           id="message"
-          name="message"
-          value={formData.message}
+          name="sendersMessage"
+          value={formData.sendersMessage}
           onChange={handleChange}
           required
           className="contactTextarea"
