@@ -28,8 +28,3 @@ Route::get('/contact', function () {
 });
 
 
-
-
-Auth::routes();
-
-Route::post('/ho', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

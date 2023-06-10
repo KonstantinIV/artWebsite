@@ -2,9 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\File;
 
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\ImageFilesController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,44 +17,13 @@ use App\Http\Controllers\MailController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 
 
 
 
 
-Route::get('imagefiles', function () {
-    $path = public_path('img/gallery');
-
-    $allFiles = File::allFiles($path);
-
-    $results = array();
-    foreach ($allFiles as $file) {
-        
-        $filePath = $file->getRelativePathname(); // Get the file path relative to the img directory
-        $dirNames = explode('/', $file->getRelativePath());
-                $fileName = basename($filePath); // Get the file name from the file path
-
-        // Add the file name to the array under its directory name
-        $dirResults = &$results;
-    foreach ($dirNames as $dirName) {
-        if (!isset($dirResults[$dirName])) {
-            $dirResults[$dirName] = [];
-        }
-        $dirResults = &$dirResults[$dirName];
-    }
-
-    // Add the file name to the final nested array
-    $dirResults[] = $fileName;
-    }
-
-    // Return the results as JSON
-    return response()->json($results);
-});
-
+Route::get('/imagefiles', [ImageFilesController::class, 'getImageFileNames']);
 
 Route::post('/sendEmail', [MailController::class, 'sendEmail']);
 
