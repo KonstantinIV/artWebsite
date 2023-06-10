@@ -34,7 +34,7 @@ class MailController extends Controller
                 ->setBody($data['message']);
         });
 
-        return response()->json("Email sent");
+        return response()->json(true);
     }
 
 

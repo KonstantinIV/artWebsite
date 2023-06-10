@@ -50,31 +50,55 @@ function Gallery() {
     setImageFileName(fileName);
   };
 
-  // Fetch image file names
-  const getImageFileNames = () => {
-    const storedData = sessionStorage.getItem("kostaImageFileNames");
+  const setSessionStorage = (data) => {
+    const stringifiedData = JSON.stringify(data);
+    sessionStorage.setItem("kostaImageFileNames", stringifiedData);
 
-    if (storedData) {
+  };
+
+  const getSessionStorage = () => {
+    const storedData = sessionStorage.getItem("kostaImageFileNames");
+    return storedData;
+
+  };
+
+  const setStateImageFiles = (imageFileNames) => {
+
+    const parsedData = JSON.parse(imageFileNames);
+    setImageFiles(parsedData);
+  };
+
+  const getImageFileNames = () => {
+    fetch("/api/imagefiles")
+    .then((response) => response.json())
+    .then((data) => {
+      setImageFiles(data);
+
+      // Store the fetched image file names in session storage for future use
+      setSessionStorage(data);
+
+    });
+}
+  
+  // Fetch image file names
+   
+  const handleGalleryImages = () => {
+
+    const sessionStorage = getSessionStorage();
+    if (sessionStorage) {
       // If image file names exist in session storage, retrieve and update the state
-      const parsedData = JSON.parse(storedData);
-      setImageFiles(parsedData);
+     setStateImageFiles(sessionStorage);
     } else {
       // Otherwise, fetch image file names from the server
-      fetch("/api/imagefiles")
-        .then((response) => response.json())
-        .then((data) => {
-          setImageFiles(data);
-
-          // Store the fetched image file names in session storage for future use
-          const stringifiedData = JSON.stringify(data);
-          sessionStorage.setItem("kostaImageFileNames", stringifiedData);
-        });
-    }
+      getImageFileNames();
   };
+
+  }
+  
 
   useEffect(() => {
     // Fetch image file names when the component mounts
-    getImageFileNames();
+    handleGalleryImages();
   }, []);
 
   // JSX content

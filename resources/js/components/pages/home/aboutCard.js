@@ -37,7 +37,7 @@ function AboutCard() {
 
 
           <a className="icon-link icon-link-hover aboutLink"  
-          href="https://twitter.com/Kosta_IV">
+          href="https://twitter.com/Kosta_IV" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
               fill="#6767d1" className="bi bi-twitter" viewBox="0 0 16 16">
               <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 
@@ -47,12 +47,12 @@ function AboutCard() {
                 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
             </svg> Twitter
           </a>
-          <a disabled className="icon-link icon-link-hover aboutLink" href="https://www.artstation.com/kosta9">
+          <a disabled className="icon-link icon-link-hover aboutLink" href="https://www.artstation.com/kosta9" target="_blank">
             <img src="img/icons/artstation.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
 
             Artstation
           </a>
-          <a className="icon-link icon-link-hover aboutLink"  href="https://www.facebook.com/KostaIV">
+          <a className="icon-link icon-link-hover aboutLink"  href="https://www.facebook.com/KostaIV" target="_blank">
             <img src="img/icons/facebook.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
 
                Facebook

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 
 
@@ -13,36 +13,50 @@ function ContactForm() {
     sendersMessage: ''
   });
 
+  const [mailResult, setMailResult] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  
-
-    fetch("/api/sendEmail", {
+  const sendEmail = () => {
+    return fetch("/api/sendEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     })
+  }
+
+  const setEmailStatus = (data) => {
+      
+    if(JSON.stringify(data)){
+      setMailResult("Mail sent!");
+    }else{
+      setMailResult("Something went wrong.");
+    }
+  }
+
+  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    sendEmail()
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
+      .then((data) => {setEmailStatus(data)})
+      .finally(() => {
+        setIsLoading(false);
       });
-
-
-
   };
 
 
-  useEffect(() => {
-    // Fetch image file names when the component mounts
-    //handleSubmit("");
 
-  }, []);
+  
 
 
   return (
@@ -87,7 +101,17 @@ function ContactForm() {
           className="contactTextarea"
         />
       </div>
+      <div className="formMailSubmitContainer">
       <button type="submit" className="contactButton">Submit</button>
+      {isLoading ? (
+           <div className="loadingIndicator">
+           <div className="spinner"></div>
+         </div>
+          ) : (
+            <div className="formMailResult">{mailResult}</div>
+            )}
+      </div>
+
     </form>
   );
 }
