@@ -1,4 +1,6 @@
 
-# Art portfolio built On Laravel as backend API and react as frontend
+# Art portfolio 
+## Backend  : Laravel API 
+## Frontend : React + CSS / SASS
 
 ## Built in gallery and contact form
