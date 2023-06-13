@@ -1,0 +1,39 @@
+
+.contactContainer{
+    display: flex;
+    flex-flow: column;
+
+    justify-content: space-around;
+
+    max-width: 340px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+
+
+}
+
+@media (min-width: 576px) {
+    .contactContainer {
+        max-width: 530px;
+        flex-flow: column;
+
+    }
+
+}
+
+@media (min-width: 992px) {
+    .contactContainer {
+        max-width: 870px;
+        flex-flow: row;
+
+    }
+
+
+    
+}
+
+
+@import "contactForm";
+@import "contactInfo";

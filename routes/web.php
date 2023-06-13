@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('/home', function () {
+    return view('welcome');
+});
+Route::get('/commission', function () {
+    return view('welcome');
+});
+Route::get('/contact', function () {
     return view('welcome');
 });
 
 
-Auth::routes();
-
-Route::post('/ho', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

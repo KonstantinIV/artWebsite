@@ -32,7 +32,6 @@ $font-family: baseFont;
 
 * {
   font-family: baseFont;
-  font-size: 17px;
   line-height: 22px;
 }
 
@@ -41,9 +40,20 @@ $font-family: baseFont;
 p {
   margin: 0;
   color: #212529;
+  font-size: 18px;
 
 }
 h1{
+  color: #212529;
+
+  
+}
+h2{
+  color: #212529;
+  margin-top: 10px;
+  
+}
+h3{
   color: #212529;
 
   
