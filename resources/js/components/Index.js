@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 
 import WebsiteLogo from './logo/websiteLogo';
-import NavigationRouter from './navigationbar/navigationRouter';
+import NavigationRouter from './navigationRouter';
 import Footer from './footer/footer';
 
 
