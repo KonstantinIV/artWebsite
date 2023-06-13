@@ -7,7 +7,7 @@ function AboutCard() {
 
     <div className="aboutContainer">
       <div className="aboutImageContainer">
-        <img src="img/true2.png" className=" aboutImage" alt="..." />
+        <img src="img/true2gray.png" className=" aboutImage" alt="..." />
 
 
       </div>
