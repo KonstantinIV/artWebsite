@@ -4,51 +4,12 @@
     display: flex;
     flex-flow: row;
     justify-content: space-evenly;
-    width: 100%;
+    width: 950px;
     padding: 0px;
     margin: 0 auto;
     list-style: none;
 
     
-}
-
-
-@media (min-width: 576px) {
-    .navBarItems {
-        width: 500px;
-
-    }
-}
-
-@media (min-width: 992px) {
-    .navBarItems {
-
-        
-        width: 750px;
-
-    }
-}
-
-
-@media (min-width: 1150px) {
-    .navBarItems {
-        width: 950px;
-
-    }
-}
-
-
-@media (max-width: 992px) {
-    .navBarItems {
-        flex-flow: column;
-
-    }
-    .navBarLinkContainer{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
 }
 .navBarLink{
 
@@ -84,6 +45,52 @@ background-color: #edebd5;
 }
 .activeBut{
     background-color: #edebd5;
+}
+
+
+
+
+
+
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+@media (max-width: 1200px) {
+   
+}
+
+
+@media (max-width: 992px) {
+    .navBarItems {
+        flex-flow: column;
+        width: 750px;
+
+    }
+
+    .navBarLinkContainer{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .navBarItems {
+        flex-flow: column;
+        width: 500px;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .navBarItems {
+        flex-flow: column;
+        width: 100%;
+
+    }
 }
 
 
