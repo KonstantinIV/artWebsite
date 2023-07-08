@@ -9,13 +9,25 @@ function GalleryImages({
   isImageClicked,
   imageFileName }) {
 
+
+   const classes2 = 
+   `${clickedViewType === "small" ? "galleryImageContainerSmallView" : "galleryImageContainerLargeView"} 
+   
+   `;
+
+  
+
   return (
     <div className="galleryContainer">
-      <div className={clickedViewType === "small" ? "gallerySmallView" : "galleryLargeView"}>
+      <div 
+      className={clickedViewType === "small" ? "gallerySmallView" : "galleryLargeView"}>
         {/* Map over the image files and render each image */}
         {imageFiles[clickedMediumType][clickedArtType] &&
           imageFiles[clickedMediumType][clickedArtType].map((file) => (
-            <div className={clickedViewType === "small" ? "galleryImageContainerSmallView" : "galleryImageContainerLargeView"} key={file}>
+            <div className={classes2}
+             key={file}>
+
+
               <img
                 onClick={() => handleEnlargeImage(file)}
                 src={`img/gallery/${clickedMediumType}/${clickedArtType}/${file}`}
