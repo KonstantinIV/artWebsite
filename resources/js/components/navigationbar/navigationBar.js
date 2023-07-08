@@ -11,13 +11,10 @@ function NavigationBar() {
 
     const [currentPageName, setActiveButton] = useState(setPageName);
 
-    /*if(currentPageName != pageName){
-        setActiveButton(setPageName) 
 
-    }*/
 
     // Other constants
-    const pageNames = ["home", "commission", "contact"];
+    const pageNames = ["home", "price", "commission", "contact"];
 
 
     // Event handlers

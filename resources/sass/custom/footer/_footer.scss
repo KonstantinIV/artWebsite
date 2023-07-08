@@ -1,7 +1,12 @@
 .footerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     height:200px;
-    display: block;
+}
+.footerCopyrightContainer{
+text-align: center;
 }
 
 /********************************MEDIA*******************************/
