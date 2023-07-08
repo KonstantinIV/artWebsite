@@ -29,7 +29,7 @@ function GalleryImages({
         {isImageClicked && (
           <div className="galleryEnlargeImageContainer" onClick={() => handleEnlargeImage("")}>
             {/* Close button for enlarged image */}
-            <img className="galleryEnlargeImageCloseButton" onClick={() => handleEnlargeImage("")} src="img/closeButton.png" alt="..." />
+            <img className="galleryEnlargeImageCloseButton" onClick={() => handleEnlargeImage("")} src="img/icons/closeButton.png" alt="..." />
 
             {/* Enlarged image */}
             <img
