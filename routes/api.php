@@ -19,7 +19,7 @@ use App\Http\Controllers\ImageFilesController;
 
 
 
-Route::get('/imagefiles', [ImageFilesController::class, 'getImageFileNames']);
+Route::get('/imagefiles', [ImageFilesController::class, 'returnImageFileNames']);
 
 Route::post('/sendEmail', [MailController::class, 'sendEmail']);
 
