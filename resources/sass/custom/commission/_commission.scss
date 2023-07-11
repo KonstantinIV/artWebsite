@@ -7,9 +7,8 @@
     margin-top: 100px;
 
 
-
-
 }
+
 .commissionContainer p{
     font-size: 19px;
     line-height: 27px;
@@ -18,3 +17,41 @@
 .commissionHeader{
     text-align: center;
 }
+
+//LARGE
+/***/
+@media (max-width: 1200px) {
+   
+}
+
+@media (max-width: 992px) {
+    .commissionContainer p{
+        width : 500px;
+     
+     }
+     .commissionContainer{
+       
+         width: 500px;
+        
+     
+     }
+    
+     
+}
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 576px) {
+    .commissionContainer p{
+        width : 300px;
+     
+     }
+     .commissionContainer{
+       
+         width: 300px;
+        
+     
+     }
+}
+

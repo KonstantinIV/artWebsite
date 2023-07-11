@@ -7,7 +7,7 @@ function Commission() {
     return (
 
         <div className="commissionContainer">
-            <h1 className="commissionHeader">Artist Tools</h1>
+            <h1 className="commissionHeader">Digital Art Tools</h1>
             <p className="commissionText">
                 With the advancement of AI (Artificial Intelligence) tools, it is important to note that all my artworks are personally
                 created by me <b>using traditional artistic techniques.</b>

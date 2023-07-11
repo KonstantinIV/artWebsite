@@ -21,8 +21,6 @@
 
 }
 
-
-
 .kostaLogoLine {
     height: 3px;
     background: #212529;
@@ -67,3 +65,89 @@
     line-height: 90px;
 
 }
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+@media (max-width: 1200px) {
+   
+}
+
+@media (max-width: 992px) {
+    .kostaLogo{
+        margin-bottom: -15px;
+    }
+    .kostaLogo a {
+        
+        font-size: 110px;
+       
+    
+    }
+
+    .kostaLogoTextContainer {
+        width: 300px;
+    
+        margin: 0 auto;
+        margin-bottom: 50px;
+    
+        text-align: center;
+    }
+    
+    .kostaLogoLine {
+        height: 3px;
+        background: #212529;
+    }
+ 
+}
+@media (max-width: 768px) {
+    .kostaLogo{
+        margin-bottom: -20px;
+    }
+    .kostaLogo a {
+        
+        font-size: 90px;
+       
+    
+    }
+
+    .kostaLogoTextContainer {
+        width: 300px;
+    
+        margin: 0 auto;
+        margin-bottom: 50px;
+    
+        text-align: center;
+    }
+    
+    .kostaLogoLine {
+        height: 3px;
+        background: #212529;
+    }
+}
+
+@media (max-width: 576px) {
+    .kostaLogo{
+        margin-bottom: -25px;
+    }
+    .kostaLogo a {
+        
+        font-size: 80px;
+       
+    
+    }
+
+    .kostaLogoTextContainer {
+        width: 300px;
+    
+        margin: 0 auto;
+        margin-bottom: 50px;
+    
+        text-align: center;
+    }
+    
+    .kostaLogoLine {
+        height: 3px;
+        background: #212529;
+    }
+}
+

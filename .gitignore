@@ -13,3 +13,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+/public/img/gallery/*
+!public/img/gallery/.gitkeepfolder
+
+/public/img/profile/*
+!public/img/profile/.gitkeepfolder

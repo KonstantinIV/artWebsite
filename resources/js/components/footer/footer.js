@@ -3,12 +3,16 @@ import React from 'react';
 
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
+    const websiteName = "Kostaartist";
     return (
+        <footer className="footerContainer">
+        <div className="footerCopyrightContainer">
 
-        <div className="footerContainer">
-
+          <p>&copy; {currentYear} {websiteName}. All rights reserved.</p>
         </div>
-
+      </footer>
+      
 
 
     )

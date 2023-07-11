@@ -1,5 +1,30 @@
 .footerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     height:200px;
-    display: block;
+}
+.footerCopyrightContainer{
+text-align: center;
+}
+
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+@media (max-width: 1200px) {
+   
+}
+
+@media (max-width: 992px) {
+   
+ 
+}
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 576px) {
+   
 }

@@ -1,11 +1,10 @@
 
 .contactContainer{
     display: flex;
-    flex-flow: column;
-
+    flex-flow: row;
     justify-content: space-around;
 
-    max-width: 340px;
+    max-width: 870px;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -14,25 +13,36 @@
 
 }
 
-@media (min-width: 576px) {
+
+//LARGE
+/***/
+@media (max-width: 1200px) {
+   
+}
+
+@media (max-width: 992px) {
     .contactContainer {
         max-width: 530px;
         flex-flow: column;
 
     }
 
+ 
+}
+@media (max-width: 768px) {
+  
 }
 
-@media (min-width: 992px) {
+@media (max-width: 576px) {
     .contactContainer {
-        max-width: 870px;
-        flex-flow: row;
+        max-width: 340px;
+        flex-flow: column;
 
     }
 
-
-    
 }
+
+
 
 
 @import "contactForm";

@@ -42,7 +42,7 @@ function ContactInfo() {
             </div>
 
             <div className="aboutContact">
-                <p className="aboutContacGreen">Contact</p>&nbsp; :  &nbsp; &nbsp;  <p>kosta.artist@outlook.com</p>
+            <p className="aboutContacGreen">Contact</p> <span>:</span>   <p>kosta.artist@outlook.com</p>
             </div>
         </div>
 

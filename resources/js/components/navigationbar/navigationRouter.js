@@ -8,6 +8,8 @@ import {
 import Home from '../pages/home/home';
 import Commission from '../pages/commission/commission';
 import Contact from '../pages/contact/contact';
+import Price from '../pages/price/price';
+
 
 import NavigationBar from './navigationBar';
 
@@ -24,6 +26,8 @@ function NavigationRouter() {
             <Routes>
 
                 <Route path="/" exact element={<Home />} />
+
+                <Route path="/price" element={<Price />} />
 
                 <Route path="/commission" element={<Commission />} />
 

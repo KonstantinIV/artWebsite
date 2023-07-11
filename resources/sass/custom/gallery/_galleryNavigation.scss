@@ -19,7 +19,7 @@
 
     height: 60px;
     width: 100%;
-    max-width: 200px;
+    max-width: 550px;
 
     margin-bottom: 20px;
 
@@ -33,19 +33,7 @@
 
 }
 
-@media (min-width: 576px) {
-    .galleryNavContainerArtMediumType {
-        max-width: 260px;
 
-    }
-}
-
-@media (min-width: 992px) {
-    .galleryNavContainerArtMediumType {
-        max-width: 550px;
-
-    }
-}
 
 .galleryNavItem {
     height: 100%;
@@ -152,6 +140,35 @@
     border-radius: 3px;
 
     background-color: #281b11;
+}
+
+
+
+
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+/********************************MEDIA*******************************/
+@media (max-width: 1200px) {
+   
+}
+
+@media (max-width: 992px) {
+    .galleryNavContainerArtMediumType {
+        max-width: 260px;
+
+    }
+ 
+}
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 576px) {
+    .galleryNavContainerArtMediumType {
+        max-width: 200px;
+
+    }
 }
 
 

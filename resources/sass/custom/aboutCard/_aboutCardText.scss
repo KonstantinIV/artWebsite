@@ -10,13 +10,10 @@
 
 
 .aboutTextContainer {
+    display: flex;
     flex-basis: 0;
     flex-grow: 3;
-    display: flex;
     flex-flow: column;
-
-
-
 
     margin-top: 45px;
     margin-bottom: 20px;
@@ -37,6 +34,7 @@
 
     display: block;
     align-items: center;
+
     margin-bottom: 0px;
 
 }
@@ -45,24 +43,40 @@
 .aboutContact {
 
     display: flex;
-    margin-bottom: 0;
-    font-weight: bold;
     align-items: center;
-    //font-family: "Segoe UI";
+
+    margin-bottom: 0;
+
+    font-weight: bold;
+}
+
+.aboutContact p {
+
+    margin-left: 10px;
 }
 
 .aboutContact .aboutContacGreen {
 
+    margin-right: 10px;
+    margin-left: 0px;
+
     color: #4ac44a;
-    
+
     font-weight: bold;
-    //font-family: "Segoe UI";
+
+
 }
 
 
 
-@media (max-width: 992px) {
+//LARGE
+/***/
+@media (max-width: 1200px) {
 
+
+}
+
+@media (max-width: 992px) {
     .aboutTextAndLinksContainer {
         flex-direction: column;
     }
@@ -70,7 +84,6 @@
     .aboutTextContainer {
         margin-top: 0px;
     }
-
 
     .aboutText {
         text-align: center;
@@ -86,6 +99,48 @@
 
         text-align: center;
 
-
     }
 }
+
+@media (max-width: 768px) {
+
+    
+}
+
+@media (max-width: 576px) {
+    .aboutContact {
+
+
+        flex-flow: column;
+    }
+
+    .aboutContact span {
+
+
+        display: none; 
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
