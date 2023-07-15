@@ -5,72 +5,56 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
+
+use App\Mail\BaseEmail;
+
 class MailController extends Controller
 {
-
-    private $sendersName;
-    private $sendersEmail;
-    private $sendersMessage;
-
-
-
-    public function sendEmail(Request $request)
-    {
-
-        $this->setSendersName( $request->input('sendersName'));
-        $this->setSendersEmail( $request->input('sendersEmail'));
-        $this->setSendersMessage( $request->input('sendersMessage'));
-        
-
-        $data = [
-            'to'  => 'kosta.artist@outlook.com',
-            'subject' =>$this->getSendersName(),
-            'message' => $this->getSendersMessage(),
-        ];
-
-        Mail::send([], [], function ($message) use ($data) {
-            $message->to($data['to'])
-                ->subject($data['subject'])
-                ->setBody($data['message']);
-        });
-
-        return response()->json(true);
-    }
-
-
-
+    // Existing mailables
+    private $mailables = [
+        'contactForm' => BaseEmail::class
+        // Add more mappings for other email types as needed
+    ];
     
-    private function setSendersName($sendersName){
-        $this->sendersName = $sendersName;
-
-    }
-    private function setSendersEmail($sendersEmail){
-        $this->sendersEmail = $sendersEmail;
-
-    }
-
-    private function setSendersMessage($sendersMessage){
-        
-        // Append extra message content
-        $sendersMessage .= "\n\n" . $this->getSendersName();
-
-        $sendersMessage .= "\n\n" . $this->getSendersEmail();
-
-        $this->sendersMessage = $sendersMessage;
+    public function sendEmail(Request $request){
+        $emailType = $request->input('emailType');
+        $emailData = $request->input('emailData');
 
 
+        if ($this->mailableExists($emailType)) {
+            $this->sendContent( $this->mailables[$emailType], $emailData);
+            return response()->json(true);
+
+        } 
+            //Email failed  to deliver
+            return response()->json(false);
     }
 
 
 
-    private function getSendersName(){
-        return $this->sendersName;
+    //Add try catch
+    private function sendContent($mailableClass, $emailData) : bool
+    { 
+        try {
+            Mail::to("kosta.artist@outlook.com")->send(new $mailableClass( $emailData));
+            // Email sent successfully
+            return true;
+        } catch (\Exception $e) {
+            // Failed to send email
+            return false;
+        }
+
     }
-    private function getSendersEmail(){
-        return $this->sendersEmail;
+
+
+    private function mailableExists($emailType) : bool
+    {
+        if (array_key_exists($emailType, $this->mailables)) {
+            return true;
+        }
+        return false;
+
     }
-    private function getSendersMessage(){
-        return $this->sendersMessage;
-    }
+
 
 }

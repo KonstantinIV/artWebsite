@@ -6,21 +6,29 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+
+//use Illuminate\Http\Request;
+
   
 class BaseEmail extends Mailable
 {
     use Queueable, SerializesModels;
   
-    public $details;
+    private $sendersName;
+    private $sendersEmail;
+    private $sendersMessage;
   
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($details)
+    public function __construct($emailData)
     {
-        $this->details = $details;
+        $this->sendersName =  $emailData['sendersName'];
+        $this->sendersEmail =  $emailData['sendersEmail'];
+        $this->sendersMessage = $emailData['sendersMessage'];
+
     }
   
     /**
@@ -30,7 +38,13 @@ class BaseEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from ')
-                    ->view('emails.BaseEmail');
+        return $this->subject('Website Mail')
+                    ->view('emails.baseEmail')
+                    ->with([
+                        'sendersName' => $this->sendersName,
+                        'sendersEmail' => $this->sendersEmail,
+                        'sendersMessage' => $this->sendersMessage,
+
+                ]);
     }
 }

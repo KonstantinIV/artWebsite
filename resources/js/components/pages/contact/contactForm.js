@@ -6,11 +6,12 @@ import {  useState } from "react";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
-    subject : 'WebsiteMail',
 
-    sendersName: '',
-    sendersEmail: '',
-    sendersMessage: ''
+    emailType : 'contactForm',
+    emailData : {
+                  sendersName: '',
+                  sendersEmail: '',
+                  sendersMessage: ''}
   });
 
   const [mailResult, setMailResult] = useState("");
@@ -18,7 +19,9 @@ function ContactForm() {
 
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, emailData: { ...formData.emailData, [e.target.name]: e.target.value } });
+
+   // setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const sendEmail = () => {
