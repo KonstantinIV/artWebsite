@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Mail;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Support\Facades\Mail;
 
 
-use App\Mail\BaseEmail;
+use App\Mail\ContactEmail;
+use App\Models\ContactEmailModel;
+
 
 class MailController extends Controller
 {   
@@ -16,7 +17,7 @@ class MailController extends Controller
 
         // Existing mailables
     private  $mailables = [
-        'contactForm' => BaseEmail::class
+        'contactForm' => ContactEmail::class
         // Add more mappings for other email types as needed
     ];
 
@@ -24,6 +25,8 @@ class MailController extends Controller
     private $emailData ; 
 
     private $mailableClass;
+
+    public $emailError;
 
 
     function __construct($emailType,$emailData){
@@ -45,6 +48,24 @@ class MailController extends Controller
         }
 
     }
+
+    public function storeContent() {
+       
+            ContactEmailModel::create([
+                'name' => $this->emailData['sendersName'],
+                'email' =>  $this->emailData['sendersEmail'],
+                'message' => $this->emailData['sendersMessage'],
+            ]);
+       
+
+    }
+
+    public function getEmailError() {
+       
+       return $this->emailError;
+    }
+
+
 
     //Set Mailable class
     public function mailableExists() : bool

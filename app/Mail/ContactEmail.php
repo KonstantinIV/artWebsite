@@ -10,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 //use Illuminate\Http\Request;
 
   
-class BaseEmail extends Mailable
+class ContactEmail extends Mailable
 {
     use Queueable, SerializesModels;
   

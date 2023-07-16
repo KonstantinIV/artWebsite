@@ -32,7 +32,15 @@ class MailLogicController extends Controller
         if ($mailController->mailableExists()) {
 
             if ($mailController->sendContent()){
-                return response()->json(true);
+
+                if ($mailController->storeContent()){
+                
+                    return response()->json(true);
+
+                }
+
+                return response()->json($mailController->getEmailError());
+
             }
             return response()->json(false);
         } 
