@@ -36,7 +36,7 @@ function ContactForm() {
 
   const setEmailStatus = (data) => {
       
-    if(JSON.stringify(data)){
+    if(data){
       setMailResult("Mail sent!");
     }else{
       setMailResult("Something went wrong.");

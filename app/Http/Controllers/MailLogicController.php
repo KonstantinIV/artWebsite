@@ -28,7 +28,7 @@ class MailLogicController extends Controller
 
         $mailController = new MailController($emailType, $emailData);
 
-        
+        //Check if the mailable exists if not send false
         if ($mailController->mailableExists()) {
 
             if ($mailController->sendContent()){
