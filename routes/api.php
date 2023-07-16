@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\MailController;
+use App\Http\Controllers\Mail\MailController;
 use App\Http\Controllers\ImageFilesController;
 
 /*

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Mail\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -11,7 +11,8 @@ use App\Mail\BaseEmail;
 class MailController extends Controller
 {
     // Existing mailables
-    private $mailables = [
+    private static $receiverEmail = "kosta.artist@outlook.com";
+    private static $mailables = [
         'contactForm' => BaseEmail::class
         // Add more mappings for other email types as needed
     ];
@@ -22,7 +23,7 @@ class MailController extends Controller
 
 
         if ($this->mailableExists($emailType)) {
-            $this->sendContent( $this->mailables[$emailType], $emailData);
+            $this->sendContent($this->receiverEmail, $this->mailables[$emailType], $emailData);
             return response()->json(true);
 
         } 
@@ -33,10 +34,10 @@ class MailController extends Controller
 
 
     //Add try catch
-    private function sendContent($mailableClass, $emailData) : bool
+    private function sendContent($receiverEmail, $mailableClass, $emailData) : bool
     { 
         try {
-            Mail::to("kosta.artist@outlook.com")->send(new $mailableClass( $emailData));
+            Mail::to($receiverEmail)->send(new $mailableClass( $emailData));
             // Email sent successfully
             return true;
         } catch (\Exception $e) {
