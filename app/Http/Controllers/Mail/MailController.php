@@ -1,43 +1,42 @@
 <?php
 
-namespace App\Http\Mail\Controllers;
+namespace App\Http\Controllers\Mail;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 use Illuminate\Support\Facades\Mail;
 
 
 use App\Mail\BaseEmail;
 
 class MailController extends Controller
-{
-    // Existing mailables
-    private static $receiverEmail = "kosta.artist@outlook.com";
-    private static $mailables = [
+{   
+    private  $receiverEmail = "kosta.artist@outlook.com";
+
+        // Existing mailables
+    private  $mailables = [
         'contactForm' => BaseEmail::class
         // Add more mappings for other email types as needed
     ];
-    
-    public function sendEmail(Request $request){
-        $emailType = $request->input('emailType');
-        $emailData = $request->input('emailData');
+
+    private $emailType ; 
+    private $emailData ; 
+
+    private $mailableClass;
 
 
-        if ($this->mailableExists($emailType)) {
-            $this->sendContent($this->receiverEmail, $this->mailables[$emailType], $emailData);
-            return response()->json(true);
+    function __construct($emailType,$emailData){
+        $this->emailType = $emailType;
+        $this->emailData = $emailData;
 
-        } 
-            //Email failed  to deliver
-            return response()->json(false);
     }
+   
 
-
-
-    //Add try catch
-    private function sendContent($receiverEmail, $mailableClass, $emailData) : bool
+    public function sendContent( ) : bool
     { 
         try {
-            Mail::to($receiverEmail)->send(new $mailableClass( $emailData));
+            Mail::to($this->receiverEmail)->send(new $this->mailableClass( $this->emailData));
             // Email sent successfully
             return true;
         } catch (\Exception $e) {
@@ -47,13 +46,21 @@ class MailController extends Controller
 
     }
 
-
-    private function mailableExists($emailType) : bool
+    //Set Mailable class
+    public function mailableExists() : bool
     {
-        if (array_key_exists($emailType, $this->mailables)) {
+        if (array_key_exists($this->emailType, $this->mailables)) {
+            $this->setMailableClass($this->emailType); 
             return true;
         }
         return false;
+
+    }
+
+
+    private function setMailableClass($emailType)
+    {
+      $this->mailableClass = $this->mailables[$emailType]; 
 
     }
 

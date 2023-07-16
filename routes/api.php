@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Mail\MailController;
+use App\Http\Controllers\MailLogicController;
 use App\Http\Controllers\ImageFilesController;
 
 /*
@@ -21,7 +21,7 @@ use App\Http\Controllers\ImageFilesController;
 
 Route::get('/imagefiles', [ImageFilesController::class, 'returnImageFileNames']);
 
-Route::post('/sendEmail', [MailController::class, 'sendEmail']);
+Route::post('/sendEmail', MailLogicController::class);
 
 
 
