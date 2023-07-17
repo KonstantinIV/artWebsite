@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Mail;
+namespace App\Classes\Mail;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,7 +11,7 @@ use App\Mail\ContactEmail;
 use App\Models\ContactEmailModel;
 
 
-class MailController extends Controller
+class MailClass extends Controller
 {   
     private  $receiverEmail = "kosta.artist@outlook.com";
 
@@ -43,6 +43,7 @@ class MailController extends Controller
             // Email sent successfully
             return true;
         } catch (\Exception $e) {
+            $this->setEmailError($e);
             // Failed to send email
             return false;
         }
@@ -60,8 +61,15 @@ class MailController extends Controller
 
     }
 
-    public function getEmailError() {
+
+      
+
+    private function setEmailError($error) {
+        $this->emailError = $error;
        
+     }
+
+    public function getEmailError() {
        return $this->emailError;
     }
 
@@ -74,6 +82,7 @@ class MailController extends Controller
             $this->setMailableClass($this->emailType); 
             return true;
         }
+        
         return false;
 
     }
