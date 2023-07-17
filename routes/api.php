@@ -21,7 +21,11 @@ use App\Http\Controllers\ImageFilesController;
 
 Route::get('/imagefiles', [ImageFilesController::class, 'returnImageFileNames']);
 
-Route::post('/sendEmail', [MailController::class, 'sendEmail']);
+
+Route::prefix('sendEmail')->group(function () {
+    Route::post('/', [MailController::class, 'store'] );
+
+});
 
 
 

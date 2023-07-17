@@ -3,74 +3,61 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
+
+use App\Classes\Mail\MailClass;
+
 
 class MailController extends Controller
 {
-
-    private $sendersName;
-    private $sendersEmail;
-    private $sendersMessage;
+    
 
 
-
-    public function sendEmail(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
 
-        $this->setSendersName( $request->input('sendersName'));
-        $this->setSendersEmail( $request->input('sendersEmail'));
-        $this->setSendersMessage( $request->input('sendersMessage'));
-        
 
-        $data = [
-            'to'  => 'kosta.artist@outlook.com',
-            'subject' =>$this->getSendersName(),
-            'message' => $this->getSendersMessage(),
-        ];
+        $mailableType = $request->input('emailType');
+        $emailData = $request->input('emailData');
 
-        Mail::send([], [], function ($message) use ($data) {
-            $message->to($data['to'])
-                ->subject($data['subject'])
-                ->setBody($data['message']);
-        });
+        $mail = new MailClass($mailableType, $emailData);
 
-        return response()->json(true);
+        //Check if the mailable exists if not send false
+        if ($mail->mailableExists()) {
+
+            if ($mail->sendContent()){
+
+                //STORE DATA INTO DATABASE
+                $mail->storeContent();
+                
+                return response()->json(true);
+
+
+            }
+        } 
+        //return response()->json($mail->getEmailError());
+
+        return response()->json(false);
+
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
     }
 
 
-
-    
-    private function setSendersName($sendersName){
-        $this->sendersName = $sendersName;
-
-    }
-    private function setSendersEmail($sendersEmail){
-        $this->sendersEmail = $sendersEmail;
-
-    }
-
-    private function setSendersMessage($sendersMessage){
-        
-        // Append extra message content
-        $sendersMessage .= "\n\n" . $this->getSendersName();
-
-        $sendersMessage .= "\n\n" . $this->getSendersEmail();
-
-        $this->sendersMessage = $sendersMessage;
-
-
-    }
-
-
-
-    private function getSendersName(){
-        return $this->sendersName;
-    }
-    private function getSendersEmail(){
-        return $this->sendersEmail;
-    }
-    private function getSendersMessage(){
-        return $this->sendersMessage;
-    }
-
+  
 }
