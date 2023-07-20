@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MailController;
-use App\Http\Controllers\ImageFilesController;
+use App\Http\Controllers\ImagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +17,13 @@ use App\Http\Controllers\ImageFilesController;
 |
 */
 
+Route::prefix('imagefiles')->group(function () {
+    Route::get('/', [ImagesController::class, 'index']);
+
+});
 
 
-Route::get('/imagefiles', [ImageFilesController::class, 'returnImageFileNames']);
+//Route::get('/imagefiles', [ImageFilesController::class, 'returnImageFileNames']);
 
 
 Route::prefix('sendEmail')->group(function () {

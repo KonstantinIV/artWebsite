@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Classes\Images;
+
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Cache;
@@ -8,11 +9,11 @@ use Carbon\Carbon;
 
 
 
-class ImageFilesController extends Controller{
+class ImagesClass {
 
     //The file system should be sructured before hand, where folders act as keys and image files act as chieldren
 
-    //current folder structure 
+    //current folder structure  
     // gallery
     //        digital
     //              all
@@ -35,34 +36,35 @@ class ImageFilesController extends Controller{
 
     public function returnImageFileNames()
     {
-
+      
         //check if cache has data 
-        if ($this->checkCacheForImageFileNames(self::CACHE_KEY)) {
-            $this->setImageFileNames( 
-                $this->getCachedImageFileNames(self::CACHE_KEY)
-            );
-
-        } else {
-            // If not cached, retrieve the value and cache it
-            $this->setImageFileNames( 
-                 $this->createImageFilesData(
-                            $this->getImageFilePaths(
-                                $this->getImageFilesPublicPath(self::IMAGE_PATH)
-            )));
-
-            //Set cache with new data : 
-            //keyname, data, expirationdate
-            $this->setCacheData( 
-                self::CACHE_KEY, 
-                $this->getImageFileNames(),
-                Carbon::now()->addMonth());
-
-
-        }
-        // Return the results as JSON
-        return response()->json(  
-            $this->getImageFileNames()
-        );
+      
+            if ($this->checkCacheForImageFileNames(self::CACHE_KEY)) {
+                $this->setImageFileNames( 
+                    $this->getCachedImageFileNames(self::CACHE_KEY)
+                );
+    
+            } else {
+                // If not cached, retrieve and set data
+                $this->setImageFileNames( 
+                     $this->createImageFilesData(
+                                $this->getImageFilePaths(
+                                    $this->getImageFilesPublicPath(self::IMAGE_PATH)
+                )));
+    
+                //Set cache with new data : 
+                //keyname, data, expirationdate
+                $this->setCacheData( 
+                    self::CACHE_KEY, 
+                    $this->getImageFileNames(),
+                    Carbon::now()->addMonth());
+    
+    
+            }
+            // Return the results 
+            return $this->getImageFileNames();
+      
+       
     }
 
      //Set new cache data
@@ -91,7 +93,7 @@ class ImageFilesController extends Controller{
         $this->sortedImageFileNames = $data;
     }
     //Get end result
-    private function getImageFileNames(){
+    public function getImageFileNames(){
        return  $this->sortedImageFileNames ;
     }
 

@@ -2,16 +2,15 @@
 
 namespace App\Classes\Mail;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
-
+//Mailable
 use App\Mail\ContactEmail;
+
 use App\Models\ContactEmailModel;
 
 
-class MailClass extends Controller
+class MailClass 
 {   
     private  $receiverEmail = "kosta.artist@outlook.com";
 
