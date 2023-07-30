@@ -6,7 +6,7 @@ import {
     Route} from 'react-router-dom';
 
 import Home from '../pages/home/home';
-import Commission from '../pages/commission/commission';
+import Info from '../pages/info/info';
 import Contact from '../pages/contact/contact';
 import Price from '../pages/price/price';
 
@@ -29,7 +29,7 @@ function NavigationRouter() {
 
                 <Route path="/price" element={<Price />} />
 
-                <Route path="/commission" element={<Commission />} />
+                <Route path="/info" element={<Info />} />
 
                 <Route path="/contact" element={<Contact />} />
 

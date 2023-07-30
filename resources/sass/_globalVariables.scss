@@ -6,12 +6,91 @@ body {
   background-color: rgb(255 253 226);
   // background-color: #e5e5f7;
   //opacity: 0.8;
-  background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, rgb(255 253 226) 0.5px);
+  background-image: radial-gradient(#281b11 0.5px, transparent 0.5px), radial-gradient(#281b11 0.5px, rgb(255 253 226) 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
   margin: 0;
 
 }
+
+.bodyContainer{
+position: relative;
+}
+
+.backgroundDesignBox1{
+  position: absolute;
+  z-index: -4;
+
+  top: 365px;
+  width: 100%;
+  height: 235px;
+  margin: 0 0 0 0;
+
+ // border-radius: 10px;
+  background-color: #893f0645;
+  
+}
+.backgroundDesignBox1{ 
+  animation: fadeInAnimation ease 1.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .backgroundDesignBox1{
+    top: 380px;   
+  }
+}
+
+@media (max-width: 992px) {
+  .backgroundDesignBox1{
+    top: 670px;
+    }
+ 
+}
+@media (max-width: 768px) {
+  .backgroundDesignBox1{
+    top: 670px;
+    }
+}
+
+@media (max-width: 576px) {
+  .backgroundDesignBox1{
+    //top: 385px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

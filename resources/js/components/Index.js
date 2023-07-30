@@ -14,7 +14,10 @@ function Main() {
   
     return(
 
-        <div>       
+        <div className='bodyContainer'>       
+            
+
+           
 
          <WebsiteLogo/>
 

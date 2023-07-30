@@ -13,6 +13,10 @@ function Home() {
     return (
 
         <div>
+             <div className='backgroundDesignBox1'>       
+
+   
+</div>
             <AboutCard />
             <Gallery />
         </div>
