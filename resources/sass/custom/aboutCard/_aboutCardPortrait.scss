@@ -29,6 +29,12 @@
 
 
 }
+.aboutImageUkraineIcon {
+    
+   width: 40px;
+ 
+ 
+ }
 
 //LARGE
 /***/
@@ -39,6 +45,18 @@
 @media (max-width: 992px) {
     .aboutImage{
         margin-top: 30px;
+    }
+    .aboutImageContainer {
+
+        flex-flow: column;
+        flex-wrap: wrap;
+        
+    }
+    .aboutImageUkraineIcon {
+    
+       align-self: center;
+    
+    
     }
 
 }

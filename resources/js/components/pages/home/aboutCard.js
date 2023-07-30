@@ -9,6 +9,7 @@ function AboutCard() {
       <div className="aboutImageContainer">
         <img src="img/profile/profileGray.png" className=" aboutImage" alt="..." />
 
+        <img src="img/icons/ukraine.png" className=" aboutImageUkraineIcon" alt="..." />
 
       </div>
       <div className="aboutTextAndLinksContainer">
