@@ -4,7 +4,7 @@ function WebsiteLogo(){
 
     return (
 
-        <div>
+        <div className="kostaLogoContainer">
             <div className="kostaLogo">
             <a className="" 
           href="/">Kosta </a>

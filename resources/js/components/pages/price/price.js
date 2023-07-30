@@ -1,11 +1,14 @@
 import React from 'react';
 
-
+import PriceNavbar from './priceNavbar';
+import PriceTrad from './priceTrad';
+import PriceDigital from './priceDigital';
 
 export default function Price() {
 
     return (
             <div className="priceContainer">
+                <PriceNavbar />
                 <h1 className="commissionHeader">Traditional art</h1>
 
                 <div className="priceArtContainer">
