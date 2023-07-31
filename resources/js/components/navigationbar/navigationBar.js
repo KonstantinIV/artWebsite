@@ -14,8 +14,8 @@ function NavigationBar() {
 
 
     // Other constants
-    const pageNames = ["home", "price", "info", "contact"];
-
+    //const pageNames = ["home", "price", "info", "contact"];
+    const pageNames = ["home",  "info", "contact"];
 
     // Event handlers
     const handleSetActiveButton = (pageName) => {

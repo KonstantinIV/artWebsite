@@ -27,7 +27,7 @@ function NavigationRouter() {
 
                 <Route path="/" exact element={<Home />} />
 
-                <Route path="/price" element={<Price />} />
+               {/* <Route path="/price" element={<Price />} />  */} 
 
                 <Route path="/info" element={<Info />} />
 

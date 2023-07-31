@@ -23,7 +23,7 @@ Route::get('/home', function () {
 Route::get('/price', function () {
     return view('welcome');
 });
-Route::get('/commission', function () {
+Route::get('/info', function () {
     return view('welcome');
 });
 Route::get('/contact', function () {
