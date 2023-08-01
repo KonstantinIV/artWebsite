@@ -4,7 +4,7 @@ export default function InfoNavbar({
     topics,
     clickedTopic,
     handleTopic }) {
-    var clickedButtonClassName = "galleryClickedButton";
+    var clickedButtonClassName = "infoNavClickedButton";
 
     return (
         <div className="infoNavBar">

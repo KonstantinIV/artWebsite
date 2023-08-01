@@ -8,7 +8,7 @@ export default function InfoCommissionProcess() {
 
     return (
         <div>
-            <h1 className="infoHeader">Process</h1>
+            <h1 className="infoHeader">Commission process</h1>
 
             <div className="infoTextContainer">
                 <p className="infoText">

@@ -4,12 +4,16 @@
 
     height: fit-content;
     width: 100%;
-    max-width: 240px;
+    max-width: 245px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 72px;
+    margin-bottom: 30px;
 
-    background-color: white;
+    background-color: rgba(218, 174, 119, 0.168627451);
     border-radius: 5px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 9px 0 rgba(7, 4, 3, 0.19);
-    margin-top: 72px;
+
 
 
 }
@@ -23,15 +27,58 @@
     justify-content: space-between;
 
     height: 35px;
+    padding: 8px 15px;
     border-radius: 3px;
-    text-transform: capitalize;
+    color: rgb(14, 14, 14);
 
+
+    text-transform: capitalize;
     transition: background-color 0.2s linear;
     cursor: pointer;
-    padding: 0 15px;
 }
 
+.infoNavClickedButton{
+    background-color: #a9744f;
+    color: white;
+}
 .infoNavItem:hover {
-    background-color: #edebd5;
+    background-color: #e8cbb7;
     //transition-timing-function: linear;
+}
+
+@media (max-width: 1200px) {
+   
+   
+}
+
+@media (max-width: 992px) {
+    .infoNavBar {
+        max-width: 560px;
+        margin-top: 0px;
+
+    }
+    .infoNavItem{
+  
+
+        justify-content: center;
+
+    }
+    
+     
+}
+@media (max-width: 768px) {
+    .infoNavBar {
+        max-width: 560px;
+        margin-top: 0px;
+
+    }
+}
+
+@media (max-width: 576px) {
+   
+    .infoNavBar {
+        max-width: 300px;
+        margin-top: 0px;
+
+    }
 }

@@ -53,12 +53,7 @@
         width : 500px;
      
      }
-     .infoContainer{
-       
-         width: 500px;
-        
-     
-     }
+  
     
      
 }
@@ -68,14 +63,15 @@
 
 @media (max-width: 576px) {
     .infoContainer p{
-        width : 300px;
-     
+        width : 280px;
+
      }
-     .infoContainer{
-       
-         width: 300px;
-        
-     
+
+     .infoTextContainer {
+        padding: 30px 10px;
+
      }
+
+  
 }
 

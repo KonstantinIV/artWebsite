@@ -11,10 +11,10 @@ export default function Info() {
     const [clickedTopic, setTopic] = useState("Digital art tools");
 
 
-    const topics = ["Digital art tools","Commission", "Rights and usage"];
+    const topics = ["Digital art tools","Commission process", "Rights and usage"];
     const topicContentMap = {
         'Digital art tools': InfoDigitalArtTools,
-        'Commission': InfoCommissionProcess,
+        'Commission process': InfoCommissionProcess,
         'Rights and usage': InfoRightsAndUsage,
         // Add more topics and corresponding content components as needed
       };

@@ -8,7 +8,7 @@ export default function InfoRightsAndUsage() {
 
     return (
         <div>
-            <h1 className="infoHeader">Copyrights/Rights</h1>
+            <h1 className="infoHeader">Rights And Usage</h1>
 
             <div className="infoTextContainer">
             <p className="infoText">
