@@ -70,7 +70,7 @@ class ImagesClass {
      //Set new cache data
      private function setCacheData($cacheKey, $data, $cacheKeyExpirationDate){
 
-        Cache::put('imageFileNameData', $data, $expirationDate);
+        Cache::put($cacheKey, $data, $cacheKeyExpirationDate);
     }
 
 
