@@ -117,7 +117,7 @@ class ImagesClass {
         foreach ($filePaths as $file) {
             $filePath = $file->getRelativePathname(); // Get the file path relative to the img directory
             $dirNames = explode('/', $file->getRelativePath()); // Get parent directory names
-            $fileName = basename($filePath); // Get the file name from the file path
+            $fileName = basename($filePath); // Get the file name from the file path hii
     
             // Add the file name to the array under its directory name
             $dirResults = &$results;
