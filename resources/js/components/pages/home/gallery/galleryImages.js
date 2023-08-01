@@ -1,11 +1,11 @@
 import React from 'react';
 
 function GalleryImages({
-  clickedViewType,
+  handleEnlargeImage,
   imageFiles,
   clickedMediumType,
   clickedArtType,
-  handleEnlargeImage,
+  clickedViewType,
   isImageClicked,
   imageFileName }) {
 
