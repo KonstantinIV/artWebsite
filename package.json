@@ -1,5 +1,10 @@
 {
     "private": true,
+
+    "name": "Art portfolio website",
+    "version": "1.0.1",
+    "description": "Art portfolio website",
+    
     "scripts": {
         "dev": "npm run development",
         "development": "mix",

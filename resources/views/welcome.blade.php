@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/icons/iconTitle.png" type="image/icon type">
 
-    <title>Laravel React</title>
+    <title>Kosta</title>
      
   <!-- JQUERY -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>

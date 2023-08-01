@@ -13,6 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/.github
 
 /public/img/gallery/*
 !public/img/gallery/.gitkeepfolder
