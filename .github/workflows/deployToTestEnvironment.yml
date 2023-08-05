@@ -1,4 +1,4 @@
-name: Deploy to test environment
+name: Test environment
 on: 
   push:
     branches:
@@ -17,5 +17,12 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          touch example13.txt
-          touch example14.txt
+          cd /var/www/html/testEnv/artWebsite 
+          git pull origin testEnvironment 
+          composer install --optimize-autoloader --no-dev 
+          npm install 
+          chown -R www-data:www-data /var/www/html/testEnv/artWebsite
+          php artisan optimize
+
+      
+					
