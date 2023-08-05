@@ -17,9 +17,10 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          cd /var/www/html/testEnv/artWebsite 
-          git pull origin testEnvironment 
-          composer install --optimize-autoloader --no-dev 
-          npm install 
+          cd /var/www/html/testEnv/artWebsite
+          su devuser
+          git pull origin testEnvironment
+          composer update					
+          npm install
           chown -R www-data:www-data /var/www/html/testEnv/artWebsite
           php artisan optimize
