@@ -18,7 +18,6 @@ jobs:
         port: 22
         script: |
           cd /var/www/html/testEnv/artWebsite
-          su devuser
           git pull origin testEnvironment
           composer update					
           npm install
