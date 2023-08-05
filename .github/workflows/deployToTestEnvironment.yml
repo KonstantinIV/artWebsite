@@ -17,6 +17,5 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          cd /var/www/html/testEnv/artWebsite && git pull origin testEnvironment
-          touch example11.txt
-          touch example12.txt
+          touch example13.txt
+          touch example14.txt
