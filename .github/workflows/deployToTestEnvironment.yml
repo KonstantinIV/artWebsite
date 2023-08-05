@@ -18,3 +18,5 @@ jobs:
         port: 22
         script: |
           cd /var/www/html/testEnv/artWebsite && git pull origin testEnvironment
+          touch example11.txt
+          touch example12.txt
