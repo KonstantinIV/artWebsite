@@ -23,6 +23,3 @@ jobs:
           npm install 
           chown -R www-data:www-data /var/www/html/testEnv/artWebsite
           php artisan optimize
-
-      
-					
