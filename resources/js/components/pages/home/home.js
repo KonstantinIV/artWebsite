@@ -8,15 +8,17 @@ import Gallery from "./gallery/gallery";
 
 
 function Home() {
-  
-   
+
+
     return (
 
         <div>
-             <div className='backgroundDesignBox1'>       
+            <div className='backgroundDesignBox1'>
 
-   
-</div>
+            </div>
+
+         
+
             <AboutCard />
             <Gallery />
         </div>

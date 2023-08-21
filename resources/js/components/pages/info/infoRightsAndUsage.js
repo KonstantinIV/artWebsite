@@ -12,19 +12,16 @@ export default function InfoRightsAndUsage() {
 
             <div className="infoTextContainer">
             <p className="infoText">
-                <b>Commercial/personal use:</b> The received artwork can be used for personal use only unless otherwise agreed upon.
+                <b>Usage:</b> The received artwork can be used for personal use only unless otherwise agreed upon.
                 <br />
                 <br />
 
-                <b>Personal use:</b>
+                <b>Personal use examples:</b>
 
                 <ul>
 
                     <li>
                         Printing single T-shirt, poster etc. for personal use.
-                    </li>
-                    <li>
-                        Gifting to others.
                     </li>
                     <li>
                         Posting online, using it as a profile picture, etc.
@@ -33,7 +30,7 @@ export default function InfoRightsAndUsage() {
 
                 <br />
 
-                <b>Commercial use:</b>
+                <b>Commercial use examples:</b>
 
                 <ul>
 
@@ -45,7 +42,7 @@ export default function InfoRightsAndUsage() {
                     </li>
                 </ul>
                 <br />
-                <b>AI, NFT, etc.:</b> Using the received artwork for NFT and AI-related projects is not allowed unless explicitly specified.
+                <b>AI and NFT:</b> Using the received artwork for NFT and AI-related projects is not allowed unless explicitly specified.
                 <br />
 
                 <br />

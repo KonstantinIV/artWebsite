@@ -3,7 +3,8 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Routes,
-    Route} from 'react-router-dom';
+    Route
+} from 'react-router-dom';
 
 import Home from '../pages/home/home';
 import Info from '../pages/info/info';
@@ -16,18 +17,18 @@ import NavigationBar from './navigationBar';
 
 
 function NavigationRouter() {
-  
+
     return (
         <Router>
 
-        <NavigationBar/>
- 
+            <NavigationBar />
+
         
             <Routes>
 
                 <Route path="/" exact element={<Home />} />
 
-               {/* <Route path="/price" element={<Price />} />  */} 
+                {/* <Route path="/price" element={<Price />} />  */}
 
                 <Route path="/info" element={<Info />} />
 

@@ -1,20 +1,19 @@
 //My own
-
+html, body {
+  overflow-x:hidden 
+} 
 body {
 
-  //background-color: rgb(248, 247, 230);
   background-color: rgb(255 253 226);
-  // background-color: #e5e5f7;
-  //opacity: 0.8;
   background-image: radial-gradient(#281b11 0.5px, transparent 0.5px), radial-gradient(#281b11 0.5px, rgb(255 253 226) 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
   margin: 0;
-
 }
 
 .bodyContainer{
 position: relative;
+
 }
 
 .backgroundDesignBox1{
@@ -30,6 +29,9 @@ position: relative;
   background-color: #893f0645;
   
 }
+
+
+
 .backgroundDesignBox1{ 
   animation: fadeInAnimation ease 1.6s;
   animation-iteration-count: 1;
@@ -45,7 +47,11 @@ position: relative;
 }
 
 
+
+
+
 @media (max-width: 1200px) {
+  $base-position: 200;
   .backgroundDesignBox1{
     top: 380px;   
   }

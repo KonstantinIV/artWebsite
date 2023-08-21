@@ -13,7 +13,7 @@ export default function InfoDigitalArtTools() {
                     created by me <b>using traditional artistic techniques.</b>
                     <br />
                     <br />
-                    Why using AI-generated images can be troublesome:
+                    Consequences of using AI generated content:
                     <ul>
                         <li>
                             <b>Brand damage:</b> Many people oppose content created by AI tools due to concerns about authenticity and ethics regarding the creation of AI tools, which can lead to reputation damage for brands.

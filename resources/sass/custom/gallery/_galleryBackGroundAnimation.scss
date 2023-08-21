@@ -10,7 +10,8 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 750px;
+    top:  640px;
+
     z-index: -1;
   
   
@@ -92,20 +93,32 @@
 /********************************MEDIA*******************************/
 /********************************MEDIA*******************************/
 @media (max-width: 1200px) {
-   
+  .galleryBackgroundAnimationContainer {
+    top: 680px;
+
+
+  
+  
+}
 }
 
 @media (max-width: 992px) {
      
   
   .galleryBackgroundAnimationContainer {
-   top:1200px;
+    
+   top:1050px;
   
   
   }
   }
 @media (max-width: 768px) {
-  
+  .galleryBackgroundAnimationContainer {
+    
+    top:1070px;
+   
+   
+   }
 }
 
 @media (max-width: 576px) {
