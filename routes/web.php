@@ -14,20 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return Inertia::render('welcome', [
+        // Your data to be passed to the component
+    ]);
 });
 
 Route::get('/home', function () {
-    return view('welcome');
-});
+    return Inertia::render('welcome', [
+        // Your data to be passed to the component
+    ]);});
 Route::get('/price', function () {
-    return view('welcome');
-});
+    return Inertia::render('welcome', [
+        // Your data to be passed to the component
+    ]);});
 Route::get('/info', function () {
-    return view('welcome');
-});
+    return Inertia::render('welcome', [
+        // Your data to be passed to the component
+    ]);});
 Route::get('/contact', function () {
-    return view('welcome');
-});
+    return Inertia::render('welcome', [
+        // Your data to be passed to the component
+    ]);});
 
 
