@@ -10,7 +10,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top:  640px;
+    top: -90px;
 
     z-index: -1;
   
@@ -94,7 +94,7 @@
 /********************************MEDIA*******************************/
 @media (max-width: 1200px) {
   .galleryBackgroundAnimationContainer {
-    top: 680px;
+    top: -90px;
 
 
   
@@ -107,7 +107,7 @@
   
   .galleryBackgroundAnimationContainer {
     
-   top:1050px;
+   top:-90px;
   
   
   }
@@ -115,7 +115,7 @@
 @media (max-width: 768px) {
   .galleryBackgroundAnimationContainer {
     
-    top:1070px;
+    top:-90px;
    
    
    }

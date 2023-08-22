@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Inertia\Inertia;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,25 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Inertia::render('welcome', [
+    return Inertia::render('home', [
         // Your data to be passed to the component
     ]);
 });
 
 Route::get('/home', function () {
-    return Inertia::render('welcome', [
+    return Inertia::render('home', [
         // Your data to be passed to the component
     ]);});
 Route::get('/price', function () {
-    return Inertia::render('welcome', [
+    return Inertia::render('price', [
         // Your data to be passed to the component
     ]);});
 Route::get('/info', function () {
-    return Inertia::render('welcome', [
+    return Inertia::render('info', [
         // Your data to be passed to the component
     ]);});
 Route::get('/contact', function () {
-    return Inertia::render('welcome', [
+    return Inertia::render('contact', [
         // Your data to be passed to the component
     ]);});
 

@@ -1,7 +1,9 @@
 //My own
-html, body {
-  overflow-x:hidden 
-} 
+html,
+body {
+  overflow-x: hidden
+}
+
 body {
 
   background-color: rgb(255 253 226);
@@ -11,38 +13,40 @@ body {
   margin: 0;
 }
 
-.bodyContainer{
-position: relative;
+.bodyContainer {
+  position: relative;
 
 }
 
-.backgroundDesignBox1{
+.backgroundDesignBox1 {
   position: absolute;
   z-index: -4;
 
-  top: 365px;
+  top: 25px;
   width: 100%;
   height: 235px;
   margin: 0 0 0 0;
 
- // border-radius: 10px;
+  // border-radius: 10px;
   background-color: #893f0645;
-  
+
 }
 
 
 
-.backgroundDesignBox1{ 
+.backgroundDesignBox1 {
   animation: fadeInAnimation ease 1.6s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
+
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -51,28 +55,29 @@ position: relative;
 
 
 @media (max-width: 1200px) {
-  $base-position: 200;
-  .backgroundDesignBox1{
-    top: 380px;   
+
+  .backgroundDesignBox1 {
+    top: 45px;
   }
 }
 
 @media (max-width: 992px) {
-  .backgroundDesignBox1{
-    top: 670px;
-    }
- 
+  .backgroundDesignBox1 {
+    top: 210px;
+  }
+
 }
+
 @media (max-width: 768px) {
-  .backgroundDesignBox1{
-    top: 670px;
-    }
+  .backgroundDesignBox1 {
+    top: 210px;
+  }
 }
 
 @media (max-width: 576px) {
-  .backgroundDesignBox1{
+  .backgroundDesignBox1 {
     //top: 385px;
-    }
+  }
 }
 
 
@@ -130,27 +135,31 @@ p {
   font-size: 18px;
 
 }
-h1{
+
+h1 {
   color: #212529;
   line-height: 30px;
-  
+
 }
-h2{
+
+h2 {
   color: #212529;
   margin-top: 10px;
-  
+
 }
-h3{
+
+h3 {
   color: #212529;
 
-  
+
 }
+
 a {
   text-decoration-color: none;
   color: none;
 }
-a:visited {
-   text-decoration-color: none;
-   color: none;
-}
 
+a:visited {
+  text-decoration-color: none;
+  color: none;
+}

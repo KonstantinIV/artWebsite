@@ -1,31 +1,32 @@
-
 import React from "react";
 
 import AboutCard from "./aboutCard";
 import Gallery from "./gallery/gallery";
 
 
+import Layout from "../../layout/layout";
 
 
-function Home() {
+
+export default function Home() {
 
 
     return (
 
-        <div>
+        <Layout title="Home">
+
             <div className='backgroundDesignBox1'>
 
             </div>
 
-         
+
 
             <AboutCard />
             <Gallery />
-        </div>
+        </Layout>
 
 
     )
 }
-export default Home;
 
 

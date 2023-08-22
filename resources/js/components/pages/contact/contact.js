@@ -3,15 +3,22 @@ import React from 'react';
 import ContactInfo from './contactInfo';
 import ContactForm from './contactForm';
 
-function Contact(){
+import Layout from "../../layout/layout";
+
+export default function Contact() {
 
 
-    return(
-        <div className='contactContainer'>
-        <ContactInfo />
-        <ContactForm />
+    return (
+
+
+
+
+        <Layout title="Contact">
+            <div className='contactContainer'>
+                <ContactInfo />
+                <ContactForm />
             </div>
-        
+        </Layout>
+
     )
 }
-export default Contact;

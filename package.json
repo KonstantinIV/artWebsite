@@ -1,10 +1,8 @@
 {
     "private": true,
-
     "name": "Art portfolio website",
     "version": "1.0.1",
     "description": "Art portfolio website",
-    
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
@@ -21,8 +19,8 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1"
@@ -30,6 +28,9 @@
     "dependencies": {
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
+        "@inertiajs/inertia-react": "^0.8.1",
+        "@inertiajs/progress": "^0.2.7",
+        "@inertiajs/react": "^1.0.11",
         "@mui/material": "^5.12.1",
         "autoprefixer": "10.4.5",
         "jquery": "^3.6.4",

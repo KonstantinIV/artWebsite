@@ -4,17 +4,24 @@ import PriceNavbar from './priceNavbar';
 import PriceTrad from './priceTrad';
 import PriceDigital from './priceDigital';
 
+import Layout from "../../layout/layout";
+
+
 export default function Price() {
 
     return (
-        <div>
-                            <PriceNavbar />
-                            <PriceTrad />
-                            <PriceDigital />
 
 
-        </div>
-           
+
+        <Layout title="Price">
+            <div>
+                <PriceNavbar />
+                <PriceTrad />
+                <PriceDigital />
+
+
+            </div>
+        </Layout>
 
 
     )
