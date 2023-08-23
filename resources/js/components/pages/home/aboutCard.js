@@ -1,6 +1,11 @@
 import React from 'react';
 
-function AboutCard() {
+
+
+function AboutCard(
+  {
+    artistDescription
+  }) {
 
   return (
 
@@ -16,15 +21,10 @@ function AboutCard() {
       <div className="aboutTextAndLinksContainer">
         <div className="aboutTextContainer">
 
-          <p className="aboutTextHeadline" >
+          <h3 className="aboutTextHeadline" >
             About
-          </p>
-          <p className="aboutText">
-
-            Digital and traditional artist from Europe,  <img style={{ marginRight: "-3px" }} src='img/icons/ee.png' alt="..." />&nbsp;
-            Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
-            continuously improving and exploring new ways of artistic expression.
-
+          </h3>
+          <p className="aboutText" dangerouslySetInnerHTML={{__html:  artistDescription}}>
           </p>
           <br />
 

@@ -15,14 +15,22 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('home', [
-        // Your data to be passed to the component
+        
+        'artistDescription' => ' Digital and traditional artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." />&nbsp;
+        Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
+        continuously improving and exploring new ways of artistic expression.'
     ]);
 });
 
 Route::get('/home', function () {
     return Inertia::render('home', [
-        // Your data to be passed to the component
-    ]);});
+        
+        'artistDescription' => ' Digital and traditional artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." />&nbsp;
+        Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
+        continuously improving and exploring new ways of artistic expression.'
+    ]);
+});
+
 Route::get('/price', function () {
     return Inertia::render('price', [
         // Your data to be passed to the component

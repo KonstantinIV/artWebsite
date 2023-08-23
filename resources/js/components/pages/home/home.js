@@ -6,11 +6,11 @@ import Gallery from "./gallery/gallery";
 
 import Layout from "../../layout/layout";
 
+//import { usePage } from '@inertiajs/react';
 
+export default function Home(props) {
 
-export default function Home() {
-
-
+   // const { artistDescription } = usePage().props;
     return (
 
         <Layout title="Home">
@@ -21,7 +21,9 @@ export default function Home() {
 
 
 
-            <AboutCard />
+            <AboutCard 
+                artistDescription={props.artistDescription}
+            />
             <Gallery />
         </Layout>
 
