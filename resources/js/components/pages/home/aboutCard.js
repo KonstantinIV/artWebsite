@@ -2,16 +2,17 @@ import React from 'react';
 
 
 
-function AboutCard(
+export default function AboutCard(
   {
     artistDescription
-  }) {
+  }
+) {
 
   return (
 
 
     <div className="aboutContainer">
-      
+
       <div className="aboutImageContainer">
         <img src="img/profile/profileGray.png" className=" aboutImage" alt="..." />
 
@@ -24,8 +25,9 @@ function AboutCard(
           <h3 className="aboutTextHeadline" >
             About
           </h3>
-          <p className="aboutText" dangerouslySetInnerHTML={{__html:  artistDescription}}>
+          <p className="aboutText" dangerouslySetInnerHTML={{ __html: artistDescription }}>
           </p>
+
           <br />
 
           <div className="aboutContact">
@@ -35,12 +37,8 @@ function AboutCard(
 
         </div>
         <div className="aboutLinksContainer">
-        
-        
-
-
-          <a className="icon-link icon-link-hover aboutLink"  
-          href="https://twitter.com/Kosta_IV" target="_blank">
+          <a className="icon-link icon-link-hover aboutLink"
+            href="https://twitter.com/Kosta_IV" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
               fill="#6767d1" className="bi bi-twitter" viewBox="0 0 16 16">
               <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 
@@ -55,12 +53,12 @@ function AboutCard(
 
             Artstation
           </a>
-          <a className="icon-link icon-link-hover aboutLink"  href="https://www.facebook.com/KostaIV" target="_blank">
+          <a className="icon-link icon-link-hover aboutLink" href="https://www.facebook.com/KostaIV" target="_blank">
             <img src="img/icons/facebook.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
 
-               Facebook
+            Facebook
           </a>
-      
+
 
 
         </div>
@@ -76,7 +74,6 @@ function AboutCard(
 
 }
 
-export default AboutCard ;
 /*
     <a className="icon-link icon-link-hover aboutLink" style={{ "--bs-icon-link-transform": " translate3d(0, -.125rem, 0)" }} href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#6767d1" className="bi bi-instagram" viewBox="0 0 16 16">

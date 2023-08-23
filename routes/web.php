@@ -14,20 +14,19 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
+   // app()->setLocale('en'); // Set the locale 
+    
     return Inertia::render('home', [
-        
-        'artistDescription' => ' Digital and traditional artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." />&nbsp;
-        Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
-        continuously improving and exploring new ways of artistic expression.'
+
+        'artistDescription' => trans('homePage.artistDescription')
     ]);
 });
 
 Route::get('/home', function () {
     return Inertia::render('home', [
         
-        'artistDescription' => ' Digital and traditional artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." />&nbsp;
-        Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
-        continuously improving and exploring new ways of artistic expression.'
+        'artistDescription' => trans('homePage.artistDescription')
+
     ]);
 });
 
@@ -35,10 +34,24 @@ Route::get('/price', function () {
     return Inertia::render('price', [
         // Your data to be passed to the component
     ]);});
+
+
 Route::get('/info', function () {
+
     return Inertia::render('info', [
+        'infoArticle' => trans('infoPage.digital-art-tools')
         // Your data to be passed to the component
-    ]);});
+    ]);
+});
+
+Route::get('/info/{article}', function ($article) {
+
+        return Inertia::render('info', [
+            'infoArticle' => trans('infoPage.'.$article)
+
+            // Your data to be passed to the component
+        ]);
+    });
 Route::get('/contact', function () {
     return Inertia::render('contact', [
         // Your data to be passed to the component

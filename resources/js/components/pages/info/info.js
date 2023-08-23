@@ -3,25 +3,25 @@ import { useState } from "react";
 
 import InfoNavbar from "./infoNavBar";
 
-import InfoDigitalArtTools from "./infoDigitalArtTools";
-import InfoCommissionProcess from './infoCommissionProcess';
-import InfoRightsAndUsage from './infoRightsAndUsage';
+
+
+import InfoArticle from './infoArticle';
 
 import Layout from "../../layout/layout";
 
 
-export default function Info() {
+export default function Info(props) {
   const [clickedTopic, setTopic] = useState("Digital art tools");
 
 
   const topics = ["Digital art tools", "Commission process", "Rights and usage"];
-  const topicContentMap = {
+ /* const topicContentMap = {
     'Digital art tools': InfoDigitalArtTools,
     'Commission process': InfoCommissionProcess,
     'Rights and usage': InfoRightsAndUsage,
     // Add more topics and corresponding content components as needed
-  };
-  const TopicContentComponent = topicContentMap[clickedTopic];
+  };*/
+  //const TopicContentComponent = topicContentMap[clickedTopic];
 
   const handleTopic = (topic) => {
     setTopic(topic);
@@ -38,7 +38,9 @@ export default function Info() {
           handleTopic={handleTopic}
         />
 
-        {TopicContentComponent && <TopicContentComponent />}
+       <InfoArticle 
+       article={props.infoArticle}
+       />
 
       </div>
     </Layout>

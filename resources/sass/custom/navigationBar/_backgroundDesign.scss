@@ -40,6 +40,7 @@ $mediaPos576: 400;
 
 
 }
+
 .backgroundDesignBox3{
   position: absolute;
   z-index: -4;
@@ -86,6 +87,10 @@ $mediaPos576: 400;
 
   border: 4px solid #dfcaa7;
   border-radius: 5px;
+
+  animation: breathing 8s ease-in-out infinite;
+  animation-delay: 1s;
+
   @media (max-width: 1200px) {
     right: ($base-position - $mediaPos1200)+px;
   
@@ -150,6 +155,10 @@ $mediaPos576: 400;
 
   border: 4px solid #dfcaa7;
   border-radius: 5px;
+
+  animation: breathing 6s ease-in-out infinite;
+
+
   @media (max-width: 1200px) {
     left: ($base-position - $mediaPos1200)+px;
   
@@ -168,5 +177,14 @@ $mediaPos576: 400;
   @media (max-width: 576px) {
     left: ($base-position - $mediaPos576)+px;
   
+  }
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
   }
 }

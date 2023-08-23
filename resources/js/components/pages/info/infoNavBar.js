@@ -10,12 +10,14 @@ export default function InfoNavbar({
         <div className="infoNavBar">
 
             {topics.map((topic, ID) => (
-                <div key={ID}
+                <a key={ID}
                     className={(clickedTopic == topic ? ("infoNavItem " + clickedButtonClassName) : "infoNavItem")}
-                    onClick={() => handleTopic(topic)}>
+                    onClick={() => handleTopic(topic)}
+                    href='/info/digital-art-tools'>
+
                     {topic}
 
-                </div>
+                </a>
             ))}
 
 
