@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from '@inertiajs/react';
+
 
 export default function InfoNavbar({
-    topics,
+    topicContentMap,
     clickedTopic,
     handleTopic }) {
     var clickedButtonClassName = "infoNavClickedButton";
@@ -9,15 +11,15 @@ export default function InfoNavbar({
     return (
         <div className="infoNavBar">
 
-            {topics.map((topic, ID) => (
-                <a key={ID}
+            {Object.keys(topicContentMap).map((topic, ID) => (
+                <Link preserveScroll key={ID}
                     className={(clickedTopic == topic ? ("infoNavItem " + clickedButtonClassName) : "infoNavItem")}
-                    onClick={() => handleTopic(topic)}
-                    href='/info/digital-art-tools'>
+                    //onClick={() => handleTopic(topic)}
+                    href={'/info/'+topicContentMap[topic]}>
 
                     {topic}
 
-                </a>
+                </Link>
             ))}
 
 

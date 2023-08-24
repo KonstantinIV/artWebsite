@@ -3,9 +3,10 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import { Link } from '@inertiajs/react';
 
-export default function NavigationBar() { 
+export default function NavigationBar() {
     // State variables
-    const pageName = window.location.pathname.split("/").pop() ;
+    const pathParts = window.location.pathname.split("/");
+    const pageName = pathParts[pathParts.length - 2];
     const setPageName = (pageName != "") ? "home" : pageName;
 
     const [currentPageName, setActiveButton] = useState(setPageName);
@@ -14,23 +15,25 @@ export default function NavigationBar() {
 
     // Other constants
     //const pageNames = ["home", "price", "info", "contact"];
-    const pageNames = ["home",  "info", "contact"];
+    const pageNames = ["home", "info", "contact"];
 
     // Event handlers
     const handleSetActiveButton = (pageName) => {
         //const currentPageName = window.location.pathname.split("/").pop();
 
-        setActiveButton(pageName) 
+        setActiveButton(pageName)
     };
 
     useEffect(() => {
-        const currentPageName = window.location.pathname.split("/").pop();        
-        setActiveButton(currentPageName) 
-      }, []);
-      
+        const pathParts = window.location.pathname.split("/");
+        const currentPageName = pathParts[pathParts.length - 2];
+
+        setActiveButton(currentPageName)
+    }, []);
+
 
     return (
-        
+
         <div>
             <nav className="navBarContainer">
                 <ul className="navBarItems">
@@ -43,7 +46,9 @@ export default function NavigationBar() {
 
                             }
                             <Link
+                                preserveScroll
                                 href={"/" + (pageName == "home" ? "" : pageName)}
+                                only={['info']}
                                 key={pageID}
                                 className={"navBarLink " +
                                     (

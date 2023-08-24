@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-
+import { useRemember } from '@inertiajs/react';
 import InfoNavbar from "./infoNavBar";
 
 
@@ -11,21 +11,25 @@ import Layout from "../../layout/layout";
 
 
 export default function Info(props) {
-  const [clickedTopic, setTopic] = useState("Digital art tools");
+  const pathParts = window.location.pathname.split("/");
+  const lastPart = pathParts.pop();
+  const currentTopic = lastPart.charAt(0).toUpperCase() + lastPart.replace(/-/g, " ").slice(1); ;
 
 
-  const topics = ["Digital art tools", "Commission process", "Rights and usage"];
- /* const topicContentMap = {
-    'Digital art tools': InfoDigitalArtTools,
-    'Commission process': InfoCommissionProcess,
-    'Rights and usage': InfoRightsAndUsage,
+  //const topics = ["Digital art tools", "Commission process", "Rights and usage"];
+ const topicContentMap = {
+    'Digital art tools': "digital-art-tools",
+    'Commission process': "commission-process",
+    'Rights and usage': "digital-art-toolsss",
     // Add more topics and corresponding content components as needed
-  };*/
-  //const TopicContentComponent = topicContentMap[clickedTopic];
-
-  const handleTopic = (topic) => {
-    setTopic(topic);
   };
+
+
+  const [clickedTopic, setTopic] = useState(currentTopic);
+
+ /* const handleTopic = (topic) => {
+    setTopic(topic);
+  };*/
   return (
 
     <Layout title="Info">
@@ -33,9 +37,9 @@ export default function Info(props) {
       <div className='infoContainer'>
 
         <InfoNavbar
-          topics={topics}
-          clickedTopic={clickedTopic}
-          handleTopic={handleTopic}
+          topicContentMap={topicContentMap}
+          clickedTopic={currentTopic}
+          //handleTopic={handleTopic}
         />
 
        <InfoArticle 
@@ -50,8 +54,3 @@ export default function Info(props) {
 
   )
 }
-
-/*    {topics.map(topic => (
-                //<InfoDigitalArtTools />
-
-            ))} */
