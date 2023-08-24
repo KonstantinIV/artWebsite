@@ -7,18 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
+    <!-- SEO -->
     <!-- BRAND -->
     <title>{{ $title }}</title>
     <link rel="icon" href="img/icons/kosta-title-icon.png" type="image/icon type">
-
-    <!-- LOCAL  -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script defer src="{{ asset('js/app.js') }}"></script>
-    <!--  <script defer type="text/javascript" src="https://livejs.com/live.js" ></script> -->
-
-   
-
-    <!-- SEO -->
     <meta name="description" content="Digital illusrtrations and traditional vintage art portraits | Kosta">
     <link rel="canonical" href="https://www.kostaartist.com">
 
@@ -48,7 +41,14 @@
     ">
     <meta name="twitter:image" content="https://www.yourartwebsite.com/images/kosta-cover-image.jpg">
     
-   
+      
+
+    <!-- LOCAL  -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script defer src="{{ asset('js/app.js') }}"></script>
+    <!--  <script defer type="text/javascript" src="https://livejs.com/live.js" ></script> -->
+
+    
     <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JTB3X1495H"></script>
         <script>

@@ -10,18 +10,19 @@ import Layout from "../../layout/layout";
 
 export default function Home(props) {
 
-   // const { artistDescription } = usePage().props;
+    // const { artistDescription } = usePage().props;
     return (
 
-        <Layout >
+        <Layout title="Kosta | Art" >
 
+           
             <div className='backgroundDesignBox1'>
 
             </div>
 
 
 
-            <AboutCard 
+            <AboutCard
                 artistDescription={props.artistDescription}
             />
             <Gallery />

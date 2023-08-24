@@ -13,7 +13,7 @@ export default function Contact() {
 
 
 
-        <Layout title="Contact">
+        <Layout title="Contact - Kosta | Art">
             <div className='contactContainer'>
                 <ContactInfo />
                 <ContactForm />

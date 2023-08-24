@@ -22,7 +22,9 @@ Route::get('/', function () {
    // app()->setLocale('en'); // Set the locale 
    $pageTitle = "test";
 
-    return Inertia::render('home', ['artistDescription' => trans('homePage.artistDescription')])-> withViewData(['title'       => 'Contact Us | My App']);
+    return Inertia::render('home', 
+    ['artistDescription' => trans('homePage.artistDescription')])
+    ->withViewData(['title' => 'Kosta | Art']); 
 });
 
 Route::get('/home', function () {
@@ -30,7 +32,8 @@ Route::get('/home', function () {
         
         'artistDescription' => trans('homePage.artistDescription')
 
-    ]);
+    ]) 
+    ->withViewData(['title'       => 'Kosta | Art ']) ;
 });
 
 
@@ -47,7 +50,9 @@ Route::get('/home', function () {
 Route::get('/price', function () {
     return Inertia::render('price', [
         // Your data to be passed to the component
-    ]);});
+    ])
+    ->withViewData(['title'       => 'Price - Kosta | Art']) ;
+    });
 
 
 
@@ -64,8 +69,10 @@ Route::get('/info', function () {
     return Inertia::render('info', [
         'infoArticle' => trans('infoPage.digital-art-tools')
         // Your data to be passed to the component
-    ]);
+    ])->withViewData(['title'       => 'Info - Kosta | Art']) ;
+    
 });
+
 
 Route::get('/info/{article}', function ($article) {
             
@@ -73,8 +80,9 @@ Route::get('/info/{article}', function ($article) {
             'infoArticle' => trans('infoPage.'.$article)
 
             // Your data to be passed to the component
-        ]);
+        ])->withViewData(['title'       => (ucwords(str_replace("-", " ", $article)).'- Kosta | Art')]) ;
     });
+    
 
 
 
@@ -90,6 +98,7 @@ Route::get('/info/{article}', function ($article) {
 Route::get('/contact', function () {
     return Inertia::render('contact', [
         // Your data to be passed to the component
-    ]);});
+    ])->withViewData(['title'       => 'Contact - Kosta | Art']) 
+    ;});
 
 

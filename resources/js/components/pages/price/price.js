@@ -13,7 +13,7 @@ export default function Price() {
 
 
 
-        <Layout title="Price">
+        <Layout title="Price - Kosta | Art">
             <div>
                 <PriceNavbar />
                 <PriceTrad />

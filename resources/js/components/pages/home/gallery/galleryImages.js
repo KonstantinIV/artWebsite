@@ -33,6 +33,7 @@ function GalleryImages({
                 src={`img/gallery/${clickedMediumType}/${clickedArtType}/${file}`}
                 className={clickedViewType === "small" ? "galleryImageSmall" : "galleryImageLarge"}
                 alt="..."
+                loading="lazy"
               />
             </div>
           ))}
