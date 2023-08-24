@@ -13,7 +13,7 @@ export default function Home(props) {
    // const { artistDescription } = usePage().props;
     return (
 
-        <Layout title="Home">
+        <Layout >
 
             <div className='backgroundDesignBox1'>
 

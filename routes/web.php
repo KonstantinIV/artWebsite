@@ -13,13 +13,16 @@ use Inertia\Inertia;
 |
 */
 
+
+
+//Home page
+//*********************************************
+//*********************************************
 Route::get('/', function () {
    // app()->setLocale('en'); // Set the locale 
-    
-    return Inertia::render('home', [
+   $pageTitle = "test";
 
-        'artistDescription' => trans('homePage.artistDescription')
-    ]);
+    return Inertia::render('home', ['artistDescription' => trans('homePage.artistDescription')])-> withViewData(['title'       => 'Contact Us | My App']);
 });
 
 Route::get('/home', function () {
@@ -30,12 +33,32 @@ Route::get('/home', function () {
     ]);
 });
 
+
+
+
+
+
+
+
+//Price page
+//*********************************************
+//*********************************************
+//*********************************************
 Route::get('/price', function () {
     return Inertia::render('price', [
         // Your data to be passed to the component
     ]);});
 
 
+
+
+
+
+
+//Info page
+//*********************************************
+//*********************************************
+//*********************************************
 Route::get('/info', function () {
 
     return Inertia::render('info', [
@@ -45,13 +68,25 @@ Route::get('/info', function () {
 });
 
 Route::get('/info/{article}', function ($article) {
-
+            
         return Inertia::render('info', [
             'infoArticle' => trans('infoPage.'.$article)
 
             // Your data to be passed to the component
         ]);
     });
+
+
+
+
+
+
+
+
+//Contact page
+//*********************************************
+//*********************************************
+//*********************************************
 Route::get('/contact', function () {
     return Inertia::render('contact', [
         // Your data to be passed to the component

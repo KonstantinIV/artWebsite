@@ -1,45 +1,34 @@
 import React from 'react';
-import { useState } from "react";
-import { useRemember } from '@inertiajs/react';
+
 import InfoNavbar from "./infoNavBar";
-
-
-
 import InfoArticle from './infoArticle';
 
 import Layout from "../../layout/layout";
+import { Head } from '@inertiajs/react'
 
 
 export default function Info(props) {
   const pathParts = window.location.pathname.split("/");
-  const lastPart = pathParts.pop();
-  const currentTopic = lastPart.charAt(0).toUpperCase() + lastPart.replace(/-/g, " ").slice(1); ;
+  let lastPart = pathParts.pop();
+  let currentTopic = lastPart.charAt(0).toUpperCase() + lastPart.replace(/-/g, " ").slice(1); 
+  if(lastPart === "info"){
+    currentTopic = "Digital art tools";
+  }
 
-
-  //const topics = ["Digital art tools", "Commission process", "Rights and usage"];
  const topicContentMap = {
     'Digital art tools': "digital-art-tools",
     'Commission process': "commission-process",
     'Rights and usage': "rights-and-usage",
     // Add more topics and corresponding content components as needed
   };
-
-
-  const [clickedTopic, setTopic] = useState(currentTopic);
-
- /* const handleTopic = (topic) => {
-    setTopic(topic);
-  };*/
   return (
-
-    <Layout title="Info">
+    <Layout >
+      <Head title="Your page title" />
 
       <div className='infoContainer'>
-
         <InfoNavbar
           topicContentMap={topicContentMap}
           clickedTopic={currentTopic}
-          //handleTopic={handleTopic}
         />
 
        <InfoArticle 
