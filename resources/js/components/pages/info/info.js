@@ -20,7 +20,7 @@ export default function Info(props) {
  const topicContentMap = {
     'Digital art tools': "digital-art-tools",
     'Commission process': "commission-process",
-    'Rights and usage': "digital-art-toolsss",
+    'Rights and usage': "rights-and-usage",
     // Add more topics and corresponding content components as needed
   };
 

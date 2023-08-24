@@ -6,8 +6,8 @@ import { Link } from '@inertiajs/react';
 export default function NavigationBar() {
     // State variables
     const pathParts = window.location.pathname.split("/");
-    const pageName = pathParts[pathParts.length - 2];
-    const setPageName = (pageName != "") ? "home" : pageName;
+    const pageName = pathParts[1];
+    const setPageName =  pageName;
 
     const [currentPageName, setActiveButton] = useState(setPageName);
 
@@ -26,7 +26,7 @@ export default function NavigationBar() {
 
     useEffect(() => {
         const pathParts = window.location.pathname.split("/");
-        const currentPageName = pathParts[pathParts.length - 2];
+        const currentPageName = pathParts[1];
 
         setActiveButton(currentPageName)
     }, []);
