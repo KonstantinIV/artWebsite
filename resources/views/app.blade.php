@@ -15,7 +15,7 @@
         portraits and characters within the realms of thought-provoking fantasy 
         and realism.'}}" >
 
-    <link rel="icon" href="img/icons/kosta-title-icon.png" type="image/icon type">
+    <link rel="icon" href="img/meta/kosta-title-icon.png" type="image/icon type">
 
 
     <link rel="canonical" href="https://www.kostaartist.com">
@@ -30,7 +30,7 @@
     ">
     <meta property="og:url" content="https://www.kostaartist.com">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.yourartwebsite.com/images/kosta-cover-image.jpg"> 
+    <meta property="og:image" content="https://www.kostaartist.com/img/meta/kosta-cover-image.webp"> 
     <meta property="og:image:alt" content="Kosta art website cover image">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -44,7 +44,7 @@
     From digital paintings that bring fantasies to life to traditional canvases that 
     capture raw emotions, my art reflects a journey through diverse artistic realms. 
     ">
-    <meta name="twitter:image" content="https://www.yourartwebsite.com/images/kosta-cover-image.jpg">
+    <meta name="twitter:image" content="https://www.kostaartist.com/img/meta/kosta-cover-image.webp">
     
       
 

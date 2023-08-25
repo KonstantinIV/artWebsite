@@ -102,7 +102,7 @@ Route::get('/info/{article}', function ($article) {
 
             // Your data to be passed to the component
         ])->withViewData([
-            'title'       => (ucwords(str_replace("-", " ", $article)).'- Kosta | Art'),
+            'title'       => (ucwords(str_replace("-", " ", $article)).' - Kosta | Art'),
             'description'       => 
             'Information about art and processes'
 

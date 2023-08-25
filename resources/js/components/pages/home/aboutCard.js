@@ -14,9 +14,9 @@ export default function AboutCard(
     <div className="aboutContainer">
 
       <div className="aboutImageContainer">
-        <img src="img/profile/profileGray.png" className=" aboutImage" alt="..." />
+        <img src="img/profile/kosta-profile-image.webp" className=" aboutImage" alt="Kosta profile image" />
 
-        <img src="img/icons/ukraine.png" className=" aboutImageUkraineIcon" alt="..." />
+        <img src="img/icons/ukraine.png" className=" aboutImageUkraineIcon" alt="Ukraine flag in the shape of a heart" />
 
       </div>
       <div className="aboutTextAndLinksContainer">
@@ -49,12 +49,12 @@ export default function AboutCard(
             </svg> Twitter
           </a>
           <a disabled className="icon-link icon-link-hover aboutLink" href="https://www.artstation.com/kosta_iv" target="_blank">
-            <img src="img/icons/artstation.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
+            <img src="img/icons/artstation.svg" className="bi bi-twitter aboutLinkIcon" alt="Artstation icon" fill="currentColor" />
 
             Artstation
           </a>
           <a className="icon-link icon-link-hover aboutLink" href="https://www.facebook.com/KostaIV" target="_blank">
-            <img src="img/icons/facebook.svg" className="bi bi-twitter aboutLinkIcon" alt="..." fill="currentColor" />
+            <img src="img/icons/facebook.svg" className="bi bi-twitter aboutLinkIcon" alt="Facebook icon" fill="currentColor" />
 
             Facebook
           </a>
