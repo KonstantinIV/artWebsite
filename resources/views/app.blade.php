@@ -10,9 +10,14 @@
 
     <!-- SEO -->
     <!-- BRAND -->
-    <title>{{ $title }}</title>
+    <title>{{ $title ?? "Kosta | Art" }}</title>
+    <meta name="description" content="{{$description ??   'Digital and traditional artist from Europe, specializing in realistic 
+        portraits and characters within the realms of thought-provoking fantasy 
+        and realism.'}}" >
+
     <link rel="icon" href="img/icons/kosta-title-icon.png" type="image/icon type">
-    <meta name="description" content="Digital illusrtrations and traditional vintage art portraits | Kosta">
+
+
     <link rel="canonical" href="https://www.kostaartist.com">
 
     <!-- Meta tags for SEO -->
