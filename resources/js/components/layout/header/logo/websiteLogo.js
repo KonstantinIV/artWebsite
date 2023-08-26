@@ -4,10 +4,12 @@ function WebsiteLogo(){
 
     return (
 
+   
         <div className="kostaLogoContainer">
             <div className="kostaLogo">
             <a className="" href="/"> 
-Kosta            </a>
+                <img src="img/icons/kosta-logo.png" alt="" /> 
+            </a>
             </div>
             <div className="kostaLogoTextContainer">
                 <div className="kostaLogoText">ARTIST</div>
@@ -27,6 +29,20 @@ export default WebsiteLogo ;
             <a className="" href="/"> 
                 <img src="img/icons/kostalogo.png" alt="" width="400"/> 
             </a>
+            </div>
+            <div className="kostaLogoTextContainer">
+                <div className="kostaLogoText">ARTIST</div>
+                <div className="kostaLogoLine"></div>
+            </div>
+
+        </div>
+
+
+
+                <div className="kostaLogoContainer">
+            <div className="kostaLogo">
+            <a className="" href="/"> 
+Kosta            </a>
             </div>
             <div className="kostaLogoTextContainer">
                 <div className="kostaLogoText">ARTIST</div>

@@ -58,17 +58,15 @@
 
 
     padding-top: 30px;
+    //margin-bottom: 10px;
     /* background-color: #f9f7d9c2; */
-    height: 100px;
-    border-radius: 10px;
+    height: 115px;
+        border-radius: 15px;
     transition: 0.3s;
 
 }
 
-.kostaLogo:hover {
 
-    background-color: #f9f7d9c2;
-}
 
 .kostaLogo a {
     color: inherit;
@@ -80,6 +78,15 @@
     font-style: italic;
     line-height: 90px;
 
+}
+.kostaLogo img {
+    width: 400px;
+    padding-left: 30px;
+
+}
+.kostaLogo img:hover {
+
+    background-color: #f9f7d9c2;
 }
 /********************************MEDIA*******************************/
 /********************************MEDIA*******************************/
@@ -93,10 +100,9 @@
     .kostaLogo{
         margin-bottom: -15px;
     }
-    .kostaLogo a {
-        
-        font-size: 120px;
-       
+    .kostaLogo img {
+        width: 330px;
+  
     
     }
 
@@ -119,10 +125,8 @@
     .kostaLogo{
         margin-bottom: -20px;
     }
-    .kostaLogo a {
-        
-        font-size: 120px;
-       
+    .kostaLogo img {
+        width: 330px;  
     
     }
 
@@ -145,15 +149,15 @@
     .kostaLogo{
         margin-bottom: -25px;
     }
-    .kostaLogo a {
-        
-        font-size: 80px;
-       
+    .kostaLogo img {
+        width:  280px;;
+        padding-left: 13px;
+
     
     }
 
     .kostaLogoTextContainer {
-        width: 300px;
+        width: 290px;
     
         margin: 0 auto;
         margin-bottom: 50px;
