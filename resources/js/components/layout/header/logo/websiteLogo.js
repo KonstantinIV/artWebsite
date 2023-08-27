@@ -8,7 +8,7 @@ function WebsiteLogo(){
         <div className="kostaLogoContainer">
             <div className="kostaLogo">
             <a className="" href="/"> 
-                <img src="img/icons/kosta-logo.png" alt="" /> 
+                <img src="/img/icons/kosta-logo.png" alt="" /> 
             </a>
             </div>
             <div className="kostaLogoTextContainer">
