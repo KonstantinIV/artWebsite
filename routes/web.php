@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Inertia\Inertia;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,21 +13,122 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+//Home page
+//*********************************************
+//*********************************************
 Route::get('/', function () {
-    return view('welcome');
+   // app()->setLocale('en'); // Set the locale 
+
+    return Inertia::render('home', 
+    ['artistDescription' => trans('homePage.artistDescription')])
+    ->withViewData([
+        'title' => 'Kosta | Art',
+        'description'       => 
+        'Digital and traditional artist from Europe, specializing in realistic 
+        portraits and characters within the realms of thought-provoking fantasy 
+        and realism. '
+
+    
+    ]); 
 });
 
 Route::get('/home', function () {
-    return view('welcome');
+    return Inertia::render('home', [
+        
+        'artistDescription' => trans('homePage.artistDescription')
+
+    ]) 
+    ->withViewData([
+    'title'       => 'Kosta | Art ',
+    'description'       => 
+    'Digital and traditional artist from Europe, specializing in realistic 
+    portraits and characters within the realms of thought-provoking fantasy 
+    and realism.']) ;
 });
+
+
+
+
+
+
+
+
+//Price page
+//*********************************************
+//*********************************************
+//*********************************************
 Route::get('/price', function () {
-    return view('welcome');
-});
+    return Inertia::render('price', [
+        // Your data to be passed to the component
+    ])
+    ->withViewData([
+        'title'       => 'Price - Kosta | Art',
+        'description'       => 
+        'Digital art and traditional art prices'
+        ]) ;
+    });
+
+
+
+
+
+
+
+//Info page
+//*********************************************
+//*********************************************
+//*********************************************
 Route::get('/info', function () {
-    return view('welcome');
+
+    return Inertia::render('info', [
+        'infoArticle' => trans('infoPage.digital-art-tools')
+        // Your data to be passed to the component
+    ])->withViewData([
+        'title'       => 'Info - Kosta | Art',
+        'description'       => 
+        'Information about art and processes'
+
+        ]) ;
+    
 });
+
+
+Route::get('/info/{article}', function ($article) {
+            
+        return Inertia::render('info', [
+            'infoArticle' => trans('infoPage.'.$article)
+
+            // Your data to be passed to the component
+        ])->withViewData([
+            'title'       => (ucwords(str_replace("-", " ", $article)).' - Kosta | Art'),
+            'description'       => 
+            'Information about art and processes'
+
+            ]) ;
+    });
+    
+
+
+
+
+
+
+
+
+//Contact page
+//*********************************************
+//*********************************************
+//*********************************************
 Route::get('/contact', function () {
-    return view('welcome');
-});
+    return Inertia::render('contact', [
+        // Your data to be passed to the component
+    ])->withViewData([
+        'title'       => 'Contact - Kosta | Art',
+        'description'       => 
+        'Get in contact with the artist !'
+        ]) 
+    ;});
 
 

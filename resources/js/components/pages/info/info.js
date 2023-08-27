@@ -1,47 +1,44 @@
 import React from 'react';
-import { useState } from "react";
 
 import InfoNavbar from "./infoNavBar";
+import InfoArticle from './infoArticle';
 
-import InfoDigitalArtTools from "./infoDigitalArtTools";
-import InfoCommissionProcess from './infoCommissionProcess';
-import InfoRightsAndUsage from './infoRightsAndUsage';
-
-export default function Info() {
-    const [clickedTopic, setTopic] = useState("Digital art tools");
+import Layout from "../../layout/layout";
+import { Head } from '@inertiajs/react'
 
 
-    const topics = ["Digital art tools","Commission process", "Rights and usage"];
-    const topicContentMap = {
-        'Digital art tools': InfoDigitalArtTools,
-        'Commission process': InfoCommissionProcess,
-        'Rights and usage': InfoRightsAndUsage,
-        // Add more topics and corresponding content components as needed
-      };
-      const TopicContentComponent = topicContentMap[clickedTopic];
+export default function Info(props) {
+  const pathParts = window.location.pathname.split("/");
+  let lastPart = pathParts.pop();
+  let currentTopic = lastPart.charAt(0).toUpperCase() + lastPart.replace(/-/g, " ").slice(1); 
+  if(lastPart === "info"){
+    currentTopic = "Digital art tools";
+  }
 
-      const handleTopic = (topic) => {
-        setTopic(topic);
-      };
-    return (
-        <div className='infoContainer'>
+ const topicContentMap = {
+    'Digital art tools': "digital-art-tools",
+    'Commission process': "commission-process",
+    'Rights and usage': "rights-and-usage",
+    // Add more topics and corresponding content components as needed
+  };
+  return (
+    <Layout title="Info - Kosta | Art">
 
-            <InfoNavbar         
-            topics={topics}
-            clickedTopic={clickedTopic}
-            handleTopic={handleTopic} 
-            />
+      <div className='infoContainer'>
+        <InfoNavbar
+          topicContentMap={topicContentMap}
+          clickedTopic={currentTopic}
+        />
 
-            {TopicContentComponent && <TopicContentComponent />}
-            
-        </div>
+       <InfoArticle 
+       article={props.infoArticle}
+       />
+
+      </div>
+    </Layout>
 
 
 
-    )
+
+  )
 }
-
-/*    {topics.map(topic => (
-                //<InfoDigitalArtTools />
-
-            ))} */

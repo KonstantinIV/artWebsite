@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column;
     
-    width: fit-content;
+    width: 620px;
     //margin: 0 30px;
     padding: 30px;
     
@@ -27,21 +27,21 @@
 }
 
 
-.infoTextContainer p{
+.infoTextContainer *{
 
-    width: 620px;
 
 
     font-size: 19px;
     line-height: 27px;
-
+    margin-bottom: 20px;
+    
 }
 
 //LARGE
 /***/
 @media (max-width: 1200px) {
    
-.infoTextContainer p{
+.infoTextContainer {
 
     width: 620px;
 
@@ -49,28 +49,35 @@
 }
 
 @media (max-width: 992px) {
-    .infoContainer p{
-        width : 500px;
-     
-     }
+    .infoTextContainer {
+
+        width : 520px
+
+    
+    }
   
     
      
 }
 @media (max-width: 768px) {
-  
+    .infoTextContainer {
+
+        width : 520px
+
+    
+    }
+   
 }
 
 @media (max-width: 576px) {
-    .infoContainer p{
-        width : 280px;
+    .infoTextContainer {
 
-     }
+        width :  230px;
 
-     .infoTextContainer {
-        padding: 30px 10px;
-
-     }
+    
+    }
+   
+  
 
   
 }
