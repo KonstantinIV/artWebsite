@@ -18,5 +18,4 @@ yarn-error.log
 /public/img/gallery/*
 !public/img/gallery/.gitkeepfolder
 
-/public/img/profile/*
-!public/img/profile/.gitkeepfolder
+
