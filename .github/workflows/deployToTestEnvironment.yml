@@ -2,7 +2,7 @@ name: Production
 on: 
   push:
     branches:
-      - main
+      - testEnvironment
 
 jobs:
   build:
