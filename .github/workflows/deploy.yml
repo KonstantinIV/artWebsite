@@ -1,4 +1,4 @@
-name: CD remote ssh command
+name: Production
 on: 
   push:
     branches:
@@ -17,5 +17,9 @@ jobs:
         key: ${{ secrets.KEY }}
         port: 22
         script: |
-          cd /var/www/html && touch example.txt
-          
+          cd /var/www/html/artWebsite
+          git pull origin main
+          composer update					
+          npm install
+          chown -R www-data:www-data /var/www/html/artWebsite/*
+          php artisan optimize
