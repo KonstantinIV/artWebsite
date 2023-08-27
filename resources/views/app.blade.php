@@ -15,7 +15,7 @@
         portraits and characters within the realms of thought-provoking fantasy 
         and realism.'}}" >
 
-    <link rel="icon" href="img/meta/kosta-title-icon.png" type="image/icon type">
+    <link rel="icon" href="/img/meta/kosta-title-icon.png" type="image/icon type">
 
 
     <link rel="canonical" href="https://www.kostaartist.com">
