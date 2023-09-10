@@ -21,6 +21,6 @@ jobs:
           git pull origin testEnvironment
           composer update					
           npm install
-          npm run produciton
+          npm run production
           chown -R www-data:www-data /var/www/html/testEnv/artWebsite
           php artisan optimize
