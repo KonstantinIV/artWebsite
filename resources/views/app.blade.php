@@ -47,7 +47,7 @@
     <meta name="twitter:image" content="https://www.kostaartist.com/img/meta/kosta-cover-image.webp">
     
       
-
+ 
     <!-- LOCAL  -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script defer src="{{ asset('js/app.js') }}"></script>
