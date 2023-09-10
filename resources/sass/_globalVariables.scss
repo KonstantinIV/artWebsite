@@ -104,16 +104,12 @@ body {
 
 
 
-@font-face {
-  font-family: myLogoFont;
-  src: url(./fonts/BilboSwashCaps-Regular.ttf);
-  //font-weight: bold;
-}
 
 @font-face {
   font-family: baseFont;
 
   src: url(./fonts/WorkSans-Regular.ttf);
+  font-display: swap;
   //font-weight: bold;
 }
 

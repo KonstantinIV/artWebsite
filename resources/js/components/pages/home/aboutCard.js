@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 
 
 
@@ -14,9 +14,9 @@ export default function AboutCard(
     <div className="aboutContainer">
 
       <div className="aboutImageContainer">
-        <img src="img/profile/kosta-profile-image.webp" className=" aboutImage" alt="Kosta profile image" />
+        <img src="img/profile/kosta-profile-image.webp" className=" aboutImage" alt="Kosta profile image" loading="lazy"/>
 
-        <img src="img/icons/ukraine.png" className=" aboutImageUkraineIcon" alt="Ukraine flag in the shape of a heart" />
+        <img src="img/icons/ukraine.png" className=" aboutImageUkraineIcon" alt="Ukraine flag in the shape of a heart" loading="lazy" />
 
       </div>
       <div className="aboutTextAndLinksContainer">
