@@ -21,5 +21,6 @@ jobs:
           git pull origin main
           composer update					
           npm install
+          npm run production
           chown -R www-data:www-data /var/www/html/artWebsite/*
           php artisan optimize
