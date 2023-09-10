@@ -51,6 +51,7 @@
     <!-- LOCAL  -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script defer src="{{ asset('js/app.js') }}"></script>
+    <link rel="preload" href="/fonts/WorkSans-Regular.ttf?4be086328ba304c25f49ad0d8af428df" as="font" type="font/ttf" crossorigin>
     <!--  <script defer type="text/javascript" src="https://livejs.com/live.js" ></script> -->
 
     
