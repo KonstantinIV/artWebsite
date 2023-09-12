@@ -16,12 +16,13 @@ function ContactForm(
     emailData : {
                   sendersName: '',
                   sendersEmail: '',
-                  sendersMessage: ''}
+                  sendersMessage: '',
+                  targetCaptcha:""}
   });
 
   const [mailResult, setMailResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
+  const [isCaptchaVerified, setCaptcha] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, emailData: { ...formData.emailData, [e.target.name]: e.target.value } });
@@ -52,8 +53,14 @@ function ContactForm(
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!isCaptchaVerified) {
+      setMailResult("Please complete the reCAPTCHA challenge.");
+      return;
+    }
+
     setIsLoading(true);
 
+  
     sendEmail()
       .then((response) => response.json())
       .then((data) => {setEmailStatus(data)})
@@ -63,7 +70,14 @@ function ContactForm(
   };
 
 
+  const handleCaptchaChange = (value) => {
+    // This function will be called when the user completes the reCAPTCHA challenge
+    if (value) {
+      setFormData({ ...formData, emailData: { ...formData.emailData, targetCaptcha: value } });
 
+      setCaptcha(value);
+    }
+  };
   
 
 
@@ -121,6 +135,8 @@ function ContactForm(
       </div>
         <ReCAPTCHA
           sitekey={siteKey} 
+          onChange={handleCaptchaChange}
+          name="targetCaptcha"
           />
 
     </form>
