@@ -26,7 +26,9 @@
     "dependencies": {
         "@inertiajs/progress": "^0.2.7",
         "@inertiajs/react": "^1.0.11",
+        "@inertiajs/server": "^0.1.0",
         "sass": "^1.66.1",
-        "sass-loader": "^13.3.2"
+        "sass-loader": "^13.3.2",
+        "stream-http": "^3.2.0"
     }
 }
