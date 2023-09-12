@@ -46,7 +46,7 @@ class MailClass
 
 
             $secretKey = urlencode(config('app.secretSiteKey'));
-            $recaptchaResponse = urlencode($this->emailData['targetCaptcha']);
+            $recaptchaResponse = urlencode($this->emailData['sendersCaptcha']);
 
             //In manual it was written to use POST  method but it didnt work for some reason use http:GET method 
             $response = Http::get('https://www.google.com/recaptcha/api/siteverify', [
