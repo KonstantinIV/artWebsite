@@ -1,10 +1,15 @@
 import React from 'react';
 import {  useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha"
 
 
 
-
-function ContactForm() {
+function ContactForm(
+  {
+    siteKey
+  }
+) {
+  
   const [formData, setFormData] = useState({
 
     emailType : 'contactForm',
@@ -114,6 +119,9 @@ function ContactForm() {
             <div className="formMailResult">{mailResult}</div>
             )}
       </div>
+        <ReCAPTCHA
+          sitekey={siteKey} 
+          />
 
     </form>
   );

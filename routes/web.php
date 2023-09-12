@@ -24,10 +24,10 @@ Route::get('/', function () {
     return Inertia::render('home', 
     ['artistDescription' => trans('homePage.artistDescription')])
     ->withViewData([
-        'title' => 'Kosta | Art',
+        'title' => 'Kosta | Art Vintage Portrait ',
         'description'       => 
         'Digital and traditional artist from Europe, specializing in realistic 
-        portraits and characters within the realms of thought-provoking fantasy 
+        portraits and characters within the realms of fantasy 
         and realism. '
 
     
@@ -41,10 +41,10 @@ Route::get('/home', function () {
 
     ]) 
     ->withViewData([
-    'title'       => 'Kosta | Art ',
+    'title'       => 'Kosta | Art Vintage Portrait',
     'description'       => 
     'Digital and traditional artist from Europe, specializing in realistic 
-    portraits and characters within the realms of thought-provoking fantasy 
+    portraits and characters within the realms of fantasy 
     and realism.']) ;
 });
 
@@ -122,7 +122,9 @@ Route::get('/info/{article}', function ($article) {
 //*********************************************
 //*********************************************
 Route::get('/contact', function () {
+    $key = config('app.siteKey');
     return Inertia::render('contact', [
+        'siteKey' => "$key"
         // Your data to be passed to the component
     ])->withViewData([
         'title'       => 'Contact - Kosta | Art',
