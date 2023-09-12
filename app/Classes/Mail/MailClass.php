@@ -3,10 +3,11 @@
 namespace App\Classes\Mail;
 
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Http;
 
 //Mailable
 use App\Mail\ContactEmail;
-
+//Model
 use App\Models\ContactEmailModel;
 
 
@@ -37,10 +38,35 @@ class MailClass
 
     public function sendContent( ) : bool
     { 
+
+
+        //Refactor the code later properly
+
         try {
-            Mail::to($this->receiverEmail)->send(new $this->mailableClass( $this->emailData));
-            // Email sent successfully
-            return true;
+
+
+            $secretKey = urlencode(config('app.secretSiteKey'));
+            $recaptchaResponse = urlencode($this->emailData['targetCaptcha']);
+
+            //In manual it was written to use POST  method but it didnt work for some reason use http:GET method 
+            $response = Http::get('https://www.google.com/recaptcha/api/siteverify', [
+                "secret" => $secretKey,
+                'response' => $recaptchaResponse,
+            ]);
+            $responseData = $response->json();
+				 
+			if ($responseData['success'] ) {
+                Mail::to($this->receiverEmail)->send(new $this->mailableClass( $this->emailData));
+                // Email sent successfully
+                return true;
+			} else {
+
+				return false;
+			}
+
+
+
+
         } catch (\Exception $e) {
             $this->setEmailError($e);
             // Failed to send email
@@ -50,13 +76,19 @@ class MailClass
     }
 
     public function storeContent() {
-       
+        try {
             ContactEmailModel::create([
                 'name' => $this->emailData['sendersName'],
                 'email' =>  $this->emailData['sendersEmail'],
                 'message' => $this->emailData['sendersMessage'],
             ]);
        
+            return true;
+        } catch (\Exception $e) {
+         
+            return false;
+        }
+          
 
     }
 
