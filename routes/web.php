@@ -103,8 +103,7 @@ Route::get('/info/{article}', function ($article) {
             // Your data to be passed to the component
         ])->withViewData([
             'title'       => (ucwords(str_replace("-", " ", $article)).' - Kosta | Art'),
-            'description'       => 
-            'Information about art and processes'
+            'description'       =>  'Information about art and processes'
 
             ]) ;
     });
@@ -122,9 +121,9 @@ Route::get('/info/{article}', function ($article) {
 //*********************************************
 //*********************************************
 Route::get('/contact', function () {
-    $key = config('app.siteKey');
     return Inertia::render('contact', [
-        'siteKey' => "$key"
+        //Pass recaptcha site key to react as prop from env file
+        'siteKey' => config('app.siteKey')
         // Your data to be passed to the component
     ])->withViewData([
         'title'       => 'Contact - Kosta | Art',

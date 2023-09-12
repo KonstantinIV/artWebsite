@@ -17,17 +17,23 @@ function ContactForm(
                   sendersName: '',
                   sendersEmail: '',
                   sendersMessage: '',
-                  targetCaptcha:""}
+                  sendersCaptcha:''}
   });
 
   const [mailResult, setMailResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isCaptchaVerified, setCaptcha] = useState(false);
+  const [captchaIsSet, setCaptcha] = useState(false);
 
+
+  //When user fills the fields the state is updated accordingly
   const handleChange = (e) => {
     setFormData({ ...formData, emailData: { ...formData.emailData, [e.target.name]: e.target.value } });
+  };
 
-   // setFormData({ ...formData, [e.target.name]: e.target.value });
+  //When user completes the captcha
+  const handleCaptchaChange = (value) => {
+      setFormData({ ...formData, emailData: { ...formData.emailData, sendersCaptcha: value } });    
+      setCaptcha(true);
   };
 
   const sendEmail = () => {
@@ -53,7 +59,7 @@ function ContactForm(
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!isCaptchaVerified) {
+    if (captchaIsSet == false) {
       setMailResult("Please complete the reCAPTCHA challenge.");
       return;
     }
@@ -66,18 +72,12 @@ function ContactForm(
       .then((data) => {setEmailStatus(data)})
       .finally(() => {
         setIsLoading(false);
+        setCaptcha(false);
+        grecaptcha.reset();
       });
   };
 
 
-  const handleCaptchaChange = (value) => {
-    // This function will be called when the user completes the reCAPTCHA challenge
-    if (value) {
-      setFormData({ ...formData, emailData: { ...formData.emailData, targetCaptcha: value } });
-
-      setCaptcha(value);
-    }
-  };
   
 
 
@@ -136,7 +136,7 @@ function ContactForm(
         <ReCAPTCHA
           sitekey={siteKey} 
           onChange={handleCaptchaChange}
-          name="targetCaptcha"
+          name="sendersCaptcha"
           />
 
     </form>

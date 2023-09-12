@@ -33,6 +33,7 @@ class MailController extends Controller
             if ($mail->sendContent()){
 
                 //STORE DATA INTO DATABASE
+                //Add proper try catch and error
                 $mail->storeContent();
                 
                 return response()->json(true);
