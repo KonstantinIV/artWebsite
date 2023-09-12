@@ -5,8 +5,7 @@ import ContactForm from './contactForm';
 
 import Layout from "../../layout/layout";
 
-export default function Contact() {
-
+export default function Contact(props) {
 
     return (
 
@@ -16,7 +15,9 @@ export default function Contact() {
         <Layout title="Contact - Kosta | Art">
             <div className='contactContainer'>
                 <ContactInfo />
-                <ContactForm />
+                <ContactForm 
+                siteKey = {props.siteKey}
+                />
             </div>
         </Layout>
 

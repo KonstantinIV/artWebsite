@@ -1,27 +1,39 @@
 import React from 'react';
 import {  useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha"
 
 
 
-
-function ContactForm() {
+function ContactForm(
+  {
+    siteKey
+  }
+) {
+  
   const [formData, setFormData] = useState({
 
     emailType : 'contactForm',
     emailData : {
                   sendersName: '',
                   sendersEmail: '',
-                  sendersMessage: ''}
+                  sendersMessage: '',
+                  sendersCaptcha:''}
   });
 
   const [mailResult, setMailResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [captchaIsSet, setCaptcha] = useState(false);
 
 
+  //When user fills the fields the state is updated accordingly
   const handleChange = (e) => {
     setFormData({ ...formData, emailData: { ...formData.emailData, [e.target.name]: e.target.value } });
+  };
 
-   // setFormData({ ...formData, [e.target.name]: e.target.value });
+  //When user completes the captcha
+  const handleCaptchaChange = (value) => {
+      setFormData({ ...formData, emailData: { ...formData.emailData, sendersCaptcha: value } });    
+      setCaptcha(true);
   };
 
   const sendEmail = () => {
@@ -47,16 +59,23 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (captchaIsSet == false) {
+      setMailResult("Please complete the reCAPTCHA challenge.");
+      return;
+    }
+
     setIsLoading(true);
 
+  
     sendEmail()
       .then((response) => response.json())
       .then((data) => {setEmailStatus(data)})
       .finally(() => {
         setIsLoading(false);
+        setCaptcha(false);
+        grecaptcha.reset();
       });
   };
-
 
 
   
@@ -114,6 +133,11 @@ function ContactForm() {
             <div className="formMailResult">{mailResult}</div>
             )}
       </div>
+        <ReCAPTCHA
+          sitekey={siteKey} 
+          onChange={handleCaptchaChange}
+          name="sendersCaptcha"
+          />
 
     </form>
   );

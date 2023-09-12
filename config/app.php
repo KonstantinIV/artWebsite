@@ -2,6 +2,10 @@
 
 return [
 
+    'siteKey' => env('REACT_APP_SITE_KEY'),
+    'secretSiteKey' => env('REACT_APP_SECRET_KEY'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
