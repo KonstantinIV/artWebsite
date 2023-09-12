@@ -7,7 +7,7 @@ function WebsiteLogo(){
    
         <div className="kostaLogoContainer">
             <div className="kostaLogo">
-            <a className="" href="https://kostaartist.com/"> 
+            <a className="" href="/home"> 
                 <img src="/img/icons/kosta-logo.png" alt="" /> 
             </a>
             </div>
