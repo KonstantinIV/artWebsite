@@ -7,6 +7,7 @@ export default function AboutCard(
     artistDescription
   }
 ) {
+  const email = "kosta.artist" + "@" + "outlook.com";
 
   return (
 
@@ -31,7 +32,7 @@ export default function AboutCard(
           <br />
 
           <div className="aboutContact">
-            <p className="aboutContacGreen">Contact</p> <span>:</span>   <p>kosta.artist@outlook.com</p>
+            <p className="aboutContacGreen">Contact</p> <span>:</span>   <p>{email}</p>
           </div>
 
 

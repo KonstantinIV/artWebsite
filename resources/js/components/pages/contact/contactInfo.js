@@ -2,6 +2,7 @@ import React from 'react';
 
 function ContactInfo() {
 
+  const email = "kosta.artist" + "@" + "outlook.com";
 
     return (
         <div className='contactInfoContainer'>
@@ -42,7 +43,7 @@ function ContactInfo() {
             </div>
 
             <div className="aboutContact">
-            <p className="aboutContacGreen">Contact</p> <span>:</span>   <p>kosta.artist@outlook.com</p>
+            <p className="aboutContacGreen">Contact</p> <span>:</span>   <p>{email}</p>
             </div>
         </div>
 

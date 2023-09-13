@@ -1,6 +1,6 @@
 import { createInertiaApp } from '@inertiajs/react';
 import { createRoot } from 'react-dom/client';
-import createServer from '@inertiajs/server';
+import  createServer   from '@inertiajs/server';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
 
