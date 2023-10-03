@@ -7,10 +7,9 @@ export default function AboutCardLinks() {
     return ( 
 
 
-        <div className="aboutLinksContainer">
 
 
-
+            <div>
             <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/kosta_iv_artist" target='_blank'>
                 <img src='img/icons/social-media/instagram.png' className='aboutLinkIcon' alt='instagram icon' fill='currentColor' />
                 Instagram

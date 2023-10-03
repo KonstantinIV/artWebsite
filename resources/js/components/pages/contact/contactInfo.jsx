@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AboutCardLinks from '../home/aboutCard/aboutCardLinks';
 function ContactInfo() {
 
   const email = 'kosta.artist' + '@' + 'outlook.com';
@@ -15,20 +16,7 @@ function ContactInfo() {
       <div className='aboutLinksContainer aboutLinksContainerContactInfo'>
 
 
-        <a className='aboutLink' href='https://twitter.com/Kosta_IV' target='_blank'>
-        <img src='img/icons/social-media/twitter.svg' className='aboutLinkIcon' alt='...' fill='currentColor' /> 
-        Twitter
-        </a>
-
-        <a disabled className=' aboutLink' href='https://www.artstation.com/kosta9' target='_blank'>
-          <img src='img/icons/social-media/artstation.svg' className='aboutLinkIcon' alt='...' fill='currentColor' />
-          Artstation
-        </a>
-
-        <a className='aboutLink' href='https://www.facebook.com/KostaIV' target='_blank'>
-          <img src='img/icons/social-media/facebook.svg' className='aboutLinkIcon' alt='...' fill='currentColor' />
-          Facebook
-        </a>
+      <AboutCardLinks />
 
 
 
