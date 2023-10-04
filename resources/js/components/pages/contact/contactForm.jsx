@@ -54,8 +54,25 @@ export default function ContactForm(
 
     //send mail
     sendEmail()
-      .then((response) => response.json())
-      .then((data) => { setEmailStatus(data) })
+      .then((response) => {
+        //check for outer errors setEmailStatus(data)
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        //check for inner errors
+        if(!data.status){
+            throw new Error(`Error! Status: ${data.message}`);
+        }
+        setEmailStatus(true);
+  
+      })
+      .catch((error) => {
+        setEmailStatus(false);
+        console.log(error);
+      })
       .finally(() => {
         //Mail progress ended
         setIsLoading(false);

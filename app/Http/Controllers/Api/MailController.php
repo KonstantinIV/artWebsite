@@ -46,7 +46,7 @@ class MailController extends Controller
         //Add proper try catch and error
         $mail->storeContent();
 
-        return ResponseController::sendData(true);
+        return ResponseController::sendData("Mail sent!");
 
     }
 
