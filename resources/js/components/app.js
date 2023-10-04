@@ -10,6 +10,6 @@ InertiaProgress.init()
 createInertiaApp({
     resolve: name => require(`./pages/${name}/${name}.jsx`),
     setup({ el, App, props }) {
-        createRoot(el).render(<App {...props} />)
+        createRoot(el).render(<App {...props} />) 
     }, 
 })
