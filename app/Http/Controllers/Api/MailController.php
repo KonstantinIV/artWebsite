@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 
 use App\Classes\Mail\MailClass;
+use  App\Http\Controllers\Controller;
 
 
 class MailController extends Controller

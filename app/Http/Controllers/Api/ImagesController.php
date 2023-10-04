@@ -1,35 +1,65 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
-use App\Classes\Images\ImagesClass;
+
+use App\Classes\Images\ImageFileNameClass;
+use App\Http\Controllers\Controller;
 
 
 class ImagesController extends Controller
 {
+    private const CACHE_KEY = 'imageFileNameData';
     private $imagesClass;
     
-    function __construct(){
-        $this->imagesClass = new ImagesClass();
+
+
+    function __construct()
+    {
+        $this->imagesClass = new ImageFileNameClass('img/gallery');
 
     }
-   
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
+    public function index()
+    {
 
-        return response()->json(  
-            $this->imagesClass->returnImageFileNames()
-        );
-    
-      
+        $imageData = [];
+        $data = [];
 
+        if (Cache::has(self::CACHE_KEY)) {
+            $imageData = Cache::get(self::CACHE_KEY);
+         
+        } else {
+            if($this->imagesClass->publicPathExists()){
+                $imageData = $this->imagesClass->getImageFileNames();;
+                //Set cache with new data : 
+                //keyname, data, expirationdate
+                Cache::put(self::CACHE_KEY, $imageData, Carbon::now()->addMonth());
+            }else{
+                $data =[
+                    'status' => false,
+                    'messsage'   => 'Directory does not exist'
+                ];
+                return response()->json($data);
+            }
 
+         
+        }
+        $data =[
+            'status' => true,
+            'data'   => $imageData
+        ];
+        return response()->json($data);
+       
 
     }
 
