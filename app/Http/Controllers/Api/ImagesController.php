@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
-
+use App\Http\Controllers\ResponseController;
 use App\Classes\Images\ImageFileNameClass;
 use App\Http\Controllers\Controller;
 
@@ -15,7 +15,7 @@ class ImagesController extends Controller
 {
     private const CACHE_KEY = 'imageFileNameData';
     private $imagesClass;
-    
+
 
 
     function __construct()
@@ -33,33 +33,26 @@ class ImagesController extends Controller
     {
 
         $imageData = [];
-        $data = [];
 
         if (Cache::has(self::CACHE_KEY)) {
             $imageData = Cache::get(self::CACHE_KEY);
-         
+
         } else {
-            if($this->imagesClass->publicPathExists()){
-                $imageData = $this->imagesClass->getImageFileNames();;
-                //Set cache with new data : 
-                //keyname, data, expirationdate
+            if ($this->imagesClass->publicPathExists()) {
+                $imageData = $this->imagesClass->getImageFileNames();
+                //keyname, data, expirationdatea
                 Cache::put(self::CACHE_KEY, $imageData, Carbon::now()->addMonth());
-            }else{
-                $data =[
-                    'status' => false,
-                    'messsage'   => 'Directory does not exist'
-                ];
-                return response()->json($data);
+            } else {
+              return  ResponseController::sendError("Directory does not exist");
+
+               
             }
 
-         
+
         }
-        $data =[
-            'status' => true,
-            'data'   => $imageData
-        ];
-        return response()->json($data);
-       
+
+        return ResponseController::sendData($imageData);
+
 
     }
 
