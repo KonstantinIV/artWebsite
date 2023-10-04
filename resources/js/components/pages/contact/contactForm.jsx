@@ -92,8 +92,8 @@ export default function ContactForm(
     })
   }
 
-  const setEmailStatus = (data) => {
-    if (data) {
+  const setEmailStatus = (status) => {
+    if (status) {
       setMailResult('Mail sent!');
     } else {
       setMailResult('Something went wrong.');
