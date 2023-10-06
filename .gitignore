@@ -15,7 +15,11 @@ yarn-error.log
 /.vscode
 /.github
 
+/public/js
+/public/css
+
 /public/img/gallery/*
 !public/img/gallery/.gitkeepfolder
 
 
+public/js/app.js

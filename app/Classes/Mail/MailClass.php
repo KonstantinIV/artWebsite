@@ -3,7 +3,6 @@
 namespace App\Classes\Mail;
 
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Http;
 
 //Mailable
 use App\Mail\ContactEmail;
@@ -11,62 +10,38 @@ use App\Mail\ContactEmail;
 use App\Models\ContactEmailModel;
 
 
-class MailClass 
-{   
-    private  $receiverEmail = "kosta.artist@outlook.com";
+class MailClass
+{
 
-        // Existing mailables
-    private  $mailables = [
+    // Existing mailables
+    private $mailables = [
         'contactForm' => ContactEmail::class
         // Add more mappings for other email types as needed
     ];
 
-    private $emailType ; 
-    private $emailData ; 
+    private $emailType;
+    private $emailData;
+    private $receiverEmail;
 
     private $mailableClass;
-
     public $emailError;
 
 
-    function __construct($emailType,$emailData){
+    function __construct($emailType, $emailData, $receiverEmail)
+    {
         $this->emailType = $emailType;
         $this->emailData = $emailData;
-
+        $this->receiverEmail = $receiverEmail;
     }
-   
-
-    public function sendContent( ) : bool
-    { 
 
 
-        //Refactor the code later properly
+    public function sendContent(): bool
+    {
 
         try {
 
-
-            $secretKey = urlencode(config('app.secretSiteKey'));
-            $recaptchaResponse = urlencode($this->emailData['sendersCaptcha']);
-
-            //In manual it was written to use POST  method but it didnt work for some reason use http:GET method 
-            $response = Http::get('https://www.google.com/recaptcha/api/siteverify', [
-                "secret" => $secretKey,
-                'response' => $recaptchaResponse,
-            ]);
-            $responseData = $response->json();
-				 
-			if ($responseData['success'] ) {
-                Mail::to($this->receiverEmail)->send(new $this->mailableClass( $this->emailData));
-                // Email sent successfully
-                return true;
-			} else {
-
-				return false;
-			}
-
-
-
-
+            Mail::to($this->receiverEmail)->send(new $this->mailableClass($this->emailData));
+            return true;
         } catch (\Exception $e) {
             $this->setEmailError($e);
             // Failed to send email
@@ -75,45 +50,46 @@ class MailClass
 
     }
 
-    public function storeContent() {
+    public function storeContent()
+    {
         try {
             ContactEmailModel::create([
                 'name' => $this->emailData['sendersName'],
-                'email' =>  $this->emailData['sendersEmail'],
+                'email' => $this->emailData['sendersEmail'],
                 'message' => $this->emailData['sendersMessage'],
             ]);
-       
+
             return true;
         } catch (\Exception $e) {
-         
+
             return false;
         }
-          
+
 
     }
 
 
-      
-
-    private function setEmailError($error) {
+    private function setEmailError($error)
+    {
         $this->emailError = $error;
-       
-     }
 
-    public function getEmailError() {
-       return $this->emailError;
+    }
+
+    public function getEmailError()
+    {
+        return $this->emailError;
     }
 
 
 
     //Set Mailable class
-    public function mailableExists() : bool
+    public function mailableExists(): bool
     {
         if (array_key_exists($this->emailType, $this->mailables)) {
-            $this->setMailableClass($this->emailType); 
+            $this->setMailableClass($this->emailType);
             return true;
         }
-        
+
         return false;
 
     }
@@ -121,7 +97,7 @@ class MailClass
 
     private function setMailableClass($emailType)
     {
-      $this->mailableClass = $this->mailables[$emailType]; 
+        $this->mailableClass = $this->mailables[$emailType];
 
     }
 
