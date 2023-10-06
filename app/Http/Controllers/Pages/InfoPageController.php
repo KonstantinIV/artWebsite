@@ -11,6 +11,10 @@ class InfoPageController extends Controller
 {
   public function showPage($article = "digital-art-tools")
   {
+    if (!trans()->has('infoPage.' . $article)) {
+      // Article does not exist, handle the "not found" scenario
+      abort(404, 'Article not found');
+  }
 
     return Inertia::render('info', [
       'infoArticle' => trans('infoPage.' . $article)
