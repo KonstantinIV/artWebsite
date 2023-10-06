@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+use App\Http\Controllers\Pages\HomePageController;
+use App\Http\Controllers\Pages\PricePageController;
+use App\Http\Controllers\Pages\InfoPageController;
+use App\Http\Controllers\Pages\ContactPageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,118 +24,21 @@ use Inertia\Inertia;
 //Home page
 //*********************************************
 //*********************************************
-Route::get('/', function () {
-   // app()->setLocale('en'); // Set the locale 
-
-    return Inertia::render('home', 
-    ['artistDescription' => trans('homePage.artistDescription')])
-    ->withViewData([
-        'title' => 'Kosta | Art Vintage Portrait ',
-        'description'       => 
-        'Digital and traditional artist from Europe, specializing in realistic 
-        portraits and characters within the realms of fantasy 
-        and realism. '
-
-    
-    ]); 
-});
-
-Route::get('/home', function () {
-    return Inertia::render('home', [
-        
-        'artistDescription' => trans('homePage.artistDescription')
-
-    ]) 
-    ->withViewData([
-    'title'       => 'Kosta | Art Vintage Portrait',
-    'description'       => 
-    'Digital and traditional artist from Europe, specializing in realistic 
-    portraits and characters within the realms of fantasy 
-    and realism.']) ;
-});
-
-
-
-
-
-
-
+Route::get('/',     [HomePageController::class, 'showPage']); 
+Route::get('/home', [HomePageController::class, 'showPage']);
 
 //Price page
 //*********************************************
 //*********************************************
-//*********************************************
-Route::get('/price', function () {
-    return Inertia::render('price', [
-        // Your data to be passed to the component
-    ])
-    ->withViewData([
-        'title'       => 'Price - Kosta | Art',
-        'description'       => 
-        'Digital art and traditional art prices'
-        ]) ;
-    });
-
-
-
-
-
-
+Route::get('/price', [PricePageController::class, 'showPage']);
 
 //Info page
 //*********************************************
 //*********************************************
-//*********************************************
-Route::get('/info', function () {
-
-    return Inertia::render('info', [
-        'infoArticle' => trans('infoPage.digital-art-tools')
-        // Your data to be passed to the component
-    ])->withViewData([
-        'title'       => 'Info - Kosta | Art',
-        'description'       => 
-        'Information about art and processes'
-
-        ]) ;
+Route::get('/info',           [InfoPageController::class, 'showPage']);
+Route::get('/info/{article}', [InfoPageController::class, 'showPage']); 
     
-});
-
-
-Route::get('/info/{article}', function ($article) {
-            
-        return Inertia::render('info', [
-            'infoArticle' => trans('infoPage.'.$article)
-
-            // Your data to be passed to the component
-        ])->withViewData([
-            'title'       => (ucwords(str_replace("-", " ", $article)).' - Kosta | Art'),
-            'description'       =>  'Information about art and processes'
-
-            ]) ;
-    });
-    
-
-
-
-
-
-
-
-
 //Contact page
 //*********************************************
 //*********************************************
-//*********************************************
-Route::get('/contact', function () {
-    return Inertia::render('contact', [
-        //Pass recaptcha site key to react as prop from env file
-        'siteKey' => config('app.siteKey')
-        // Your data to be passed to the component
-    ])->withViewData([
-        'title'       => 'Contact - Kosta | Art',
-        'description'       => 
-        'Get in contact with the artist !'
-        ]) 
-    ;});
-
-
+Route::get('/contact', [ContactPageController::class, 'showPage']);
