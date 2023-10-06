@@ -12,5 +12,15 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-   
+    /*
+    HTML head data, SEO
+    */
+    'headTitle'       => 'Contact - Kosta | Art',
+    'headDescription' => 'Get in contact with the artist !',
+    'headCanonicalLink' => 'contact',
+
+
+    /* 
+    Data    
+    */
 ];

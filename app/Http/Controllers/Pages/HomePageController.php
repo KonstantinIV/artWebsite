@@ -16,11 +16,9 @@ class HomePageController extends Controller
         )
         // Your data to be passed to the html before getting to frontend, seo stuff
             ->withViewData([
-                'title' => 'Kosta | Art Vintage Portrait ',
-                'description' =>
-                    'Digital and traditional artist from Europe, specializing in realistic 
-                    portraits and characters within the realms of fantasy 
-                    and realism. '
+                'title' => trans('homePage.headTitle'),
+                'description' => trans('homePage.headDescription'),
+                'canonicalLink' => trans('homePage.headCanonicalLink'),
             ]);
     }
 }

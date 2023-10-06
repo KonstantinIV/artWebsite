@@ -17,7 +17,9 @@ class PricePageController extends Controller
         ->withViewData([
             'title'       => 'Price - Kosta | Art',
             'description'       => 
-            'Digital art and traditional art prices'
+            'Digital art and traditional art prices',
+            'canonicalLink' => 'price',
+
             ]) ;
     }
 }

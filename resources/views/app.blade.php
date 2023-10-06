@@ -17,8 +17,7 @@
 
     <link rel="icon" href="/img/meta/kosta-title-icon.png" type="image/icon type">
 
-
-    <link rel="canonical" href="https://www.kostaartist.com">
+    <link rel="canonical" href="https://kostaartist.com/{{$canonicalLink ?? ''}}">
 
     <!-- Meta tags for SEO -->
     <meta property="og:title" content="Digital and traditional art | Kosta">
@@ -46,7 +45,8 @@
     ">
     <meta name="twitter:image" content="https://www.kostaartist.com/img/meta/kosta-cover-image.webp">
     
-      
+    <!-- Pinterest claim -->
+    <meta name="p:domain_verify" content="a3c181b46341cd2c980e93c3d55ebe65"/>
 
     <!-- LOCAL  -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
