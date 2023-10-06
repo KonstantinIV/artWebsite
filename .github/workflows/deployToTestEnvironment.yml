@@ -24,4 +24,5 @@ jobs:
           npm install
           npm run production
           chown -R www-data:www-data /var/www/html/testEnv/artWebsite
+          php artisan cache:forget imageFileNameData
           php artisan optimize
