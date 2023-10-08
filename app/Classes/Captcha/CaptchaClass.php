@@ -10,18 +10,17 @@ class CaptchaClass
 
     private $secretKey;
     private $captchaResponse;
-    function __construct($secretKey, $captchaResponse)
+    function __construct($secretKey)
     {
         $this->secretKey = $secretKey;
-        $this->captchaResponse = $captchaResponse;
     }
 
 
-    public function verifyCaptcha(): bool
+    public function verifyCaptcha($captchaValue): bool
     {
         try {
             $secretKey = urlencode($this->secretKey);
-            $recaptchaResponse = urlencode($this->captchaResponse);
+            $recaptchaResponse = urlencode($captchaValue);
 
             //In manual it was written to use POST  method but it didnt work for some reason so use http:GET method 
             $response = Http::get('https://www.google.com/recaptcha/api/siteverify', [

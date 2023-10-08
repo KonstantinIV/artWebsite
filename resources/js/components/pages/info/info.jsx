@@ -7,13 +7,13 @@ import InfoArticle from './infoArticle';
 
 export default function Info(props) {
 
-  //Set initial topic if user clicks on info
+  //Set initial topic if user clicks on info .
   const pathParts = window.location.pathname.split('/');
   let lastPart = pathParts.pop();
   let currentTopic = lastPart.charAt(0).toUpperCase() + lastPart.replace(/-/g, ' ').slice(1);
 
   if (lastPart === 'info') {
-    currentTopic = 'Digital art tools';
+    currentTopic = 'Digital art tools'; 
   }
   //Existing topics
   const topicContentMap = {

@@ -23,53 +23,39 @@ class ImageFileNameClass
     //              paintings
     //              drawings
 
-    private $relativePath;
-    private $publicPath;
     private $sortedImageFileNames = array();
 
 
-    function __construct($relativePath)
+    public function getImageFileNames($relativePath) : array
     {
-        $this->relativePath = $relativePath;
-        $this->publicPath = $this->getImageFilesPublicPath($this->relativePath);
-    }
-    public function getImageFileNames()
-    {
-        return $this->createImageFilesData(
-            $this->getImageFilePaths($this->publicPath)
-        );
+        $publicPath = public_path($relativePath);
+        $pathsArr = $this->getImageFilePaths($publicPath);
+        return $this->createImageFilesData($pathsArr);
 
     }
-    public function publicPathExists()
+    public function publicPathExists($relativePath) : bool
     {
-        if (is_dir($this->publicPath)) {
+        $publicPath = public_path($relativePath);
+        if (is_dir($publicPath)) {
             return true;
         }
         return false;
     }
     //Set end result
-    private function setImageFileNames($data)
+    private function setImageFileNames($data) : void
     {
         $this->sortedImageFileNames = $data;
     }
 
 
-    //Return full path by providing relative path
-    public function getImageFilesPublicPath($relativePath)
-    {
-
-        return public_path($relativePath);
-
-    }
-
     //Return array with full path of the images
-    private function getImageFilePaths($path)
+    private function getImageFilePaths($path) : array
     {
         return File::allFiles($path);
     }
 
 
-    private function createImageFilesData($filePaths)
+    private function createImageFilesData($filePaths) : array
     {
         $results = array();
 

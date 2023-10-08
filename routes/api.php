@@ -18,16 +18,11 @@ use App\Http\Controllers\Api\ImagesController;
 
 Route::prefix('imagefiles')->group(function () {
     Route::get('/', [ImagesController::class, 'index']);
-
 });
-
-
-//Route::get('/imagefiles', [ImageFilesController::class, 'returnImageFileNames']);
 
 
 Route::prefix('sendEmail')->group(function () {
     Route::post('/', [MailController::class, 'store'] );
-
 });
 
 
