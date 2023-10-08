@@ -17,6 +17,7 @@ yarn-error.log
 
 /public/js
 /public/css
+/public/build
 
 /public/img/gallery/*
 !public/img/gallery/.gitkeepfolder
