@@ -20,16 +20,14 @@ class MailClass
     ];
 
     private $emailData;
-    private $receiverEmail;
-
     private $mailable;
     public $emailError;
 
 
-    function __construct( $emailData, $receiverEmail)
+    function __construct($emailData)
     {
         $this->emailData = $emailData;
-        $this->receiverEmail = $receiverEmail;
+
     }
 
 
@@ -40,7 +38,7 @@ class MailClass
             Mail::to($receiverEmail)->send($mailableClass);
             return true;
         } catch (\Exception $e) {
-            $this->setEmailError($e);
+
             // Failed to send email
             return false;
         }
@@ -48,7 +46,7 @@ class MailClass
     }
 
 
-    public function storeContent() : bool
+    public function storeContent(): bool
     {
         try {
             ContactEmailModel::create([
@@ -66,7 +64,7 @@ class MailClass
 
     }
 
-   
+
 
     public function mailableExists($mailableType): bool
     {
@@ -79,13 +77,13 @@ class MailClass
     }
 
 
-    private function setMailable($mailableType) : void
+    private function setMailable($mailableType): void
     {
         $this->mailable = $this->mailables[$mailableType];
 
     }
 
-   
+
 
 
 
