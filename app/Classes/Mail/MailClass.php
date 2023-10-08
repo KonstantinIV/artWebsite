@@ -77,7 +77,7 @@ class MailClass
     }
 
 
-    private function setMailable($mailableType): void
+    public function setMailable($mailableType): void
     {
         $this->mailable = $this->mailables[$mailableType];
 
