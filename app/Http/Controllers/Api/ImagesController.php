@@ -20,7 +20,7 @@ class ImagesController extends Controller
 
     function __construct()
     {
-        $this->imagesClass = new ImageFileNameClass('img/gallery');
+        $this->imagesClass = new ImageFileNameClass();
 
     }
 
@@ -38,14 +38,13 @@ class ImagesController extends Controller
             $imageData = Cache::get(self::CACHE_KEY);
 
         } else {
-            if ($this->imagesClass->publicPathExists()) {
-                $imageData = $this->imagesClass->getImageFileNames();
+            if ($this->imagesClass->publicPathExists('img/gallery')) {
+                $imageData = $this->imagesClass->getImageFileNames('img/gallery');
                 //keyname, data, expirationdatea
                 Cache::put(self::CACHE_KEY, $imageData, Carbon::now()->addMonth());
             } else {
-              return  ResponseController::sendError("Directory does not exist");
+                return ResponseController::sendError("Directory does not exist");
 
-               
             }
 
 

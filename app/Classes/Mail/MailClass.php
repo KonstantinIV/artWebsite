@@ -19,38 +19,34 @@ class MailClass
         // Add more mappings for other email types as needed
     ];
 
-    private $emailType;
     private $emailData;
-    private $receiverEmail;
-
-    private $mailableClass;
+    private $mailable;
     public $emailError;
 
 
-    function __construct($emailType, $emailData, $receiverEmail)
+    function __construct($emailData)
     {
-        $this->emailType = $emailType;
         $this->emailData = $emailData;
-        $this->receiverEmail = $receiverEmail;
+
     }
 
 
-    public function sendContent(): bool
+    public function sendContent($receiverEmail): bool
     {
-
         try {
-
-            Mail::to($this->receiverEmail)->send(new $this->mailableClass($this->emailData));
+            $mailableClass = new $this->mailable($this->emailData);
+            Mail::to($receiverEmail)->send($mailableClass);
             return true;
         } catch (\Exception $e) {
-            $this->setEmailError($e);
+
             // Failed to send email
             return false;
         }
 
     }
 
-    public function storeContent()
+
+    public function storeContent(): bool
     {
         try {
             ContactEmailModel::create([
@@ -69,24 +65,10 @@ class MailClass
     }
 
 
-    private function setEmailError($error)
+
+    public function mailableExists($mailableType): bool
     {
-        $this->emailError = $error;
-
-    }
-
-    public function getEmailError()
-    {
-        return $this->emailError;
-    }
-
-
-
-    //Set Mailable class
-    public function mailableExists(): bool
-    {
-        if (array_key_exists($this->emailType, $this->mailables)) {
-            $this->setMailableClass($this->emailType);
+        if (array_key_exists($mailableType, $this->mailables)) {
             return true;
         }
 
@@ -95,11 +77,14 @@ class MailClass
     }
 
 
-    private function setMailableClass($emailType)
+    public function setMailable($mailableType): void
     {
-        $this->mailableClass = $this->mailables[$emailType];
+        $this->mailable = $this->mailables[$mailableType];
 
     }
+
+
+
 
 
 }

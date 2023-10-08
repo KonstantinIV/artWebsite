@@ -7,7 +7,7 @@ export default function AboutCardLinks() {
     return ( 
 
 
-
+            //color of the icons, edited in website that provides icons #6c6cf7
 
             <div>
             <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/kosta_iv_artist" target='_blank'>
@@ -26,17 +26,22 @@ export default function AboutCardLinks() {
             </a>
 
             <br />
-            <a disabled className=' aboutLink' href='https://www.artstation.com/kosta_iv' target='_blank'>
+            <a  className=' aboutLink' href='https://www.artstation.com/kosta_iv' target='_blank'>
                 <img src='img/icons/social-media/artstation.png' className='aboutLinkIcon' alt='artstation icon' fill='currentColor' />
                 Artstation
             </a>
+            <a  className=' aboutLink' href='https://www.pinterest.com/kosta_iv/' target='_blank'>
+                <img src='img/icons/social-media/pinterest.png' className='aboutLinkIcon' alt='pinterest icon' fill='currentColor' />
+                Pinterest
+            </a>
+
            
-            <a disabled className=' aboutLink' href='https://www.tumblr.com/kosta-iv' target='_blank'>
+            <a  className=' aboutLink' href='https://www.tumblr.com/kosta-iv' target='_blank'>
                 <img src='img/icons/social-media/tumblr.png' className='aboutLinkIcon' alt='tumblr icon' fill='currentColor' />
                 Tumblr
             </a>
 
-            <a disabled className=' aboutLink' href='https://cara.app/kosta' target='_blank'>
+            <a  className=' aboutLink' href='https://cara.app/kosta' target='_blank'>
                 <img src='img/icons/social-media/cara.png' className='aboutLinkIcon' alt='cara icon' fill='currentColor' />
                 Cara
             </a>
