@@ -13,7 +13,7 @@ export default function Contact(props) {
 
 
 
-        <Layout title="Contact - Kosta | Art">
+        <Layout title="Contact - Kosta | Art" urlRoute={props.urlRoute}>
             <div className='contactContainer'>
                 <ContactInfo />
                 <ContactForm

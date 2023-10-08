@@ -17,7 +17,9 @@ class InfoPageController extends Controller
   }
 
     return Inertia::render('info', [
-      'infoArticle' => trans('infoPage.' . $article)
+      'urlRoute' => 'info',
+      'articleUrl' =>  $article,
+      'infoArticle' => trans('infoPage.' . $article),
 
       // Your data to be passed to the html before getting to frontend, seo stuff
     ])->withViewData([

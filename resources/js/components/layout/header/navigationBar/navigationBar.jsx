@@ -5,13 +5,13 @@ import { Link } from '@inertiajs/react';
 import classNames from 'classnames';
 
 
-export default function NavigationBar() {
+export default function NavigationBar({urlRoute}) {
 
     //Get current page name to highlight the button in navnar
-    const pathParts = window.location.pathname.split('/');
-    const pageName = pathParts[1];
+   // const pathParts = window.location.pathname.split('/');
+   // const pageName = pathParts[1];
     //state
-    const [currentPageName, setActiveButton] = useState(pageName);
+    const [currentPageName, setActiveButton] = useState(urlRoute);
 
     // Available page names
     const pageNames = ['home', 'info', 'contact'];

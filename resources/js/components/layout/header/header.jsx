@@ -4,14 +4,14 @@ import Design from "./design/design";
 import WebsiteLogo from "./logo/websiteLogo";
 import NavigationBar from "./navigationBar/navigationBar";
 
-export default function Header() {
+export default function Header({urlRoute}) {
 
     return (
         <div>
             <Design />
 
             <WebsiteLogo />
-            <NavigationBar />
+            <NavigationBar urlRoute={urlRoute}/>
         </div>
     );
 }

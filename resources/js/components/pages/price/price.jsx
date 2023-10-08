@@ -13,7 +13,7 @@ export default function Price() {
 
 
 
-        <Layout title="Price - Kosta | Art">
+        <Layout title="Price - Kosta | Art" urlRoute={props.urlRoute}>
             <div>
                 <PriceNavbar />
                 <PriceTrad />
