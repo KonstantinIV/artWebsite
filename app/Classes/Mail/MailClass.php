@@ -19,22 +19,15 @@ class MailClass
         // Add more mappings for other email types as needed
     ];
 
-    private $emailData;
     private $mailable;
-    public $emailError;
 
 
-    function __construct($emailData)
-    {
-        $this->emailData = $emailData;
+   
 
-    }
-
-
-    public function sendContent($receiverEmail): bool
+    public static function sendContent($mailableType, $receiverEmail, $emailData): bool
     {
         try {
-            $mailableClass = new $this->mailable($this->emailData);
+            $mailableClass = new $mailableType($emailData);
             Mail::to($receiverEmail)->send($mailableClass);
             return true;
         } catch (\Exception $e) {
@@ -44,31 +37,9 @@ class MailClass
         }
 
     }
-
-
-    public function storeContent(): bool
+    public static function mailableExists($mailableType): bool
     {
-        try {
-            ContactEmailModel::create([
-                'name' => $this->emailData['sendersName'],
-                'email' => $this->emailData['sendersEmail'],
-                'message' => $this->emailData['sendersMessage'],
-            ]);
-
-            return true;
-        } catch (\Exception $e) {
-
-            return false;
-        }
-
-
-    }
-
-
-
-    public function mailableExists($mailableType): bool
-    {
-        if (array_key_exists($mailableType, $this->mailables)) {
+        if (array_key_exists($mailableType, Self::$mailables)) {
             return true;
         }
 
@@ -77,11 +48,6 @@ class MailClass
     }
 
 
-    public function setMailable($mailableType): void
-    {
-        $this->mailable = $this->mailables[$mailableType];
-
-    }
 
 
 
