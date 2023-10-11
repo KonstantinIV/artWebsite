@@ -21,6 +21,8 @@ class HomePageController extends Controller
                 'title' => trans('homePage.headTitle'),
                 'description' => trans('homePage.headDescription'),
                 'canonicalLink' => trans('homePage.headCanonicalLink'),
+                'schemaMarkup' => trans('infoPage.schemaMarkup') ,
+
             ]);
     }
 }

@@ -43,7 +43,7 @@ export default function NavigationBar({urlRoute}) {
 
     return (
 
-        <div>
+        <header>
             <nav className='navBarContainer'>
                 <ul className='navBarItems'>
 
@@ -74,7 +74,7 @@ export default function NavigationBar({urlRoute}) {
 
 
             </nav>
-        </div>
+        </header>
     )
 
 }

@@ -19,6 +19,8 @@ return [
     'headDescription' => 'Get in contact with the artist !',
     'headCanonicalLink' => 'contact',
 
+    //SEO Markup schemas
+    'schemaMarkup' => "",
 
     /* 
     Data    

@@ -19,6 +19,9 @@
 
     <link rel="canonical" href="https://kostaartist.com/{{$canonicalLink ?? ''}}">
 
+
+    {{$schemaMarkup ?? ""}}
+
     <!-- Meta tags for SEO -->
     <meta property="og:title" content="Digital and traditional art | Kosta">
     <meta property="og:description" content="
@@ -48,11 +51,7 @@
     <!-- Pinterest claim -->
     <meta name="p:domain_verify" content="a3c181b46341cd2c980e93c3d55ebe65"/>
 
-    <!-- OLD LOCAL  
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script defer src="{{ asset('js/app.js') }}"></script>
-    <link rel="preload" href="/fonts/WorkSans-Regular.ttf?4be086328ba304c25f49ad0d8af428df" as="font" type="font/ttf" crossorigin>
-    -->
+   
     <!-- VITE generates css and js assets-->
     @viteReactRefresh
     @vite(['resources/js/app.jsx','resources/sass/app.scss'])

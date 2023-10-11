@@ -13,9 +13,8 @@ return [
     |
     */
 
-    /*
-    HTML head data, SEO
-    */
+    //HTML head data, SEO
+    
     'headTitle'       => 'Kosta | Art Vintage Portrait ',
 
     'headDescription' => 'Digital and traditional artist from Europe, specializing in realistic 
@@ -23,11 +22,13 @@ return [
     and realism. ',
 
     'headCanonicalLink' => '',
+    //SEO  rich results
+    'schemaMarkup' => file_get_contents(resource_path('lang/en/schemaMarkup/homeMarkup.html')),
 
 
-    /* 
-    Data    
-    */
+
+
+    //data
 
     'artistDescription' => ' Digital and traditional artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." />&nbsp;
     Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while

@@ -28,7 +28,10 @@ class InfoPageController extends Controller
           //Add new page titles to lang file in recources foulder
           'title' => trans('infoPage.headTitle.' . $article) . ' - Kosta | Art',
           'description' => 'Information about art and processes',
-          'canonicalLink' => 'info/'.$article
+          'canonicalLink' => 'info/'.$article,
+          'schemaMarkup' => trans('infoPage.schemaMarkup.' . $article) ,
+
+
         ]);
   }
 }

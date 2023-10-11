@@ -28,14 +28,21 @@ return [
     and realism. ',
 
     'headCanonicalLink' => '',
+    //SEO Markup schemas
+    'schemaMarkups' => [
+        'digital-art-tools' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/digitalArtTools.html')),
+        'commission-process' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/commissionProcess.html')),
+        'rights-and-usage' =>   file_get_contents(resource_path('lang/en/schemaMarkup/infoPage//rightsAndUsage.html')),
 
+    ],
 
     /* 
     Data    
     */
     //HHTML articles
+    
     'digital-art-tools' => file_get_contents(resource_path('lang/en/infoPageArticles/digitalArtTools.html')),
-    'commission-process' => file_get_contents(resource_path('lang/en/infoPageArticles/commisionProcess.html')),
+    'commission-process' => file_get_contents(resource_path('lang/en/infoPageArticles/commissionProcess.html')),
     'rights-and-usage' =>   file_get_contents(resource_path('lang/en/infoPageArticles/rightsAndUsage.html')),
 
 ];
