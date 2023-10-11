@@ -16,7 +16,7 @@ return [
     HTML head data, SEO
     */
     'headTitle'       => 'Contact - Kosta | Art',
-    'headDescription' => 'Get in contact with the artist !',
+    'headDescription' => 'Artists contact details and contact form to send feedback or any other questions regarding art.',
     'headCanonicalLink' => 'contact',
 
     //SEO Markup schemas

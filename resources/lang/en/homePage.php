@@ -15,7 +15,7 @@ return [
 
     //HTML head data, SEO
     
-    'headTitle'       => 'Kosta | Art Vintage Portrait ',
+    'headTitle'       => 'Home - Kosta | Art',
 
     'headDescription' => 'Digital and traditional artist from Europe, specializing in realistic 
     portraits and characters within the realms of fantasy 
