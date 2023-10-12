@@ -23,7 +23,7 @@ return [
 
     'headCanonicalLink' => '',
     //SEO  rich results
-    'schemaMarkup' => file_get_contents(resource_path('lang/en/schemaMarkup/homeMarkup.html')),
+    'schemaMarkup' => file_get_contents(resource_path('lang/en/schemaMarkup/homeMarkup.json')), 
 
 
 

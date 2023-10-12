@@ -1,8 +1,6 @@
-<script type="application/ld+json">
     {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Inforamtion",
+    "@type": "WebPage",
     "author": {
       "@type": "Person",
       "name": "Kosta"
@@ -10,6 +8,5 @@
     "datePublished": "2023-10-11T08:00:00+08:00",
     "dateModified": "2023-10-11T09:20:00+08:00",
     "image": "",
-    "description": "Discover comprehensive information about the artist or explore guides to assist you in requesting services."
+    "description": "Clients can get in contact with the artist through email, form and other social media."
   }
-</script>

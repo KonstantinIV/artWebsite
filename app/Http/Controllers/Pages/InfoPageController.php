@@ -9,14 +9,12 @@ use Illuminate\Http\Request;
 
 class InfoPageController extends Controller
 {
-  public function showPage($article )
+  public function showPage($article = 'info' )
   {
-    if($article == ""){
-      $article = "info";
-    }
-    if (!trans()->has('infoPage.' . $article)) {
+   
+    if (!trans()->has('infoPage.article.' . $article)) {
       // Article does not exist, handle the "not found" scenario
-      abort(404, 'Article not found');
+      abort(404, 'Article not found ' );
   }
  
 

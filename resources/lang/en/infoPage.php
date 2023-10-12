@@ -36,11 +36,11 @@ return [
 
     'headCanonicalLink' => '',
     //SEO Markup schemas
-    'schemaMarkups' => [
-        'info' => file_get_contents(resource_path('lang/en/schemaMarkup/infoMarkup.html')),
-        'digital-art-tools' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/digitalArtTools.html')),
-        'commission-process' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/commissionProcess.html')),
-        'rights-and-usage' =>   file_get_contents(resource_path('lang/en/schemaMarkup/infoPage//rightsAndUsage.html')),
+    'schemaMarkup' => [
+        'info' => file_get_contents(resource_path('lang/en/schemaMarkup/infoMarkup.json')),
+        'digital-art-tools' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/digitalArtTools.json')),
+        'commission-process' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/commissionProcess.json')),
+        'rights-and-usage' =>   file_get_contents(resource_path('lang/en/schemaMarkup/infoPage//rightsAndUsage.json')),
 
     ],
 

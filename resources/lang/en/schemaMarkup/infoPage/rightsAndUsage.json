@@ -1,15 +1,13 @@
-<script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Your Article Headline",
+    "headline": "Rights and usage",
     "author": {
       "@type": "Person",
-      "name": "Author Name"
+      "name": "Kosta"
     },
     "datePublished": "2023-10-11T08:00:00+08:00",
     "dateModified": "2023-10-11T09:20:00+08:00",
     "image": "",
-    "description": "A brief description of your article."
+    "description": "Gives client overview of rights and usages of artist artworks."
   }
-</script>

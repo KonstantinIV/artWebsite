@@ -1,4 +1,3 @@
-<script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -12,4 +11,3 @@
     "image": "",
     "description": "Gives overview of artist digital tools and reason for not using AI."
   }
-</script>
