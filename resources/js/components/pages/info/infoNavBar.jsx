@@ -9,7 +9,7 @@ export default function InfoNavbar({
     var clickedButtonClassName = "infoNavClickedButton";
 
     return (
-        <div className="infoNavBar">
+        <aside className="infoNavBar">
             {Object.keys(topicContentMap).map((topic, ID) => (
                 <Link preserveScroll key={ID}
                     className={(clickedTopic == topic ? ("infoNavItem " + clickedButtonClassName) : "infoNavItem")}
@@ -17,6 +17,6 @@ export default function InfoNavbar({
                     {topic}
                 </Link>
             ))}
-        </div>
+        </aside>
     );
 }

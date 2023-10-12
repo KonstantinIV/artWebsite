@@ -18,6 +18,7 @@ yarn-error.log
 /public/js
 /public/css
 /public/build
+/bootstrap/ssr
 
 /public/img/gallery/*
 !public/img/gallery/.gitkeepfolder

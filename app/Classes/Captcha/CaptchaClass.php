@@ -8,18 +8,11 @@ use Illuminate\Support\Facades\Http;
 class CaptchaClass
 {
 
-    private $secretKey;
-    private $captchaResponse;
-    function __construct($secretKey)
-    {
-        $this->secretKey = $secretKey;
-    }
 
-
-    public function verifyCaptcha($captchaValue): bool
+    public static function verifyCaptcha($captchaValue,$secretKey): bool
     {
         try {
-            $secretKey = urlencode($this->secretKey);
+            $secretKey = urlencode($secretKey);
             $recaptchaResponse = urlencode($captchaValue);
 
             //In manual it was written to use POST  method but it didnt work for some reason so use http:GET method 

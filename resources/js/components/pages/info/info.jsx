@@ -8,8 +8,9 @@ import InfoArticle from './infoArticle';
 export default function Info(props) {
 
   //Set initial topic if user clicks on info .
-  const pathParts = window.location.pathname.split('/');
-  let lastPart = pathParts.pop();
+  //const pathParts = window.location.pathname.split('/');
+  //let lastPart = pathParts.pop();
+  let lastPart = props.articleUrl;
   let currentTopic = lastPart.charAt(0).toUpperCase() + lastPart.replace(/-/g, ' ').slice(1);
 
   if (lastPart === 'info') {
@@ -23,7 +24,7 @@ export default function Info(props) {
     // Add more topics and corresponding content components as needed
   };
   return (
-    <Layout title='Info - Kosta | Art'>
+    <Layout title='Info - Kosta | Art' urlRoute={props.urlRoute}>
 
       <div className='infoContainer'>
         <InfoNavbar

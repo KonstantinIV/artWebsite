@@ -3,22 +3,32 @@
 
     <url>
         <loc>https://kostaartist.com/</loc>
+        <lastmod>2023-10-11</lastmod>
     </url>
+    <url>
+        <loc>https://kostaartist.com/info</loc>
+        <lastmod>2023-10-11</lastmod>
+    </url>
+
 
     <url>
         <loc>https://kostaartist.com/info/digital-art-tools</loc>
+        <lastmod>2023-10-11</lastmod>
     </url>
 
     <url>
         <loc>https://kostaartist.com/info/commission-process</loc>
+        <lastmod>2023-10-11</lastmod>
     </url>
 
     <url>
         <loc>https://kostaartist.com/info/rights-and-usage</loc>
+        <lastmod>2023-10-11</lastmod>
     </url>
 
     <url>
         <loc>https://kostaartist.com/contact</loc>
+        <lastmod>2023-10-11</lastmod>
     </url>
 
 </urlset>

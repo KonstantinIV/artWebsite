@@ -6,8 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\ResponseController;
-use App\Classes\Mail\MailClass;
 use App\Classes\Captcha\CaptchaClass;
+use App\Classes\Mail\MailClass;
+
+use App\Models\ContactEmailModel;
+
 
 class MailController extends Controller
 {
@@ -20,35 +23,44 @@ class MailController extends Controller
     {
         $receiverEmail = "kosta.artist@outlook.com";
 
-        $mailableType = $request->input('emailType');
         $emailData = $request->input('emailData');
-        $captchaValue = $emailData['sendersCaptcha'];
+        $mailableType = $request->input('emailData.emailType');
+        $captchaValue = $request->input('captcha');
 
-        $mail = new MailClass( $emailData);
-        //app.sitekey cant be accesed from env file must define serately in app config file
-
-        $captcha = new CaptchaClass(config('app.secretSiteKey'));
+        //Validate data
+        $rules = ContactEmailModel::emailRules(); 
+               
+        //fix validator
+        // $request->validate($rules);
 
         //Captcha by google to stop bots sendng email
-        if (!$captcha->verifyCaptcha($captchaValue)) {
+        if (!CaptchaClass::verifyCaptcha($captchaValue, config('app.secretSiteKey'))) {
             return ResponseController::sendError("Captcha error");
         }
-        //Check if the mailable exists if not send false, each mailable has its own style or structure for sending email
-        if (!$mail->mailableExists($mailableType)) {
+        //Check if the mailable exists, mailables have own html structure to them
+        if (!MailClass::mailableExists($mailableType)) {
             return ResponseController::sendError("Wrong email type");
-        }
-        //Set mailable class
-        $mail->setMailable($mailableType);
+        } 
         //if mail was not sent for some reason
-        if (!$mail->sendContent($receiverEmail)) {
+        if (!MailClass::sendContent($mailableType,$receiverEmail,$emailData)) {
             return ResponseController::sendError("Email was not sent");
         }
 
-        //add chanegs in the futture
         //STORE DATA INTO DATABASE
-        //Add proper try catch and error
-        $mail->storeContent();
+        try{
 
+        /*    ContactEmailModel::create([
+                'emailType' => $emailData['emailType'],
+                'name' => $emailData['sendersName'],
+                'email' => $emailData['sendersEmail'],
+                'message' => $emailData['sendersMessage'],
+            ]);*/
+        } catch(e){
+
+        }
+            
+
+     
         return ResponseController::sendData("Mail sent!");
 
     }

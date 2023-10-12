@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 
@@ -12,13 +12,15 @@ export default function ContactForm(
 ) {
 
   const [formData, setFormData] = useState({
-    emailType: 'contactForm',
+    
+    captcha : '',
     emailData: {
+      emailType: 'contactForm',
       sendersName: '',
       sendersEmail: '',
-      sendersMessage: '',
-      sendersCaptcha: ''
-    }
+      sendersMessage: ''
+      }
+
   });
 
   const [mailResult, setMailResult] = useState('');
@@ -33,7 +35,7 @@ export default function ContactForm(
 
   //When user completes the captcha set the captcha value to send to server for verification
   const handleCaptchaChange = (value) => {
-    setFormData({ ...formData, emailData: { ...formData.emailData, sendersCaptcha: value } });
+    setFormData({ ...formData,  captcha : value  });
     //Captcha was completed
     setCaptcha(true);
   };
