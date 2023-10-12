@@ -48,12 +48,13 @@ class MailController extends Controller
 
         //STORE DATA INTO DATABASE
         try{
-            ContactEmailModel::create([
+
+        /*    ContactEmailModel::create([
                 'emailType' => $emailData['emailType'],
                 'name' => $emailData['sendersName'],
                 'email' => $emailData['sendersEmail'],
                 'message' => $emailData['sendersMessage'],
-            ]);
+            ]);*/
         } catch(e){
 
         }
