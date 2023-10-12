@@ -48,7 +48,6 @@
 
     <!-- VITE generates css and js assets-->
     @viteReactRefresh
-        <!-- @vite(['resources/js/app.jsx','resources/sass/app.scss'])-->
 
     @vite(['resources/js/app.jsx'])
 
