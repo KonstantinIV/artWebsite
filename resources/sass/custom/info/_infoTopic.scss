@@ -27,12 +27,19 @@
 .infoHeader {
     text-align: center;
 }
+.infoFooter{
+    display: flex;
+    justify-content: end;
+    flex-flow: column-reverse;
+}
 
 .infoFooter p {
     font-size: 12px;
     line-height: 0px;
     height: 15px;
     text-align: end;
+
+  
 }
 
 .infoTextContainer * {

@@ -1,12 +1,19 @@
-    {
+
+  {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "author": {
-      "@type": "Person",
-      "name": "Kosta"
-    },
-    "datePublished": "2023-10-11T08:00:00+08:00",
-    "dateModified": "2023-10-11T09:20:00+08:00",
-    "image": "",
+    "@type": "Person",
+    "name": "Kosta",
+    "jobTitle": "Digital and Traditional artist",
+    "url": "https://kostaartist.com/",
+    "sameAs": [
+      "https://www.instagram.com/kosta_iv_artist",
+      "https://www.facebook.com/KostaIV",
+      "https://twitter.com/Kosta_IV",
+      "https://www.pinterest.com/kosta_iv/",
+      "https://www.tumblr.com/kosta-iv",
+      "https://cara.app/kosta"
+    ],
+    "email": "kosta.artist@outlook.com",
     "description": "Clients can get in contact with the artist through email, form and other social media."
   }
+  
