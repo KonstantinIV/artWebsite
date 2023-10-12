@@ -12,6 +12,7 @@ class PricePageController extends Controller
     {
           // app()->setLocale('en'); // Set the locale 
           return Inertia::render('price', [
+            'urlRoute' => 'price',
             // Your data to be passed to the component
         ])
         ->withViewData([

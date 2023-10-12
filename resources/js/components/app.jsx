@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { InertiaProgress } from '@inertiajs/progress';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+//import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 //Shows the progressbar when page loads
 InertiaProgress.init()
 

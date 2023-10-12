@@ -12,6 +12,7 @@ class ContactPageController extends Controller
     public function showPage()
     {
         return Inertia::render('contact', [
+            'urlRoute' => 'contact',
             //Pass recaptcha site key to react as prop from env file
             'siteKey' => config('app.siteKey')
             

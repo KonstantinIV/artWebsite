@@ -12,13 +12,17 @@ class HomePageController extends Controller
     {
           // app()->setLocale('en'); // Set the locale 
         return Inertia::render('home',
-            ['artistDescription' => trans('homePage.artistDescription')]
+            ['artistDescription' => trans('homePage.artistDescription'),
+            'urlRoute' => 'home',
+            ]
         )
         // Your data to be passed to the html before getting to frontend, seo stuff
             ->withViewData([
                 'title' => trans('homePage.headTitle'),
                 'description' => trans('homePage.headDescription'),
                 'canonicalLink' => trans('homePage.headCanonicalLink'),
+                'schemaMarkup' => trans('homePage.schemaMarkup') ,
+
             ]);
     }
 }

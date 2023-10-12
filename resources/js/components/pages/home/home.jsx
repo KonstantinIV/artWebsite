@@ -11,7 +11,7 @@ import Gallery from "./gallery/gallery";
 export default function Home(props) {
 
     return (
-        <Layout title="Kosta | Art" >
+        <Layout title="Kosta | Art" urlRoute={props.urlRoute} >
 
             <div className='backgroundDesignBox1'></div>
 
