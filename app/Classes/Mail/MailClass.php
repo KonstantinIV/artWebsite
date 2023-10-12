@@ -14,7 +14,7 @@ class MailClass
 {
 
     // Existing mailables
-    private $mailables = [
+    public static $mailables = [
         'contactForm' => ContactEmail::class
         // Add more mappings for other email types as needed
     ];
@@ -27,7 +27,7 @@ class MailClass
     public static function sendContent($mailableType, $receiverEmail, $emailData): bool
     {
         try {
-            $mailableClass = new $mailableType($emailData);
+            $mailableClass = new self::$mailables[$mailableType]($emailData);
             Mail::to($receiverEmail)->send($mailableClass);
             return true;
         } catch (\Exception $e) {
@@ -39,7 +39,7 @@ class MailClass
     }
     public static function mailableExists($mailableType): bool
     {
-        if (array_key_exists($mailableType, Self::$mailables)) {
+        if (array_key_exists($mailableType, self::$mailables)) {
             return true;
         }
 

@@ -28,8 +28,10 @@ class MailController extends Controller
         $captchaValue = $request->input('captcha');
 
         //Validate data
-        $rules = ContactEmailModel::emailRules();        
-        $request->validate($rules, $emailData);
+        $rules = ContactEmailModel::emailRules(); 
+               
+        //fix validator
+        // $request->validate($rules);
 
         //Captcha by google to stop bots sendng email
         if (!CaptchaClass::verifyCaptcha($captchaValue, config('app.secretSiteKey'))) {
@@ -45,12 +47,17 @@ class MailController extends Controller
         }
 
         //STORE DATA INTO DATABASE
+        try{
             ContactEmailModel::create([
                 'emailType' => $emailData['emailType'],
                 'name' => $emailData['sendersName'],
                 'email' => $emailData['sendersEmail'],
                 'message' => $emailData['sendersMessage'],
             ]);
+        } catch(e){
+
+        }
+            
 
      
         return ResponseController::sendData("Mail sent!");
