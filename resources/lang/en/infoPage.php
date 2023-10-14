@@ -18,10 +18,10 @@ return [
        HTML head data, SEO
        */
     'headTitle' => [
-        'info' => 'Info',
-        'digital-art-tools' => 'Digital art tools',
-        'commission-process' => 'Commission process',
-        'rights-and-usage' => 'Rights And Usage',
+        'info' => 'Info - Traditional and Digital artist - Kosta | Art',
+        'digital-art-tools' => 'Info - Digital art tools - Kosta | Art',
+        'commission-process' => 'Info - Commission process - Kosta | Art',
+        'rights-and-usage' => 'Info - Rights And Usage - Kosta | Art',
 
     ],
     'headDescription' => [
