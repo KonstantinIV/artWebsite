@@ -21,7 +21,7 @@
 <meta property="og:description" content="
 'Digital and traditional artist from Europe, specializing in realistic
  portraits and characters within the realms of thought-provoking fantasy and realism.">
-<meta property="og:url" content="https://www.kostaartist.com/">
+<meta property="og:url" content="https://kostaartist.com/{{$canonicalLink ?? ''}}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.kostaartist.com/img/meta/kosta-cover-image.webp">
 <meta property="og:image:alt" content="Kosta art website cover image">
