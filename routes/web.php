@@ -25,7 +25,7 @@ use App\Http\Controllers\Pages\ContactPageController;
 //*********************************************
 //*********************************************
 Route::get('/',     [HomePageController::class, 'showPage']); 
-Route::get('/home', [HomePageController::class, 'showPage']);
+//Route::get('/home', [HomePageController::class, 'showPage']);
 
 //Price page
 //*********************************************
