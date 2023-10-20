@@ -5,8 +5,8 @@ export default function WebsiteLogo() {
     return (
         <div className="kostaLogoContainer">
             <div className="kostaLogo">
-                <a className="" href="/home">
-                    <img src="/img/icons/kosta-logo.png" alt="artWebsiteLogo-Kosta-artist" />
+                <a className="" href="/">
+                    <img loading="lazy" src="/img/icons/kosta-logo.png" alt="artWebsiteLogo-Kosta-artist" width="400" height="127"/>
                 </a>
             </div>
             <div className="kostaLogoTextContainer">
