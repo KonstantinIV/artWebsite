@@ -34,6 +34,7 @@ function GalleryImages({
                 className={clickedViewType === "small" ? "galleryImageSmall" : "galleryImageLarge"}
                 alt="..."
                 loading="lazy"
+                width="300" height="300" 
               />
             </div>
           ))}

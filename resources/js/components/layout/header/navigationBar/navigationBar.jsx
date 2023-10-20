@@ -13,8 +13,10 @@ export default function NavigationBar({urlRoute}) {
     //state
     const [currentPageName, setActiveButton] = useState(urlRoute);
 
+    const absoluteUrl = "https://kostaartist.com/";
     // Available page names
     const pageNames = ['home', 'info', 'contact'];
+
 
     // Hightlight other navbutton after chaning pages
     const handleSetActiveButton = (pageName) => {

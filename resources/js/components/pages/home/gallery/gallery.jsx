@@ -116,7 +116,7 @@ function Gallery() {
   // JSX content
   return (
     <div className="galleryNavAndGalleryContainer">
-      <h1 className="galleryHeader">Gallery</h1>
+      <h2 className="galleryHeader">Gallery</h2>
 
       {/* Component for gallery background CSS */}
       <GalleryBackgroundCSS />
