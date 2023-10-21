@@ -1,7 +1,8 @@
 import React from 'react';
 
 import AboutCardLinks from '../home/aboutCard/aboutCardLinks';
-function ContactInfo() {
+
+export default function ContactInfo() {
 
   const email = 'kosta.artist' + '@' + 'outlook.com';
 
@@ -30,4 +31,4 @@ function ContactInfo() {
 
   )
 }
-export default ContactInfo;
+
