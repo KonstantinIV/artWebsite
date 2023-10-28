@@ -4,9 +4,10 @@ import Header from "./header/header";
 import Footer from "./footer/footer";
 
 export default function Layout({title,urlRoute, children}) {
-    React.useEffect(() => {
+    //Deleted so it would not override the one set in backend
+    /*React.useEffect(() => {
         document.title = title;
-    });
+    });*/
     return (
         <React.Fragment>
             <Header urlRoute={urlRoute}/>

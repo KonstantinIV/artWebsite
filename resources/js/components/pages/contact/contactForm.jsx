@@ -1,6 +1,6 @@
 import React from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 
 
@@ -160,7 +160,8 @@ export default function ContactForm(
         sitekey={siteKey}
         onChange={handleCaptchaChange}
         name='sendersCaptcha'
-      />
+      >
+        </ReCAPTCHA>
 
     </form>
   );
