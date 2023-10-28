@@ -11,7 +11,59 @@ body {
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
   margin: 0;
+  /*
+  background-color: rgb(255, 253, 226);
+  background-image: radial-gradient(rgba(40, 27, 17, 0.8) 0.8px, transparent 0.2px), radial-gradient(rgba(40, 27, 17, 0.8) 0.8px, rgb(255, 253, 226) 0.1px);
+  background-size: 10px 20px;
+  background-position: 0 0, 10px 10px;
+  margin: 0;
+  background-size: 7px 7px;
+ */
 }
+
+body::before {
+ 
+  /*
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 70%; 
+  z-index: -10; 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)), url('noise4.png') repeat;
+  opacity: 0.18;
+  background-repeat: repeat;
+   mix-blend-mode: hard-light; 
+*/
+   /*
+    content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  z-index: -10; 
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)), url('noise4.png') repeat;
+  //background: url('noise8.png') repeat; 
+  opacity: 0.18; 
+  background-repeat: repeat;
+   mix-blend-mode: hard-light; 
+   */
+   /*
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url(http://192.168.56.106:5173/resources/sass/noise4.png) repeat;
+    background-repeat: repeat;
+    mix-blend-mode: hard-light;
+    */
+}
+
 
 .bodyContainer {
   position: relative;
@@ -137,3 +189,5 @@ a:visited {
   text-decoration: none;
   color: none;
 }
+
+
