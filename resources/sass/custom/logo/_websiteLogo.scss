@@ -106,7 +106,7 @@
 }
 .kostaLogo img:hover {
     
-    background-color: #f9f7d9c2;
+    background-color: #f9f7d96e;
 }
 
 .logoExtraImageContainer{
@@ -130,6 +130,10 @@
 }
 
 @media (max-width: 992px) {
+    .kostaLogoContainer {
+        padding-left: 0px;
+
+    }
     .kostaLogo{
         //margin-bottom: -15px;
     }
@@ -155,6 +159,7 @@
     .logoExtraImage{
         margin-left: 10px;
     }
+
  
 }
 @media (max-width: 768px) {
@@ -179,17 +184,36 @@
         height: 3px;
         background: #212529;
     }
+    .logoExtraImageContainer {
+        margin-top: 45px;
+    }
+    .logoExtraImage {
+        width: 140px;
+        height: 160px;
+        margin-left: 0px;
+    }
 }
 
 @media (max-width: 576px) {
     .kostaLogo{
-        margin-bottom: -40px;
+        margin-bottom: -15px;
+                margin-top: 5px;
+    }
+    .kostaLogoContainer{
+        padding: 0px;
+        flex-flow: column-reverse;
+        height: 370px;
     }
     .kostaLogo img {
         width:  280px;;
-        padding-left: 13px;
+        padding-left: 45px;
 
     
+    }
+    .kostaLogoText {
+       
+        padding: 0px 23px;
+       
     }
 
     .kostaLogoTextContainer {
@@ -198,12 +222,20 @@
         margin: 0 auto;
         margin-bottom: 50px;
     
-        text-align: center;
+       // text-align: center;
     }
     
     .kostaLogoLine {
         height: 3px;
         background: #212529;
+    }
+    .logoExtraImageContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .kostaLogo img:hover {
+    
+        background-color: transparent;
     }
 }
 

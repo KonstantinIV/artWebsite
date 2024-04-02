@@ -13,7 +13,7 @@ export default function WebsiteLogo() {
             </div>
 
             <div className="kostaLogoTextContainer">
-                <div className="kostaLogoText">With the advancement of AI (Artificial Intelligence) tools, it is</div>
+                <div className="kostaLogoText">Exploring the Boundaries of Art and Design</div>
             </div>
         </div>
 
