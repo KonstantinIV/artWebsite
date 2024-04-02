@@ -4,7 +4,7 @@ import AboutCardLinks from '../home/aboutCard/aboutCardLinks';
 
 export default function ContactInfo() {
 
-  const email = 'kosta.artist' + '@' + 'outlook.com';
+  const email = 'rosenhart.artist' + '@' + 'outlook.com';
 
   return (
     <div className='contactInfoContainer'>

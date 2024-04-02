@@ -63,7 +63,16 @@ body::before {
     mix-blend-mode: hard-light;
     */
 }
-
+.disabledLink {
+  pointer-events: none;
+  cursor: default;
+  color: #bebebe !important;
+}
+.disabledLink img{
+  pointer-events: none;
+  cursor: default;
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 255, 255));
+}
 
 .bodyContainer {
   position: relative;

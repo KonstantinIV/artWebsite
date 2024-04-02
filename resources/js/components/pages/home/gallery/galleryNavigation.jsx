@@ -16,6 +16,7 @@ function GalleryNavigation(props) {
                 clickedMediumType = {props.clickedMediumType}
 
             />
+            {/*
 
             {(props.artMediumClicked == "digital" ?
                 <GalleryNavigationTabArtType
@@ -36,7 +37,8 @@ function GalleryNavigation(props) {
                 />
 
             )}
-
+            */}
+            {/*
             <GalleryNavigationTabViewType
                 handleSetViewType={props.handleSetViewType}
                 viewTypes={props.viewTypes}
@@ -44,7 +46,7 @@ function GalleryNavigation(props) {
                 clickedViewType = {props.clickedViewType}
 
             />
-
+            */}
         </div>
     );
 }
@@ -68,7 +70,7 @@ function GalleryNavigationTabArtMedium(props) {
         </div>
     );
 }
-
+/*
 function GalleryNavigationTabArtType(props) {
 
     return (
@@ -86,7 +88,8 @@ function GalleryNavigationTabArtType(props) {
         </div>
     );
 }
-
+*/
+/*
 function GalleryNavigationTabViewType(props) {
     return (
         <div className="galleryNavContainerArtViewType">
@@ -123,7 +126,7 @@ function GalleryNavigationTabViewType(props) {
 
         </div>
     );
-}
+}*/
 
 
 export default GalleryNavigation;

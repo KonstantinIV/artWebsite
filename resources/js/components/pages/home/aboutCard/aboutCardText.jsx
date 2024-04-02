@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { MyContext } from './MyContext';
 
 export default function AboutCardText() {
-    const email = "kosta.artist" + "@" + "outlook.com";
+    const email = "rosenhart.artist" + "@" + "outlook.com";
 
     const artistDescription = useContext(MyContext);
 
