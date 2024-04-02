@@ -7,12 +7,12 @@ import NavigationBar from "./navigationBar/navigationBar";
 export default function Header({urlRoute}) {
 
     return (
-        <div>
+        <header>
             <Design />
 
             <WebsiteLogo />
             <NavigationBar urlRoute={urlRoute}/>
-        </div>
+        </header>
     );
 }
 

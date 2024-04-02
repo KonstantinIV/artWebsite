@@ -2,7 +2,10 @@ import React from "react";
 
 
 export default function Design() {
-
+    return(
+        <div></div>
+    )
+/*
     return (
         <div>
             <div className='bodyContainer'>
@@ -27,5 +30,6 @@ export default function Design() {
 
         </div>
     );
+    */
 }
 

@@ -1,6 +1,19 @@
 
 
 .kostaLogoContainer{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: #f9d98a85;
+    height: 274px;
+    width: fit-content;
+    margin: auto;
+    padding: 0px 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    background-color: #d47b0059;
+    //padding-left: 0;
     /*animation: fadeInAnimation ease 0.6s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;*/
@@ -20,16 +33,16 @@
     margin: 0 auto;
     margin-bottom: 50px;
 
-    text-align: center;
+    //text-align: center;
 }
 
 
 .kostaLogoText {
     position: relative;
-    top: 15px;
-    background: #fffde2;
+    top: -10px;
+    //background: #fffde2;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 35px;
 
     font-weight: 900;
     color: #212529;
@@ -46,7 +59,7 @@
     width: fit-content;
 
     margin: 0 auto;
-    margin-top: 110px;
+    margin-top: 27px;
 
     text-align: center;
 
@@ -64,6 +77,7 @@
         border-radius: 15px;
     transition: 0.3s;
 
+    
 }
 
 
@@ -80,15 +94,33 @@
 
 }
 .kostaLogo img {
-    width: 400px;
-    height: auto ;
+    width: 330px;
+    height: auto;
     padding-left: 30px;
+    opacity: 0.9;
+    transition: 0.3s;
+    padding: 5px 15px;
+    border-radius: 5px;
+
 
 }
 .kostaLogo img:hover {
-
+    
     background-color: #f9f7d9c2;
 }
+
+.logoExtraImageContainer{
+    height: 111px;
+    margin-top: 15px;
+}
+.logoExtraImage{
+    width: 250px;
+    height: 242px;
+    object-fit: cover;
+    object-position: 66% 46%;
+    margin-left: 50px;
+}
+
 /********************************MEDIA*******************************/
 /********************************MEDIA*******************************/
 /********************************MEDIA*******************************/
@@ -99,7 +131,7 @@
 
 @media (max-width: 992px) {
     .kostaLogo{
-        margin-bottom: -15px;
+        //margin-bottom: -15px;
     }
     .kostaLogo img {
         width: 330px;
@@ -108,23 +140,26 @@
     }
 
     .kostaLogoTextContainer {
-        width: 300px;
+       // width: 300px;
     
         margin: 0 auto;
         margin-bottom: 50px;
     
-        text-align: center;
+        //text-align: center;
     }
     
     .kostaLogoLine {
         height: 3px;
         background: #212529;
     }
+    .logoExtraImage{
+        margin-left: 10px;
+    }
  
 }
 @media (max-width: 768px) {
     .kostaLogo{
-        margin-bottom: -20px;
+       // margin-bottom: -20px;
     }
     .kostaLogo img {
         width: 330px;  
@@ -132,12 +167,12 @@
     }
 
     .kostaLogoTextContainer {
-        width: 300px;
+      //  width: 300px;
     
         margin: 0 auto;
         margin-bottom: 50px;
     
-        text-align: center;
+   //     text-align: center;
     }
     
     .kostaLogoLine {
