@@ -20,7 +20,7 @@ return [
     'headTitle' => [
         'info' => 'Info - Traditional and Digital artist - Kosta | Art',
         'digital-art-tools' => 'Info - Digital art tools - Kosta | Art',
-        'commission-process' => 'Info - Commission process - Kosta | Art',
+        'commission' => 'Info - Commission - Kosta | Art',
         'rights-and-usage' => 'Info - Rights And Usage - Kosta | Art',
 
     ],
@@ -39,7 +39,7 @@ return [
     'schemaMarkup' => [
         'info' => file_get_contents(resource_path('lang/en/schemaMarkup/infoMarkup.json')),
         'digital-art-tools' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/digitalArtTools.json')),
-        'commission-process' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/commissionProcess.json')),
+        'commission' => file_get_contents(resource_path('lang/en/schemaMarkup/infoPage/commission.json')),
         'rights-and-usage' =>   file_get_contents(resource_path('lang/en/schemaMarkup/infoPage//rightsAndUsage.json')),
 
     ],
@@ -51,7 +51,7 @@ return [
     'article' => [
         'info' => file_get_contents(resource_path('lang/en/infoPageArticles/digitalArtTools.html')),
         'digital-art-tools' => file_get_contents(resource_path('lang/en/infoPageArticles/digitalArtTools.html')),
-        'commission-process' => file_get_contents(resource_path('lang/en/infoPageArticles/commissionProcess.html')),
+        'commission' => file_get_contents(resource_path('lang/en/infoPageArticles/commission.html')),
         'rights-and-usage' =>   file_get_contents(resource_path('lang/en/infoPageArticles/rightsAndUsage.html')),
     ]
     

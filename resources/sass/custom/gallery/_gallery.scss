@@ -3,11 +3,12 @@
     position: relative;
     display: flex;
     flex-flow: column;
+    justify-content: center;
 
-    max-width: 840px;
+    //max-width: 840px;
 
-    margin-right: auto;
-    margin-left: auto;
+   // margin-right: auto;
+   // margin-left: auto;
 
 }
 
@@ -33,7 +34,7 @@
 
 @media (max-width: 992px) {
     .galleryNavAndGalleryContainer {
-        max-width: 500px;
+       // max-width: 500px;
 
     }
  
@@ -44,7 +45,7 @@
 
 @media (max-width: 576px) {
     .galleryNavAndGalleryContainer {
-        max-width: 300px;
+       // max-width: 300px;
 
     }
 }

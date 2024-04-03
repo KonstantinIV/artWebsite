@@ -13,6 +13,7 @@ export default function Layout({title,urlRoute, children}) {
             <Header urlRoute={urlRoute}/>
                 <div className="bodyContainer">
                     {children}
+                    <div></div>
                 </div>
             <Footer />
         </React.Fragment>

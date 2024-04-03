@@ -26,7 +26,7 @@ export default function AboutCardLinks() {
             </a>
 
             <br />
-            <a   className=' aboutLink disabledLink' href='https://www.artstation.com/rosenhart' target='_blank'>
+            <a   className=' aboutLink ' href='https://www.artstation.com/rosenhart' target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/artstation.png' className='aboutLinkIcon' alt='artstation icon'  width="16" height="16" />
                 Artstation
             </a>
