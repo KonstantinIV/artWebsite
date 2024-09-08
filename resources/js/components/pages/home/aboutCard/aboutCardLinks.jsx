@@ -10,6 +10,8 @@ export default function AboutCardLinks() {
             //color of the icons, edited in website that provides icons #6c6cf7
 
             <div>
+  
+
             <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/rosenhart_artist/" target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/instagram.png' className='aboutLinkIcon' alt='instagram icon' fill='currentColor' width="16" height="16" />
                 Instagram
@@ -49,6 +51,7 @@ export default function AboutCardLinks() {
                 <img loading="lazy" src='img/icons/social-media/cara.png' className='aboutLinkIcon' alt='cara icon' fill='currentColor' width="16" height="16" />
                 Cara
             </a>
+         
  
 
 
