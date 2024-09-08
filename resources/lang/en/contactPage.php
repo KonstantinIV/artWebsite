@@ -20,7 +20,7 @@ return [
     'headCanonicalLink' => 'contact',
 
     //SEO Markup schemas
-    'schemaMarkup' => "",
+    'schemaMarkup' => file_get_contents(resource_path('lang/en/schemaMarkup/contactMarkup.json')), 
 
     /* 
     Data    

@@ -18,9 +18,11 @@ jobs:
         port: 22
         script: |
           cd /var/www/html/testEnv/artWebsite
+          git stash
           git pull origin testEnvironment
           composer update					
           npm install
-          npm run production
+          npm run build
           chown -R www-data:www-data /var/www/html/testEnv/artWebsite
+          php artisan cache:forget imageFileNameData
           php artisan optimize

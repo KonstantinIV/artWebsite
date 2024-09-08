@@ -21,6 +21,7 @@ class ContactPageController extends Controller
                     'title' => trans('contactPage.headTitle'),
                     'description' => trans('contactPage.headDescription'),
                     'canonicalLink' => trans('contactPage.headCanonicalLink'),
+                    'schemaMarkup' => trans('contactPage.schemaMarkup') ,
                 ]);
 
     }
