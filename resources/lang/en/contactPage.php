@@ -15,7 +15,7 @@ return [
     /*
     HTML head data, SEO
     */
-    'headTitle'       => 'Contact - Traditional and Digital artist - Kosta | Art',
+    'headTitle'       => 'Contact - Traditional and Digital artist - Rosenhart | Art',
     'headDescription' => 'Artists contact details and contact form to send feedback or any other questions regarding art.',
     'headCanonicalLink' => 'contact',
 

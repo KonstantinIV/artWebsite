@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer() {
   
   const currentYear = new Date().getFullYear();
-  const websiteName = 'Kostaartist';
+  const websiteName = 'Rosenhart';
 
   return (
     <footer className="footerContainer">

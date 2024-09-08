@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
 
     <!-- BRAND --> 
-    <title>{{ $title ?? "Kosta | Art" }}</title> 
+    <title>{{ $title ?? "Rosenhart | Art" }}</title> 
     <meta name="description" content="{{$description ?? 'Digital and traditional artist from Europe, specializing in realistic portraits and characters within the realms of thought-provoking fantasy and realism.'}}">
 
     <!-- favicon -->
@@ -23,18 +23,18 @@
     </script>
 
     <!-- Meta tags for SEO -->
-    <meta property="og:title" content="Digital and traditional art | Kosta">
+    <meta property="og:title" content="Digital and traditional art | Rosenhart">
     <meta property="og:description" content="Digital and traditional artist from Europe, specializing in realistic portraits and characters within the realms of thought-provoking fantasy and realism.">
     <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/{{$canonicalLink ?? ''}}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/img/meta/kosta-cover-image.webp">
-    <meta property="og:image:alt" content="Kosta art website cover image">
+    <meta property="og:image:alt" content="Rosenhart art website cover image">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Twitter Card Meta Tags, for better Twitter sharing -->
-    <meta name="twitter:title" content="Digital and traditional art | Kosta">
-    <meta name="twitter:card" content="Digital and traditional art | Kosta">
+    <meta name="twitter:title" content="Digital and traditional art | Rosenhart">
+    <meta name="twitter:card" content="Digital and traditional art | Rosenhart">
     <meta name="twitter:description" content="Digital and traditional artist from Europe, specializing in realistic portraits and characters within the realms of thought-provoking fantasy and realism.">
     <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/img/meta/kosta-cover-image.webp">
 

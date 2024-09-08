@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Kosta",
+    "name": "Rosenhart",
     "jobTitle": "Digital and Traditional artist",
     "url": "https://kostaartist.com/",
     "sameAs": [
@@ -13,7 +13,7 @@
       "https://www.tumblr.com/kosta-iv",
       "https://cara.app/kosta"
     ],
-    "email": "kosta.artist@outlook.com",
+    "email": "rosenhart.artist@outlook.com",
     "description": "Clients can get in contact with the artist through email, form and other social media."
   }
   

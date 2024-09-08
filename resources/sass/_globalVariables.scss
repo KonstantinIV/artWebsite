@@ -22,7 +22,7 @@ body {
 }
 
 body::before {
- 
+
   /*
   content: "";
   position: absolute;
@@ -36,7 +36,7 @@ body::before {
   background-repeat: repeat;
    mix-blend-mode: hard-light; 
 */
-   /*
+  /*
     content: "";
   position: fixed;
   top: 0;
@@ -50,7 +50,7 @@ body::before {
   background-repeat: repeat;
    mix-blend-mode: hard-light; 
    */
-   /*
+  /*
    content: "";
     position: absolute;
     top: 0;
@@ -63,12 +63,14 @@ body::before {
     mix-blend-mode: hard-light;
     */
 }
+
 .disabledLink {
   pointer-events: none;
   cursor: default;
   color: #bebebe !important;
 }
-.disabledLink img{
+
+.disabledLink img {
   pointer-events: none;
   cursor: default;
   filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 255, 255));
@@ -84,16 +86,17 @@ body::before {
   z-index: -4;
 
   top: 25px;
-  width: 1030px;
+  width: 1060px;
   height: 235px;
   margin: 0 0 0 0;
 
-  background-color: #893f0645;
+  background-color: rgb(255 232 187);
   margin: 0 auto;
-    right: 0;
-    left: 0;
-    border-radius: 13px;
+  right: 0;
+  left: 0;
+  border-radius: 13px;
 
+  box-shadow: -14px 0 6px -11px #4c4b3d87, 10px 0 6px -7px #4c4b3d8a;
 }
 
 
@@ -122,12 +125,14 @@ body::before {
 
   .backgroundDesignBox1 {
     top: 45px;
+    width: 860px
   }
 }
 
 @media (max-width: 992px) {
   .backgroundDesignBox1 {
     top: 210px;
+    width: 620px;
   }
 
 }
@@ -135,12 +140,14 @@ body::before {
 @media (max-width: 768px) {
   .backgroundDesignBox1 {
     top: 210px;
+    width: 555px;
   }
 }
 
 @media (max-width: 576px) {
   .backgroundDesignBox1 {
-    //top: 385px;
+    top: 270px;
+    width: 400px;
   }
 }
 
@@ -202,5 +209,3 @@ a:visited {
   text-decoration: none;
   color: none;
 }
-
-

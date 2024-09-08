@@ -18,10 +18,10 @@ return [
        HTML head data, SEO
        */
     'headTitle' => [
-        'info' => 'Info - Traditional and Digital artist - Kosta | Art',
-        'digital-art-tools' => 'Info - Digital art tools - Kosta | Art',
-        'commission' => 'Info - Commission - Kosta | Art',
-        'rights-and-usage' => 'Info - Rights And Usage - Kosta | Art',
+        'info' => 'Info - Traditional and Digital artist - Rosenhart | Art',
+        'digital-art-tools' => 'Info - Digital art tools - Rosenhart | Art',
+        'commission' => 'Info - Commission - Rosenhart | Art',
+        'rights-and-usage' => 'Info - Rights And Usage - Rosenhart | Art',
 
     ],
     'headDescription' => [
