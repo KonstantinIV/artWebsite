@@ -16,9 +16,11 @@
     
     flex-grow: 3;
 
-    width: 180px;
-    height: 180px;
-    max-width: 180px;
+    //width: 180px;
+    //height: 180px;
+    //max-width: 180px;
+    width: 215px;
+    height: 250px;
 
     margin: 0px 20px;
     margin-bottom: 5px;
@@ -26,10 +28,12 @@
 
 
 
-    border-radius: 50%;
+    //border-radius: 50%;
+    border-radius: 10px;
+
 
     object-fit: cover;
-    object-position: 100% 10%;
+    object-position: 100% 45%;
     opacity: 0.94;
 
 
