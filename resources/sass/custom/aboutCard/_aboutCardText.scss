@@ -15,7 +15,7 @@
     flex-grow: 3;
     flex-flow: column;
 
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     padding: 15px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -46,8 +46,8 @@
     display: flex;
     align-items: center;
 
-    margin-bottom: 0;
-
+    margin-bottom: 15px;
+    margin-top: 18px;
     font-weight: bold;
 }
 
@@ -74,7 +74,9 @@
 /***/
 @media (max-width: 1200px) {
 
-
+    .aboutContact {
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -93,7 +95,7 @@
 
     .aboutContact {
         justify-content: center;
-
+        margin-top: 0px;
     }
 
     .aboutTextHeadline {
