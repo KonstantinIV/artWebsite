@@ -4,6 +4,9 @@ import GalleryNavigation from "./galleryNavigation";
 import GalleryImages from "./galleryImages";
 import GalleryBackgroundCSS from "./galleryBackgroundCSS";
 
+import GalleryTest from "./gallerytest";
+
+
 function Gallery() {
   // State variables
   const [imageFiles, setImageFiles] = useState({
@@ -18,7 +21,7 @@ function Gallery() {
       drawings: []
     }
   });
-  const [clickedMediumType, setClickedMediumType] = useState("digital");
+  const [clickedMediumType, setClickedMediumType] = useState("traditional");
   const [clickedArtType, setClickedArtType] = useState("all");
   const [clickedViewType, setClickedViewType] = useState("small");
   const [isImageClicked, setIsImageClicked] = useState(false);
@@ -26,7 +29,7 @@ function Gallery() {
 
   // Other constants
   const viewTypes = ["small", "large"];
-  const artMediums = ["digital", "traditional"];
+  const artMediums = ["traditional","digital" ];
   const artTypes = {
     digital: ["all", "paintings", "drawings"],
     traditional: ["all", "paintings", "drawings"]
@@ -134,8 +137,11 @@ function Gallery() {
         clickedViewType={clickedViewType}
         isImageClicked={isImageClicked}
       />
+<GalleryTest clickedMediumType={clickedMediumType}/>
 
-      {/* Component for gallery images */}
+      {/* Component for gallery images 
+
+
       <GalleryImages
         handleEnlargeImage={handleEnlargeImage}
         imageFiles={imageFiles}
@@ -145,6 +151,7 @@ function Gallery() {
         isImageClicked={isImageClicked}
         imageFileName={imageFileName}
       />
+      */}
     </div>
   );
 }
