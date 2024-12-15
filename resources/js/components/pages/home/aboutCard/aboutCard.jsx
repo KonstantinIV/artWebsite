@@ -16,8 +16,7 @@ export default function AboutCard(
     <div className="aboutContainer">
  <div class="tooltip">!
         <span class="tooltiptext"><p>
-I am mostly active on Instagram and for updates you can follow me on Bluesky or this Website. Wont post much on Facebook and is currently used as a placeholder. 
-You still can follow in case situation changes in the future.
+I am mostly active on Instagram and for updates you can follow me on Bluesky or follow this Website.
 
 </p>
 </span>

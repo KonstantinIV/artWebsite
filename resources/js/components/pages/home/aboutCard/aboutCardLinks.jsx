@@ -17,7 +17,7 @@ export default function AboutCardLinks() {
                 Instagram
             </a>
 
-            <a className='aboutLink disabledAboutLink' href='https://www.facebook.com/rosenhartartist' target='_blank'>
+            <a className='aboutLink ' href='https://www.facebook.com/rosenhartartist' target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/facebook.png' className='aboutLinkIcon' alt='facebook icon' fill='currentColor' width="16" height="16" />
                 Facebook
             </a>
