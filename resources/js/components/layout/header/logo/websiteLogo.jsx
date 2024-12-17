@@ -3,22 +3,22 @@ import React from 'react';
 export default function WebsiteLogo() {
 
     return (
-        <div className="kostaLogoContainer">
+        <div className="rosenhartLogoContainer">
 
         <div>
-            <div className="kostaLogo">
+            <div className="rosenhartLogo">
                 <a className="" href="/">
-                    <img src="/img/icons/logo.png" alt="artWebsiteLogo-Kosta-artist" width="400" height="127"/>
+                    <img src="/img/icons/logo.png" alt="artWebsiteLogo-rosenhart-artist" width="400" height="127"/>
                 </a>
             </div>
 
-            <div className="kostaLogoTextContainer">
-                <div className="kostaLogoText">Exploring the Boundaries of Art and Design</div>
+            <div className="rosenhartLogoTextContainer">
+                <div className="rosenhartLogoText">Exploring the Boundaries of Art and Design</div>
             </div>
         </div>
 
         <div className='logoExtraImageContainer'>
-        <img src="/img/icons/logoimage2.png" alt="artWebsiteLogo-Kosta-artist" className="logoExtraImage" />
+        <img src="/img/icons/logoimage3.png" alt="artWebsiteLogo-rosenhart-artist" className="logoExtraImage" />
 
         </div>
 
