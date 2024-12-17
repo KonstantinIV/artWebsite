@@ -39,8 +39,7 @@
     <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/img/meta/rosenhart-cover-image.webp">
 
     <!-- Pinterest claim -->
-    <meta name="p:domain_verify" content="a3c181b46341cd2c980e93c3d55ebe65" />
-
+    <meta name="p:domain_verify" content="a3c181b46341cd2c980e93c3d55ebe65"/>
     <!-- VITE generates css and js assets-->
     @viteReactRefresh
     @vite(['resources/js/app.jsx'])
