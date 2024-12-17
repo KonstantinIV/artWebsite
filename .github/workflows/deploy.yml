@@ -18,9 +18,10 @@ jobs:
         port: 22
         script: |
           cd /var/www/html/artWebsite
+          git stash
           git pull origin main
           composer update					
           npm install
-          npm run production
+          npm run build
           chown -R www-data:www-data /var/www/html/artWebsite/*
           php artisan optimize
