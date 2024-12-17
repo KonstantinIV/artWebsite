@@ -1,0 +1,13 @@
+    {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Digital art tools",
+    "author": {
+      "@type": "Person",
+      "name": "Rosenhart"
+    },
+    "datePublished": "2023-09-01T08:00:00+08:00",
+    "dateModified": "2024-09-10T09:20:00+08:00",
+    "image": "",
+    "description": "Gives overview of artist digital tools and reason for not using AI."
+  }

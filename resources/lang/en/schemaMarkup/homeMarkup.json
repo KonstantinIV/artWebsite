@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rosenhart",
+  "jobTitle": "Digital and Traditional artist",
+  "image": "https://rosenhartartist.com/img/profile/rosenhart-profile-image.webp",
+  "url": "https://rosenhartartist.com/",
+  "sameAs": [
+    "https://www.instagram.com/rosenhart_k/",
+    "https://www.facebook.com/rosenhart_k",
+    "https://x.com/Rosenhart_k",
+    "https://www.pinterest.com/Rosenhart_artist/",
+    "https://www.tumblr.com/rosenhart-artist",
+    "https://cara.app/rosenhart",
+    "https://www.artstation.com/rosenhart",
+    "https://bsky.app/profile/rosenhart.bsky.social"
+  ],
+  "email": "rosenhart.artist@outlook.com",
+  "description": "A brief description of Rosenhart and gallery of the artworks."
+}

@@ -11,7 +11,18 @@ class ContactEmailModel extends Model
 
     protected $table = 'contact_email';
 
-    protected $fillable = ['name', 'email', 'message'];
+    protected $fillable = ['emailType','name', 'email', 'message'];
     public $timestamps = false;
+
+
+    public static function emailRules()
+    {
+        return [
+            'emailType' => 'required|string', // Adjust as needed
+            'sendersName' => 'required|string|max:255',
+            'sendersEmail' => 'required|email',
+            'sendersMessage' => 'required|string',
+        ];
+    }
 
 }
