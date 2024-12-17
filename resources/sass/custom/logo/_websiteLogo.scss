@@ -1,4 +1,4 @@
-.kostaLogoContainer {
+.rosenhartLogoContainer {
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -28,12 +28,12 @@ width: 80%;
     }
 }
 
-.kostaLogoTextContainer {
+.rosenhartLogoTextContainer {
     width: 500px;
 }
 
 
-.kostaLogoText {
+.rosenhartLogoText {
     position: relative;
     top: 74px;
     //background: #fffde2;
@@ -48,12 +48,12 @@ width: 80%;
 
 }
 
-.kostaLogoLine {
+.rosenhartLogoLine {
     height: 3px;
     background: #212529;
 }
 
-.kostaLogo {
+.rosenhartLogo {
     width: fit-content;
 
     margin: 0 auto;
@@ -80,7 +80,7 @@ width: 80%;
 
 
 
-.kostaLogo a {
+.rosenhartLogo a {
     color: inherit;
     text-decoration: none;
 
@@ -92,7 +92,7 @@ width: 80%;
 
 }
 
-.kostaLogo img {
+.rosenhartLogo img {
     width: 630px;
     height: auto;
     padding-left: 30px;
@@ -105,7 +105,7 @@ width: 80%;
 }
 
 
-.kostaLogo img:hover {
+.rosenhartLogo img:hover {
 
     // background-color: #f9f7d96e;
 }
@@ -132,7 +132,7 @@ width: 80%;
 /********************************MEDIA*******************************/
 @media (max-width: 1500px) {
    
-    .kostaLogoContainer {
+    .rosenhartLogoContainer {
         display: flex;
         flex-flow: row;
         justify-content: center;
@@ -151,24 +151,24 @@ width: 80%;
         max-width: 1130px;
         min-width: 1025px;
     }
-    .kostaLogo {
+    .rosenhartLogo {
         
         margin-top: 30px;
        // margin-right: 0px;
     
     }
-    .kostaLogo img {
+    .rosenhartLogo img {
         width: 540px;
         
     
     
     }
-    .kostaLogoTextContainer {
+    .rosenhartLogoTextContainer {
         width: 460px;
 
     }
 
-    .kostaLogoText {
+    .rosenhartLogoText {
         top: 50px;
        
         font-size: 25px;
@@ -192,7 +192,7 @@ width: 80%;
 
 
     }
-    .kostaLogoContainer {
+    .rosenhartLogoContainer {
 
         width: 80%;
         max-width: none;
@@ -201,23 +201,23 @@ width: 80%;
 }
 
 @media (max-width: 992px) {
-    .kostaLogoContainer {
+    .rosenhartLogoContainer {
         //padding-left: 0px;
 
     }
 
-    .kostaLogo {
+    .rosenhartLogo {
         //margin-bottom: -15px;
         margin-top: 50px;
     }
 
-    .kostaLogo img {
+    .rosenhartLogo img {
         width: 420px;
 
 
     }
 
-    .kostaLogoTextContainer {
+    .rosenhartLogoTextContainer {
         // width: 300px;
         width: 425px;
         margin: 0 auto;
@@ -226,7 +226,7 @@ width: 80%;
         //text-align: center;
     }
 
-    .kostaLogoLine {
+    .rosenhartLogoLine {
         height: 3px;
         background: #212529;
     }
@@ -237,7 +237,7 @@ width: 80%;
         height: 270px;
         margin-top: 5px;
     }
-    .kostaLogoText {
+    .rosenhartLogoText {
         
         top: 14px;
         
@@ -255,26 +255,26 @@ width: 80%;
 }
 
 @media (max-width: 768px) {
-    .kostaLogoContainer {
+    .rosenhartLogoContainer {
         padding: 0px;
         flex-flow: column-reverse;
         height: 440px;
     }
-    .kostaLogo {
+    .rosenhartLogo {
         // margin-bottom: -20px;
         margin-bottom: -15px;
         margin-top: -40px;
         padding-top: 0;
     }
 
-    .kostaLogo img {
+    .rosenhartLogo img {
         width: 380px;
         padding: 0;
         padding-left: 45px;
 
     }
 
-    .kostaLogoTextContainer {
+    .rosenhartLogoTextContainer {
         //  width: 300px;
 
         width: 300px;
@@ -284,7 +284,7 @@ width: 80%;
         //     text-align: center;
     }
 
-    .kostaLogoLine {
+    .rosenhartLogoLine {
         height: 3px;
         background: #212529;
     }
@@ -304,7 +304,7 @@ width: 80%;
         margin-left: 0px;
         margin-bottom: 10px;
     }
-    .kostaLogoText{
+    .rosenhartLogoText{
         margin-left: -18px;
         text-align: center;
         font-size: 23px;
@@ -313,13 +313,13 @@ width: 80%;
 }
 
 @media (max-width: 576px) {
-    .kostaLogo {
+    .rosenhartLogo {
         margin-bottom: -15px;
         margin-top: -25px;
         height: 85px;
     }
 
-    .kostaLogoContainer {
+    .rosenhartLogoContainer {
         padding: 0px;
         flex-flow: column-reverse;
         height: 390px;
@@ -327,7 +327,7 @@ width: 80%;
         margin-top: 0;
     }
 
-    .kostaLogo img {
+    .rosenhartLogo img {
         width: 280px;
         ;
         padding-left: 20px;
@@ -335,7 +335,7 @@ width: 80%;
 
     }
 
-    .kostaLogoText {
+    .rosenhartLogoText {
 
         padding-right: 43px;
         margin-left: 20px;
@@ -344,7 +344,7 @@ width: 80%;
 
     }
 
-    .kostaLogoTextContainer {
+    .rosenhartLogoTextContainer {
         width: 300px;
 
         margin: 0 auto;
@@ -353,7 +353,7 @@ width: 80%;
         // text-align: center;
     }
 
-    .kostaLogoLine {
+    .rosenhartLogoLine {
         height: 3px;
         background: #212529;
     }
@@ -368,7 +368,7 @@ width: 80%;
         margin-top: 60px;
     }
 
-    .kostaLogo img:hover {
+    .rosenhartLogo img:hover {
 
         background-color: transparent;
     }

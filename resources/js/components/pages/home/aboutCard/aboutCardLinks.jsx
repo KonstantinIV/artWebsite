@@ -12,12 +12,12 @@ export default function AboutCardLinks() {
             <div>
   
 
-            <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/rosenhart_artist/" target='_blank'>
+            <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/rosenhart_k/" target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/instagram.png' className='aboutLinkIcon' alt='instagram icon' fill='currentColor' width="16" height="16" />
                 Instagram
             </a>
 
-            <a className='aboutLink ' href='https://www.facebook.com/rosenhartartist' target='_blank'>
+            <a className='aboutLink ' href='https://www.facebook.com/rosenhart_k' target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/facebook.png' className='aboutLinkIcon' alt='facebook icon' fill='currentColor' width="16" height="16" />
                 Facebook
             </a>
@@ -26,7 +26,7 @@ export default function AboutCardLinks() {
                 Bluesky
             </a>
 
-            <a className='aboutLink' href='https://twitter.com/Rosenhart_art' target='_blank'>
+            <a className='aboutLink' href='https://twitter.com/Rosenhart_k' target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/twitter.png' className='aboutLinkIcon' alt='Twitter icon' fill='currentColor' width="16" height="16" />
                 Twitter
             </a>
