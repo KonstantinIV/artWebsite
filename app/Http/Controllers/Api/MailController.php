@@ -21,7 +21,7 @@ class MailController extends Controller
      */
     public function store(Request $request)
     {
-        $receiverEmail = "kosta.artist@outlook.com";
+        $receiverEmail = "rosenhart.artist@outlook.com";
 
         $emailData = $request->input('emailData');
         $mailableType = $request->input('emailData.emailType');
