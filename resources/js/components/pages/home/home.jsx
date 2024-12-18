@@ -5,7 +5,6 @@ import Layout from "../../layout/layout";
 import AboutCard from "./aboutCard/aboutCard";
 import Gallery from "./gallery/gallery";
 
-import GalleryTest from "./gallery/gallerytest";
 
 
 

@@ -19,6 +19,7 @@ export default function Info(props) {
   //Existing topics
   const topicContentMap = {
     'Digital art tools': 'digital-art-tools',
+    'Traditional art tools': 'traditional-art-tools',
     'Commission': 'commission',
     'Rights and usage': 'rights-and-usage',
     // Add more topics and corresponding content components as needed

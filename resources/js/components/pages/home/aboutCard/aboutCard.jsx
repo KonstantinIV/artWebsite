@@ -16,7 +16,7 @@ export default function AboutCard(
     <div className="aboutContainer">
  <div class="tooltip">!
         <span class="tooltiptext"><p>
-I am mostly active on Instagram and for updates you can follow me on Bluesky or bookmark this Website.
+I am mostly active on Instagram and for updates you can follow me on Bluesky, Twitter or bookmark this Website.
 
 </p>
 </span>
