@@ -1,25 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import GalleryNavigation from "./galleryNavigation";
-import GalleryImages from "./galleryImages";
+//import GalleryImages from "./galleryImages";
 import GalleryBackgroundCSS from "./galleryBackgroundCSS";
 
-import GalleryTest from "./gallerytest";
+import GalleryImagesV2 from "./galleryImagesV2";
 
 
 function Gallery() {
   // State variables
   const [imageFiles, setImageFiles] = useState({
-    digital: {
-      all: [],
-      paintings: [],
-      drawings: []
-    },
-    traditional: {
-      all: [],
-      paintings: [],
-      drawings: []
-    }
+    digital: [],
+    traditional: []
   });
   const [clickedMediumType, setClickedMediumType] = useState("traditional");
   const [clickedArtType, setClickedArtType] = useState("all");
@@ -137,10 +129,15 @@ function Gallery() {
         clickedViewType={clickedViewType}
         isImageClicked={isImageClicked}
       />
-<GalleryTest clickedMediumType={clickedMediumType}/>
+
+<GalleryImagesV2 
+      clickedMediumType={clickedMediumType}
+      imageFiles={imageFiles[clickedMediumType]}
+
+      />        
 
       {/* Component for gallery images 
-
+ 
 
       <GalleryImages
         handleEnlargeImage={handleEnlargeImage}
