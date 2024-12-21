@@ -17,9 +17,9 @@ return [
     
     'headTitle'       => 'Home - Traditional and Digital artist - Rosenhart | Art',
 
-    'headDescription' => 'Digital and traditional artist from Europe, Estonia specializing in realistic 
+    'headDescription' => 'Rosenhart is Traditional and Digital artist from Europe, Estonia specializing in realistic 
     portraits and characters within the realms of fantasy 
-    and realism. ',
+    and realism by using various tools like charcoal and many others. ',
 
     'headCanonicalLink' => '',
     //SEO  rich results
@@ -30,7 +30,7 @@ return [
 
     //data
 
-    'artistDescription' => ' Traditional and Digital artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." width="16" height="12" />&nbsp;
+    'artistDescription' => 'Rosenhart is Traditional and Digital artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." width="16" height="12" />&nbsp;
     Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
     continuously improving and exploring new ways of artistic expression.'
 
