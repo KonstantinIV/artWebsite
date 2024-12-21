@@ -16,7 +16,7 @@ class PricePageController extends Controller
             // Your data to be passed to the component
         ])
         ->withViewData([
-            'title'       => 'Price - Kosta | Art',
+            'title'       => 'Price - Rosenhart | Art',
             'description'       => 
             'Digital art and traditional art prices',
             'canonicalLink' => 'price',
