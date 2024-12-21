@@ -2,33 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://kostaartist.com/</loc>
-        <lastmod>2023-10-11</lastmod>
+        <loc>https://rosenhartartist.com/</loc>
+        <lastmod>2024-10-11</lastmod>
     </url>
     <url>
-        <loc>https://kostaartist.com/info</loc>
-        <lastmod>2023-10-11</lastmod>
-    </url>
-
-
-    <url>
-        <loc>https://kostaartist.com/info/digital-art-tools</loc>
-        <lastmod>2023-10-11</lastmod>
+        <loc>https://rosenhartartist.com/info</loc>
+        <lastmod>2024-10-11</lastmod>
     </url>
 
     <url>
-        <loc>https://kostaartist.com/info/commission-process</loc>
-        <lastmod>2023-10-11</lastmod>
+        <loc>https://rosenhartartist.com/info/traditional-art-tools</loc>
+        <lastmod>2024-10-11</lastmod>
     </url>
 
     <url>
-        <loc>https://kostaartist.com/info/rights-and-usage</loc>
-        <lastmod>2023-10-11</lastmod>
+        <loc>https://rosenhartartist.com/info/digital-art-tools</loc>
+        <lastmod>2024-10-11</lastmod>
     </url>
 
     <url>
-        <loc>https://kostaartist.com/contact</loc>
-        <lastmod>2023-10-11</lastmod>
+        <loc>https://rosenhartartist.com/info/commission</loc>
+        <lastmod>2024-10-11</lastmod>
+    </url>
+
+    <url>
+        <loc>https://rosenhartartist.com/info/rights-and-usage</loc>
+        <lastmod>2024-10-11</lastmod>
+    </url>
+
+    <url>
+        <loc>https://rosenhartartist.com/contact</loc>
+        <lastmod>2024-10-11</lastmod>
     </url>
 
 </urlset>
