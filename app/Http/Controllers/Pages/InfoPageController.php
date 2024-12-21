@@ -28,7 +28,7 @@ class InfoPageController extends Controller
           //'title' => (ucwords(str_replace("-", " ", $article)) . ' - Kosta | Art'),
 
           //Add new page titles to lang file in recources foulder
-          'title' => trans('infoPage.headTitle.' . $article) . ' - Kosta | Art',
+          'title' => trans('infoPage.headTitle.' . $article) . ' - Rosenhart | Art',
           'description' => trans('infoPage.headDescription.' . $article) ,
           'canonicalLink' => 'info'.(($article === 'info') ? '' : "/".$article),
           'schemaMarkup' => trans('infoPage.schemaMarkup.' . $article) ,
