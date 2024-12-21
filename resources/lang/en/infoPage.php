@@ -26,11 +26,11 @@ return [
 
     ],
     'headDescription' => [
-        'info' => 'Discover comprehensive information about the artist or explore guides to assist you in requesting services.',
-        'digital-art-tools' => 'Ensuring the proper usage of digital tools and providing a summary of the consequences of using AI tools in art.',
-        'traditional-art-tools' => 'Description of traditional tools.',
-        'commission-process' => 'Here, you can find an overview of the steps to commission an artist. Please send an email if you want more details.',
-        'rights-and-usage' => 'A brief description of the rights and usages of the commissioned artwork. Contact us for further questions!',
+        'info' => 'Discover comprehensive information about the artist, Rosenhart, or explore guides to assist you in requesting services.',
+        'digital-art-tools' => 'Rosenhart ensures the proper usage of digital tools and providing a summary of the consequences of using AI tools in art.',
+        'traditional-art-tools' => 'Rosenhart Description of usage of the traditional tools.',
+        'commission-process' => 'Here, you can find an overview of the steps to commission Rosenhart. Please send an email if you want more details.',
+        'rights-and-usage' => 'A brief description of the rights and usages of the commissioned artwork. Contact the artist, Rosenhart, for further questions!',
     ],
     
     
