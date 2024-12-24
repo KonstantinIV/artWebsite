@@ -25,7 +25,7 @@ export default function Info(props) {
     // Add more topics and corresponding content components as needed
   };
   return (
-    <Layout title='Info - Kosta | Art' urlRoute={props.urlRoute}>
+    <Layout title='Info - Rosenhart | Art' urlRoute={props.urlRoute}>
 
       <div className='infoContainer'>
         <InfoNavbar

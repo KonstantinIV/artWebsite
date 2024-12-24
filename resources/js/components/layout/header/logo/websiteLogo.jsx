@@ -18,7 +18,7 @@ export default function WebsiteLogo() {
         </div>
 
         <div className='logoExtraImageContainer'>
-        <img src="/img/icons/logoimage3.png" alt="artWebsiteLogo-rosenhart-artist" className="logoExtraImage" />
+        <img src="/img/icons/logoimage3.png" alt="artWebsiteLogo-rosenhart-artist-etra" className="logoExtraImage" />
 
         </div>
 
