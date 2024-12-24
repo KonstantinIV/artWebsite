@@ -13,7 +13,7 @@ export default function NavigationBar({urlRoute}) {
     //state
     const [currentPageName, setActiveButton] = useState(urlRoute);
 
-    const absoluteUrl = "https://kostaartist.com/";
+    const absoluteUrl = "https://rosenhartartist.com/";
     // Available page names
     const pageNames = ['home', 'info', 'contact'];
 
