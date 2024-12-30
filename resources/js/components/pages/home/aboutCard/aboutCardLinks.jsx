@@ -12,7 +12,7 @@ export default function AboutCardLinks() {
             <div>
   
 
-            <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/rosenhart_k/" target='_blank'>
+            <a className="icon-link icon-link-hover aboutLink"  href="https://www.instagram.com/rosenhart_art/" target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/instagram.png' className='aboutLinkIcon' alt='instagram icon' fill='currentColor' width="16" height="16" />
                 Instagram
             </a>
