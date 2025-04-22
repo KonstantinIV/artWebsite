@@ -21,7 +21,7 @@ export default function AboutCardLinks() {
                 <img loading="lazy" src='img/icons/social-media/facebook.png' className='aboutLinkIcon' alt='facebook icon' fill='currentColor' width="16" height="16" />
                 Facebook
             </a>
-            <a  className=' aboutLink' href='https://bsky.app/profile/rosenhart.bsky.social' target='_blank'>
+            <a  className=' aboutLink' href='https://bsky.app/profile/rosenhartartist.com' target='_blank'>
                 <img loading="lazy" src='img/icons/social-media/Bluesky.png' className='aboutLinkIcon' alt='artstation icon' fill='currentColor' width="16" height="16" />
                 Bluesky
             </a>

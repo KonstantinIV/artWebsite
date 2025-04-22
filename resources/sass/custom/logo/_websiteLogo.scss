@@ -29,13 +29,13 @@ width: 80%;
 }
 
 .rosenhartLogoTextContainer {
-    width: 500px;
+    width: 525px;
 }
 
 
 .rosenhartLogoText {
     position: relative;
-    top: 74px;
+    top: 78px;
     //background: #fffde2;
     display: inline-block;
     //padding: 0 35px;
@@ -44,6 +44,7 @@ width: 80%;
     font-size: 27px;
     font-weight: 900;
     color: #212529;
+    margin: 0;
 
 
 }
@@ -232,10 +233,11 @@ width: 80%;
 
     .rosenhartLogoTextContainer {
         // width: 300px;
-        width: 425px;
+       // width: 425px;
         margin: 0 auto;
         margin-bottom: 50px;
-
+        width: 365px;
+        margin-left: 13px;
         //text-align: center;
     }
 

@@ -12,9 +12,9 @@ export default function AboutCardText() {
         <main className="aboutTextContainer">
             <article>
 
-                <h1 className="aboutTextHeadline" >
+                <h2 className="aboutTextHeadline" >
                     About
-                </h1>
+                </h2>
                 <p className="aboutText" dangerouslySetInnerHTML={{ __html: artistDescription }}>
 
                 </p>
