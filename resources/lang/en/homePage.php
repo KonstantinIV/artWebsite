@@ -17,9 +17,7 @@ return [
     
     'headTitle'       => 'Home - Traditional and Digital artist - Rosenhart | Art',
 
-    'headDescription' => 'Rosenhart is Traditional and Digital artist from Europe, Estonia specializing in realistic 
-    portraits and characters within the realms of fantasy 
-    and realism by using various tools like charcoal and many others. ',
+    'headDescription' => 'Traditional and digital artist from Estonia, creating realistic portraits, characters, and illustrations with charcoal, graphite, oil, and digital techniques.',
 
     'headCanonicalLink' => '',
     //SEO  rich results
@@ -30,8 +28,17 @@ return [
 
     //data
 
-    'artistDescription' => 'Rosenhart is Traditional and Digital artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." width="16" height="12" />&nbsp;
-    Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
-    continuously improving and exploring new ways of artistic expression.'
+    'artistDescription' => 'Traditional and digital artist from Europe,   <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." width="16" height="12" />&nbsp; Estonia, focusing on realistic portraits, characters, and illustrations within the genre of dynamic fantasy and realism. 
+    Working with charcoal, graphite, oil, digital and other techniques, always pushing the boundaries of my craft and refining my skills.'
 
+
+    /*
+    Traditional and digital artist from Europe,   <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." width="16" height="12" />&nbsp; Estonia, focusing on realistic portraits, characters, and illustrations within the genre of dynamic fantasy and realism. 
+    Working with charcoal, graphite, oil, digital and other techniques, always pushing the boundaries of my craft and refining my skills.
+
+Traditional and Digital artist from Europe,  <img style={{ marginRight: "-3px" }} src="img/icons/ee.png" alt="..." width="16" height="12" />&nbsp;
+    Estonia focusing on realistic portraits and characters in the genre of thought-provoking fantasy and realism while
+    continuously improving and exploring new ways of artistic expression.
+
+    */
 ];

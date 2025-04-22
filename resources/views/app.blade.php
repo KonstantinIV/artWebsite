@@ -8,7 +8,7 @@
 
     <!-- BRAND --> 
     <title>{{ $title ?? "Rosenhart | Art" }}</title> 
-    <meta name="description" content="{{$description ?? 'Digital and traditional artist from Europe, Estonia specializing in realistic portraits and characters within the realms of thought-provoking fantasy and realism.'}}">
+    <meta name="description" content="{{$description ?? 'Traditional and digital artist from Estonia, creating realistic portraits, characters, and illustrations with charcoal, graphite, oil, and digital techniques.'}}">
 
     <!-- favicon -->
     <link rel="icon" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/img/meta/rosenhart-title-icon.png" type="image/icon type">
@@ -24,7 +24,7 @@
 
     <!-- Meta tags for SEO -->
     <meta property="og:title" content="Digital and traditional art | Rosenhart">
-    <meta property="og:description" content="Digital and traditional artist from Europe, Estonia specializing in realistic portraits and characters within the realms of thought-provoking fantasy and realism.">
+    <meta property="og:description" content="Traditional and digital artist from Estonia, creating realistic portraits, characters, and illustrations with charcoal, graphite, oil, and digital techniques.">
     <meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/{{$canonicalLink ?? ''}}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/img/meta/rosenhart-cover-image.webp">
@@ -35,7 +35,7 @@
     <!-- Twitter Card Meta Tags, for better Twitter sharing -->
     <meta name="twitter:title" content="Digital and traditional art | Rosenhart">
     <meta name="twitter:card" content="Digital and traditional art | Rosenhart">
-    <meta name="twitter:description" content="Digital and traditional artist from Europe, Estonia specializing in realistic portraits and characters within the realms of thought-provoking fantasy and realism.">
+    <meta name="twitter:description" content="Traditional and digital artist from Estonia, creating realistic portraits, characters, and illustrations with charcoal, graphite, oil, and digital techniques.">
     <meta name="twitter:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/img/meta/rosenhart-cover-image.webp">
 
     <!-- Pinterest claim -->
