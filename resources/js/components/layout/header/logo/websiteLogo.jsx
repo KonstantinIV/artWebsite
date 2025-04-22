@@ -13,7 +13,7 @@ export default function WebsiteLogo() {
             </div>
 
             <div className="rosenhartLogoTextContainer">
-                <div className="rosenhartLogoText">Exploring the Boundaries of Art and Design</div>
+                <h1 className="rosenhartLogoText">Crafting Unique Art with Charcoal, Oil and Digital Techniques</h1>
             </div>
         </div>
 
