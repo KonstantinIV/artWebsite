@@ -101,8 +101,8 @@ export default function ContactForm(
       setMailResult('Something went wrong.');
     }
   }
-
-
+ return (<div></div>);
+/*
 
   return (
 
@@ -164,6 +164,6 @@ export default function ContactForm(
         </ReCAPTCHA>
 
     </form>
-  );
+  );*/
 }
 
